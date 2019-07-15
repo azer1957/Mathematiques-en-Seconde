@@ -1,0 +1,339 @@
+
+
+
+
+\fancyhead{} % Delete current head settings
+
+\fancyhead{} % efface les entêtes pr\'ec\'edentes
+%\fancyhead[LE,RO]{\footnotesize \em \rightmark} % section en entête
+\fancyhead[RE,LO]{\scriptsize \em Seconde} % classe et ann\'ee en entête
+
+%\setcounter{ds}{1} %c'est le num\'ero du DS
+%\setcounter{chaptertemp}{\thechapter} %stocke le num\'ero du chapitre courant dans un compteur temporaire
+%\stepcounter{chapter} % avance le compteur de 1 et surtout remet tous les compteurs d\'ependant du chapitre à 0, dont les num\'eros d'exercice
+%\setcounter{chapter}{\theds} % met le compteur de chapitre au num\'ero du ds
+
+
+
+%\small
+
+\chapter{Expressions alg\'ebriques}
+
+
+\pagenumbering{roman} \setcounter{page}{1}
+
+\section{Rappels}
+
+\begin{definition*}
+ D\'evelopper c'est transformer un produit en une somme. Factoriser c'est transformer une somme en un produit.
+\end{definition*}
+
+\begin{prop*}
+Au coll\`ege, on a obtenu les factorisations et d\'eveloppements suivants :
+\[\begin{array}{rclcrcl}
+ ka+kb & = & \ldots\ldots\ldots\ldots & & (a+b)^2 & = & \ldots\ldots\ldots\ldots\\
+ (a+b)(c+d) & = & \ldots\ldots\ldots\ldots & & (a-b)^2 & = & \ldots\ldots\ldots\ldots\\
+ &&&&a^2-b^2 & = & \ldots\ldots\ldots\ldots
+\end{array}\]
+\end{prop*}
+
+
+\section{Technique}
+
+\begin{exo}
+ Parmi les formules rappel\'ees dans la propri\'et\'e ci-dessus, lesquelles sont des formules de d\'eveloppement, lesquelles sont des formules de factorisation ?
+\end{exo}
+
+
+
+
+
+\begin{exo}
+ D\'evelopper puis r\'eduire les expressions suivantes :
+\vspace{-1em}\begin{multicols}{3}\begin{itemize}
+ \item $A=(x^2+4)(2x-3)$
+ \item $B=x+2(x-5)+8(3-2x)$
+ \item $C=(5-2x)(x-4)$
+ \item $D=(x-4)^2+(3x+1)^2$
+ \item $E=(x-1)^2-(2x+5)^2$
+ \item $F=x(x+1)(x-3)$
+ \item $G=(a-b)(a^2+ab+b^2)$
+ \item $H=(a+b)^3$
+ \item $I=(a-b)^3$
+ \item $J=-(x-7)$
+ \item $K=-(2x+3)^2$
+ \item $L=(x-2)^2$
+ \item $M=(x+1)^2-x^2$
+\end{itemize} \end{multicols}\vspace{-1em}
+\end{exo}
+
+%\sautpage
+
+\begin{exo}
+ Factoriser au maximum les expressions suivantes :
+\vspace{-1em}\begin{multicols}{2}\begin{itemize}
+ \item $A=x(x-1)+2x(x-3)$
+ \item $B=(x-1)^2+4(x-1)(x+5)$
+ \item $C=x^2-(3x+1)^2$
+ \item $D=x(x-4)-5(4-x)$
+ \item $E=4x^2+20x+25$
+ \item $F=x(x-1)-(2x+5)x$
+ \item $G=(x+5)^2-(2x+7)^2$
+ \item $H=(5x+1)(-3x+4)+x(10x+2)$
+ \item $I=x^3-12x^2$
+ \item $J=x^2-4+(x-2)(2x+1)$
+ \item $K=2x-3+(3-2x)^2$
+ \item $L=(2a+1)^2-(a+6)^2$
+ \item $M=(2x-3)(1-x)-3(x-1)(x+2)$
+ \item $N=(x-1)^2+2(x^2-1)$
+ \item $O=x^4+4x^3+4x^2$
+ \item $P=4x^5-x^3$
+ \item $Q=x^7-x^5$
+ \item $R=x(x+2)^2-4x(x-1)^2$
+ \item $S=(2a-b)(b-a)-(2b-a)(b-2a)$
+ \item $T=a^4-b^4$
+\end{itemize} \end{multicols}\vspace{-1em}
+\end{exo}
+
+
+
+
+
+\section{Probl\`emes}
+
+%
+\vspace{-1em}\begin{multicols}{3}\begin{prob}
+ Montrer que le somme du produit de trois entiers cons\'ecutifs $n-1$, $n$ et $n+1$ et de l'entier $n$ est le cube d'un entier.
+\end{prob}
+\sautcol
+\begin{prob}
+ Choisir un nombre entier, \'elever le nombre suivant et le nombre pr\'ec\'edent cet entier au carr\'e, puis faire la diff\'erence de ces deux carr\'es :
+on obtient un multiple du nombre choisi. Pourquoi ?
+\end{prob}
+\sautcol
+\begin{prob}
+ Choisir quatre nombres entiers cons\'ecutifs, puis faire le produit du plus petit et du plus grand, puis faire le produit des deux nombres.
+Que remarque-t-on ? Est-ce toujours vrai ? Le d\'emontrer.
+\end{prob}\end{multicols}\vspace{-1em}
+%\sautcol
+
+\vspace{-1em}\begin{multicols}{2}
+\begin{prob}
+ Soit $x$ un nombre strictement compris entre 0 et 10. Calculer le p\'erim\`etre de la figure gris\'ee en fonction du nombre $x$. Que constate-t-on ?\\
+
+\vspace{-2em}\begin{center}
+\begin{pspicture*}(-0.5,-1.5)(5.5,2.6)
+ \psline(0,0)(5,0)
+ \psline{<->}(0,-0.5)(1.5,-0.5)
+ \rput(0.75,-0.35){\small $x$}
+ \psline{<->}(0,-1)(5,-1)
+ \rput(2.5,-0.85){\small $10$}
+\pscustom[fillstyle=solid,fillcolor=lightgray,linecolor=black]{%
+\psarc(2.5,0){2.5}{0}{180}}
+\pscustom[fillstyle=solid,fillcolor=white,linecolor=black]{%
+\psarc(3.25,0){1.75}{0}{180}
+ \psarc(0.75,0){0.75}{0}{180}}
+\end{pspicture*}               \end{center}\vspace{-2em}
+\end{prob}
+
+\sautcol
+
+\begin{prob}
+ Soit $x$ un nombre strictement compris entre 0 et 10. Calculer l'aire de la surface gris\'ee en fonction de $x$.\\
+
+\vspace{-2em}\begin{center}
+\begin{pspicture*}(0,-2.5)(5.5,3)
+\pscustom[fillstyle=solid,fillcolor=lightgray,linecolor=black]{%
+\psarc(2.5,0){2.5}{0}{180}}
+\pscustom[fillstyle=solid,fillcolor=white,linecolor=black]{%
+ \psarc(0.75,0){0.75}{0}{180}}
+\pscustom[fillstyle=solid,fillcolor=lightgray,linecolor=black]{%
+\psarc(3.25,0){1.75}{180}{360}}
+\psline(0,0)(5,0)
+ \psline{<->}(0,-0.5)(1.5,-0.5)
+ \rput(0.75,-0.35){\small $x$}
+ \psline{<->}(0,-1)(5,-1)
+ \rput(2.5,-0.85){\small $10$}
+\end{pspicture*}               \end{center}\vspace{-2em}
+\end{prob}
+\end{multicols}\vspace{-1em}
+
+\vspace{-1em}\begin{multicols}{2}\begin{prob}
+ Oscar et Alix doivent tracer sur la plage un circuit de karting.
+Ils souhaitent construire un circuit en forme de 8 et disposent de 80 m\`etres de plage.
+Sur la figure ci-dessous sont trac\'es leurs mod\`eles respectifs, compos\'es chacun de deux cercles tangeants ; dans le premier mod\`ele le petit cercle est d'un rayon quelconque (compris entre 0 et 80 m) tandis que dans le second mod\`ele les deux cercles ont m\^eme rayon.
+De ces deux circuits, lequel est le plus long ?
+
+\vspace{-2em}\begin{center}
+
+\begin{pspicture*}(-0.75,-0.75)(7,4.5)
+\pscircle[linewidth=2pt](1,1.5){1.5}
+\pscircle[linewidth=2pt](1,3.5){0.5}
+\pscircle[linewidth=2pt](4,1){1}
+\pscircle[linewidth=2pt](4,3){1}
+\psline{<->}(5.5,0)(5.5,4)
+\uput[r](5.5,2){\small 80\,m}
+
+\end{pspicture*}               \end{center}\vspace{-2em}
+
+\end{prob}
+
+\sautcol
+
+\begin{prob}
+ $ABCD$ est un carr\'e. Pour construire $E$ et $F$, on a trac\'e un quart de cercle de centre $D$ passant par $B$.
+On a \'egalement trac\'e un quart de cercle de centre $B$ passant par $A$.
+\begin{enumerate}
+ \item Montrer que l'aire de la surface blanche int\'erieure au secteur $DEF$ est \'egale \`a l'aire de la surface gris\'ee.
+ \item L'aire de la surface gris\'ee est-elle plus grande ou plus petite que les trois quarts de l'aire du carr\'e $ABCD$ ?
+\end{enumerate}
+
+\vspace{-1em}\begin{center}
+
+\begin{pspicture*}(-0.75,-5)(5,0.75)
+
+\pscustom[fillstyle=solid,fillcolor=lightgray,linecolor=black]{%
+\psarc(3,-3){3}{90}{180}
+\psline(0,-3)(3,-3)}
+ \psline(0,0)(3,0)(3,-3)(0,-3)(0,0)
+ \psline(3,0)(4.2426,0)
+ \psline(0,-3)(0,-4.2426)
+\psarc(0,0){4.2426}{270}{360}
+\uput[ul](0,0){$D$}
+\uput[u](3,0){$C$}
+\uput[ur](4.2426,0){$F$}
+\uput[dr](3,-3){$B$}
+\uput[dl](0,-4.2426){$E$}
+\uput[l](0,-3){$A$}
+\end{pspicture*}               \end{center}\vspace{-1em}
+
+\end{prob}\end{multicols}\vspace{-1em}
+
+\section{Probl\`emes dits \emph{de synth\`ese}}
+
+\vspace{-1em}\begin{multicols}{2}\begin{prob}
+ Sur les c\^ot\'es d'un carr\'e $ABCD$ de c\^ot\'e 4, on place les points $M$, $N$, $P$, $Q$, $R$, $S$, $T$ et $U$ comme indiqu\'e sur le dessin,
+o\`u $0\leqslant x \leqslant 2$. On note $\mathcal{A}(x)$ l'aire du domaine gris\'e.
+\begin{center}
+
+\begin{pspicture*}(-1.25,-0.75)(4.75,5.25)
+\pspolygon*[linecolor=lightgray](0,0)(1,0)(1,1)(0,1)
+\pspolygon*[linecolor=lightgray](3,0)(4,0)(4,1)(3,1)
+\pspolygon*[linecolor=lightgray](0,3)(1,3)(1,4)(0,4)
+\pspolygon*[linecolor=lightgray](3,3)(4,3)(4,4)(3,4)
+\pspolygon*[linecolor=lightgray](1,1)(3,1)(3,3)(1,3)
+\psline(0,0)(4,0)(4,4)(0,4)(0,0)
+\psline(0,1)(4,1)
+\psline(0,3)(4,3)
+\psline(1,0)(1,4)
+\psline(3,0)(3,4)
+\psline{<->}(-1,0)(-1,1)
+\rput*(-1,0.5){\footnotesize $x$}
+\psline{<->}(-1,3)(-1,4)
+\rput*(-1,3.5){\footnotesize $x$}
+\psline{<->}(0,5)(1,5)
+\rput*(0.5,5){\footnotesize $x$}
+\psline{<->}(3,5)(4,5)
+\rput*(3.5,5){\footnotesize $x$}
+\uput[ul](0,4){\footnotesize $A$}
+\uput[u](1,4){\footnotesize $M$}
+\uput[u](3,4){\footnotesize $N$}
+\uput[ur](4,4){\footnotesize $B$}
+\uput[l](0,3){\footnotesize $U$}
+\uput[ur](1,3){\footnotesize $E$}
+\uput[ul](3,3){\footnotesize $F$}
+\uput[r](4,3){\footnotesize $P$}
+\uput[l](0,1){\footnotesize $T$}
+\uput[ul](1,1){\footnotesize $H$}
+\uput[ur](3,1){\footnotesize $G$}
+\uput[r](4,1){\footnotesize $Q$}
+\uput[dl](0,0){\footnotesize $D$}
+\uput[d](1,0){\footnotesize $S$}
+\uput[d](3,0){\footnotesize $R$}
+\uput[dr](4,0){\footnotesize $C$}
+\end{pspicture*}               \end{center}
+\begin{enumerate}
+ \item Montrer par un raisonnement g\'eom\'etrique que $\mathcal{A}(x)$ peut s'\'ecrire sous l'une des formes suivantes :
+$\mathcal{A}(x)=4x^2+(4-2x)^2$ ou $\mathcal{A}(x)=16-4x(4-2x)$.
+ \item Montrer que l'on a aussi : $\mathcal{A}(x)=8x^2-16x+16$.
+ \item En utilisant la forme la plus adapt\'ee, calculer $\mathcal{A}(2)$ puis $\mathcal{A}(\sqrt{3})$.
+ \item \begin{enumerate}
+        \item Montrer que : $\mathcal{A}(x)=8(x-1)^2+8$.
+        \item En d\'eduire que l'aire $\mathcal{A}(x)$ est minimale pour $x=1$.
+       \end{enumerate}
+ \item \begin{enumerate}
+        \item Montrer que : $\mathcal{A}(x)=(2x-1)(4x-6)+10$.
+	\item En utilisant l'expression pr\'ec\'edente de $\mathcal{A}(x)$, d\'eterminer les valeurs de $x$ telles que l'aire $\mathcal{A}(x)$ soit \'egale \`a 10.
+       \end{enumerate}
+
+
+\end{enumerate}
+
+\end{prob}\end{multicols}\vspace{-1em}
+
+%\sautpage
+
+\begin{prob}
+\begin{multicols}{2}
+Les ma\^itres nageurs d'une plage disposent d'un cordon flottant d'une longueur de 400 m avec lequel ils d\'elimitent la zone de baignade surveill\'ee, de forme rectangulaire.\\
+Le probl\`eme est de d\'eterminer les dimensions de ce rectangle pour que l'aire de baignade soit maximale.\\
+On appelle $x$ la largeur du rectangle et $y$ sa longueur.
+
+\sautcol
+
+\begin{center}\small
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.7,-1.2)(6.2,2.2)
+\def\xmin{-0.5} \def\xmax{6} \def\ymin{-1} \def\ymax{2}
+\psframe[linewidth=0.3pt,linecolor=gray](-0.7,-1.2)(6.2,2.2)
+\def\pshlabel#1{\psframebox*[framesep=1pt]{\small #1}}
+\def\psvlabel#1{\psframebox*[framesep=1pt]{\small #1}}
+\psclip{%
+\psframe[linestyle=none](\xmin,\ymin)(\xmax,\ymax)
+}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psline(-0.5,0)(5.5,0)
+\rput(2.5,-0.5){plage}
+\psline(1,0)(1,1.5)(4,1.5)(4,0)
+\rput(2.5,0.75){zone de baignade}
+\psline[linestyle=dashed]{<->}(4.5,0)(4.5,1.5)
+\rput*(4.5,0.75){$x$}
+\psline[linestyle=dashed]{<->}(1,1.7)(4,1.7)
+\rput*(2.5,1.8){$y$}
+\endpsclip
+\end{pspicture*}
+\end{center}\normalsize
+\end{multicols}
+\begin{enumerate}
+	\item Expression de l'aire de la zone de baignade .
+	\begin{enumerate}
+	\item Calculer l'aide de la zone de baignade lorsque $x=50$ m et lorsque $x=100$ m.
+	\item Quelles sont les valeurs posibles pour $x$ ?
+	\item Sachant que la longueur du cordon est de 400 m, exprimer $y$ en fonction de $x$.
+	\item Exprimer, en fonction de $x$, l'aire $\mathcal{A}(x)$ de la zone de baignade. Sur quel intervalle cette fonction est-elle d\'efinie ?
+\end{enumerate}
+\item Recherche graphique de l'aire maximale.
+\begin{enumerate}
+	\item Repr\'esenter dans un rep\`ere aux unit\'es bien choisies la courbe de $\mathcal{A}$.
+	\item Pour quelle(s) valeur(s) de $x$, l'aire semble-t-elle maximale ?
+\end{enumerate}
+\item Recherche par le calcul de l'aire maximale.
+\begin{enumerate}
+	\item D\'emontrer que pour tout $x\in[0;400]$, $\mathcal{A}(x)$ peut s'\'ecrire sous la forme : \[\mathcal{A}(x)=20 000 - 2(x-100)^2 \]
+	\item Peut-on obtenir une aire de 22 000 m$^2$ ? Justifier.
+	\item Quelle est l'aire maximale qu'on peut obtenir ? Quelles sont alors les dimensions du rectangle ?
+\end{enumerate}
+\end{enumerate}
+\end{prob}
+
+
+
+%\end{multicols}\vspace{-1em}
+
+
+
+
+
+
+
+

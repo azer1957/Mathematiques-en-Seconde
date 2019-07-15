@@ -1,0 +1,177 @@
+\cleardoublepage
+
+\fancyhead{} % Delete current head settings
+
+		\fancyhead[LO]{\footnotesize \em Nom : }
+		\fancyhead[RE,RO]{\scriptsize \em Lundi 27 mars 2017 -- 1h00}
+		\fancyfoot{}
+
+\setcounter{ds}{7} %c'est le numéro du DS	
+\setcounter{chaptertemp}{\thechapter} %stocke le numéro du chapitre courant dans un compteur temporaire
+\stepcounter{chapter} % avance le compteur de 1 et surtout remet tous les compteurs dépendant du chapitre à 0, dont les numéros d'exercice
+\setcounter{chapter}{\theds} % met le compteur de chapitre au numéro du ds
+		
+    
+\section*{Devoir surveill\'e n°\theds}\label{DS7}
+{\centering \large Probabilit\'es}
+\addstarredchapter{Devoir surveill\'e n°\theds : Probabilit\'es} 
+
+\medskip
+
+\hrule
+
+\begin{exo}\label{ds7exo1}
+On tire au hasard une carte dans un jeu de 52 cartes : 13 cartes de pique (couleur noire), 13 de tr\`efle (couleur noire), 13 de c\oe{}ur (couleur rouge), 13 de carreau (couleur rouge) ; ces 13 cartes sont celles num\'erot\'ees de 1 (as) \`a 10 auxquelles s'ajoutent les 3 figures : valet, dame, roi.
+\begin{enumerate}
+ \item Quelle est la probabilit\'e de tirer un tr\`efle ?
+ \item Quelle est la probabilit\'e de tirer une carte noire ?
+ \item Quelle est la probabilit\'e de ne pas tirer un carreau ?
+ \item Quelle est la probabilit\'e de tirer une figure (roi, dame ou valet) ?
+ \item Quelle est la probabilit\'e de tirer un as ?
+ \item Quelle est la probabilit\'e de ne pas tirer un valet noir ?
+\end{enumerate}
+\end{exo}
+
+\hrule
+
+\begin{exo}
+On lance deux d\'es cubiques \'equilibr\'es num\'erot\'es de 1 \`a 6. On note alors le plus grand des deux num\'eros sortis.
+\begin{enumerate}
+ \item Utiliser un tableau \`a double entr\'ee pour mod\'eliser la situation.
+ \item Quel est l'univers $\Omega$ de toutes les issues possibles ?
+ \item \'Etablir la loi de probabilit\'e de l'exp\'erience.
+\end{enumerate}
+
+\end{exo}
+
+\hrule
+
+
+\begin{exo}
+La porte d'entr\'ee d'un immeuble est muni d'un clavier de trois touches marqu\'ees par les lettres $A$, $B$ et $C$.\\
+Le code qui d\'eclenche l'ouverture de la porte est form\'e d'une s\'erie de deux lettres distinctes ou non.
+\begin{enumerate}
+ \item Recopier et compl\'eter l'arbre suivant qui d\'enombre l'ensemble des codes possibles :
+ \begin{center}
+  %\usepackage{pstricks,pst-plot,pst-text,pst-tree,pst-eps,pst-fill,pst-node,pst-math}
+\psset{nodesep=0mm,levelsep=20mm,treesep=10mm}
+\pstree[treemode=R]{\Tdot}
+{
+\pstree
+{\Tdot~[tnpos=a]{$A$}\taput{\small $$}}
+{
+\Tdot~[tnpos=r]{$A$}\taput{\small $$}
+\Tdot~[tnpos=r]{$B$}\taput{\small $$}
+\Tdot~[tnpos=r]{$C$}\tbput{\small $$}
+}
+\pstree
+{\Tdot~[tnpos=a]{$B$}\taput{\small $$}}
+{
+\Tdot~[tnpos=r]{$\ldots$}\taput{\small $$}
+\Tdot~[tnpos=r]{$\ldots$}\taput{\small $$}
+\Tdot~[tnpos=r]{$\ldots$}\tbput{\small $$}
+}
+\Tdot~[tnpos=r]{$\ldots$}\tbput{\small $$}
+}
+
+
+ \end{center}
+ \item D\'eterminer le nombre de codes diff\'erents possibles.
+ \item D\'eterminer la probabilit\'e de chacun des \'ev\`enements suivants :
+      \begin{description}
+       \item[X :] Le code se termine par $A$.
+       \item[Y :] Le code est form\'e de deux lettres diff\'erentes.
+       \item[Z :] Le code comporte au moins une fois la lettre $A$.
+      \end{description}
+\end{enumerate}
+
+\end{exo}
+
+\hrule
+
+\sautpage
+
+\begin{exo}
+ Une campagne de pr\'evention routi\`ere s'int\'eresse aux d\'efauts constat\'es sur le freinage et sur l'\'eclairage de 400 v\'ehicules :
+ \begin{itemize}
+  \item 60 des 400 v\'ehicules pr\'esentent un d\'efaut de freinage $F$ (dont certains pr\'esentent aussi un autre d\'efaut).
+  \item 140 des 400 v\'ehicules pr\'esentent un d\'efaut d'\'eclairage $E$ (dont certains pr\'esentent aussi un autre d\'efaut).
+  \item 45 v\'ehicules pr\'esentent \`a la fois un d\'efaut de freinage et un d\'efaut d'\'eclairage.
+ \end{itemize}
+\begin{enumerate}
+ \item Recopier puis compl\'eter le diagramme ci-dessous avec des nombres pour repr\'esenter la situation.
+ \begin{center}
+  \psset{xunit=1cm,yunit=1cm}
+\def\xmin{-0} \def\xmax{10.6} \def\ymin{-0} \def\ymax{4}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%\psset{xunit=1cm,yunit=1cm}
+%\psgrid[griddots=7,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+%\psset{xunit=1cm,yunit=1cm}
+%\psaxes[labels=all,labelsep=1pt, Dx=1,Dy=1]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+
+\psellipse[](3,2)(2,1)
+\psellipse[](5.75,2.25)(2,1)
+\psellipse[](4.5,2)(4.5,1.5)
+
+\rput(1.75,2){$F$}
+\rput(7,2.25){$E$}
+\end{pspicture*}
+ \end{center}
+ \item On choisit un v\'ehicule au hasard parmi ceux qui ont \'et\'e examin\'es. Quelle est la probabilit\'e que :
+ \begin{enumerate}
+  \item le v\'ehicule pr\'esente un d\'efaut de freinage mais pas de d\'efaut d'\'eclairage ?
+  \item le v\'ehicule pr\'esente un d\'efaut d'\'eclairage mais pas de d\'efaut de freinage ?
+  \item le v\'ehicule ne pr\'esente aucun des deux d\'efauts ?
+  \item le v\'ehicule pr\'esente au moins un des deux d\'efauts ?
+ \end{enumerate}
+
+\end{enumerate}
+
+\end{exo}
+
+\hrule
+
+\begin{exo}
+ Voici les r\'esultats d'un saondage effectu\'e en 1999 aupr\`es de \np{2000} personnes, \`a propos d'Internet :
+ \begin{itemize}
+  \item 40\,\% des personnes interrog\'ees d\'eclarent \^etre int\'eress\'ees par Internet ;
+  \item 35\,\% des personnes interrog\'ees ont moins de 30 ans et, parmi celles-ci, quatre cinqui\`emes d\'eclarent \^etre int\'eress\'ees par Internet ;
+  \item 30\,\% des personnes interrog\'ees ont plus de 60 ans et, parmi celles-ci, 85\,\% ne sont pas int\'eress\'ees par Internet.
+ \end{itemize}
+\begin{enumerate}
+ \item Reproduire et compl\'eter le tableau suivant :
+ \begin{center}
+  \begin{tabular}{c|c|c|c}
+   & int\'eress\'ees par Internet & non int\'eress\'ees par Internet & total \\ \hline
+   moins de 30 ans &&& \\ \hline
+   de 30 \`a 60 ans &&& \\ \hline
+   plus de 60 ans &&& \\ \hline
+   total &&& \np{2000}
+  \end{tabular}
+
+ \end{center}
+ \item On choisit au hasard une personne parmi les \np{2000} interrog\'ees. On suppose que toutes les personnes ont la m\^eme probabilit\'e d'\^etre choisies. On consid\`ere les \'ev\`enements :
+ \begin{description}
+  \item[A :] \og la personne interrog\'ee a moins de 30 ans \fg{} ;
+  \item[B :] \og la personne interrog\'ee est int\'eress\'ee par Internet \fg{}.
+ \end{description}
+ \begin{enumerate}
+  \item Calculer les probabilit\'es $p(A)$ et $p(B)$.
+  \item D\'efinir par une phrase l'\'ev\`enement $\overline{A}$ puis calculer $p(\overline{A})$.
+  \item D\'efinir par une phrase l'\'ev\`enement $A\cap B$ puis calculer $p(A\cap B)$. En d\'eduire $p(A\cup B)$.
+ \end{enumerate}
+ 
+ \item On sait maintenant que la personne interrog\'ee est int\'eress\'ee par Internet.\\
+ Quelle est la probabilit\'e qu'elle ait plus de 30 ans ?
+\end{enumerate}
+
+\end{exo}
+
+
+
+
+
+
+
+
+\setcounter{chapter}{\thechaptertemp} % remet le numéro de chapitre à ce qu'il était

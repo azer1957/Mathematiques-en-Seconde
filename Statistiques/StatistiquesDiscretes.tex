@@ -1,0 +1,926 @@
+\chapter{Statistiques discr\`etes} \label{statistiques1}
+\minitoc
+
+\fancyhead{} % efface les ent\^etes pr\'ec\'edentes
+\fancyhead[LE,RO]{\footnotesize \em \rightmark} % section en ent\^ete
+\fancyhead[RE,LO]{\scriptsize \em Seconde} % classe et ann\'ee en ent\^ete
+
+    \fancyfoot{}
+		\fancyfoot[RE]{\scriptsize \em \href{http://perpendiculaires.free.fr/}{http://perpendiculaires.free.fr/}}
+		\fancyfoot[LO]{\scriptsize \em David ROBERT}
+    \fancyfoot[LE,RO]{\textbf{\thepage}}
+
+%\sautpage
+
+
+\section{Vocabulaire}
+
+
+\begin{definition}
+Une s\'erie statistique est un ensemble d'observations collect\'ees et on a les d\'efinitions suivantes :
+\begin{itemize}
+	\item \emph{Population} : C'est l'ensemble sur lequel porte une \'etude statistique ;
+		  %si elle est trop grande, on s'int\'eresse \`a un \emph{\'echantillon} de cette population ;
+	\item \emph{Individu} : C'est un \'el\'ement de la population ;
+	\item \emph{Caract\`ere} : C'est ce qu'on observe chez l'individu ;
+	\item \emph{Modalit\'e} : Ce sont les diff\'erentes valeurs prises par le caract\`ere ;
+	\item La s\'erie statistique est dite \emph{quantitative} quand les modalit\'es sont des nombres %(nombre de fr\`eres et soeurs, dimensions d'une pi\`ece)
+		et \emph{qualitative} sinon ; %(candidat pour lequel un individu \`a l'intention de voter)
+	\item Dans le cas d'une s\'erie quantitative, celle-ci est dite \emph{discr\`ete} si les modalit\'es sont limit\'ees \`a un ensemble fini de valeurs %(le nombre de fr\`eres et soeurs ne peut \^etre qu'un \'el\'ement de l'ensemble $\{0\,;\,1\,;\,\ldots\,;\,10\}$)
+	    et \emph{continue} si les modalit\'es peuvent prendre n'importe quelle valeur dans un intervalle. %(la taille d'un individu)
+\end{itemize}
+\end{definition}
+
+\begin{exemples*}~
+\begin{itemize}
+ \item On peut s'int\'eresser \`a une classe (population),
+comportant des \'el\`eves (individus) et observer leur nombre de fr\`eres et s\oe{}urs (caract\`ere)
+qui peuvent \^etre 0, 1, 2, \ldots (modalit\'es),
+ces donn\'ees formant alors une s\'erie statistique quantitative discr\`ete.
+ \item On peut s'int\'eresser \`a une cha\^ine d'usine produisant des bras de suspension pour voiture (population),
+et observer sur chaque pi\`ece (individu) ses dimensions exactes (caract\`ere)
+qui peuvent varier entre 500 et 750 mm (modalit\'es),
+ces donn\'ees formant alors une s\'erie statistique quantitative continue.
+ \item On peut s'int\'eresser \`a la population fran\c{c}aise (population)
+comportant des individus (individus) et estimer leur intention de vote (caract\`ere) pouvant \^etre n'importe
+lequel des candidats se pr\'esentant (modalit\'es),
+ces donn\'ees formant alors une s\'erie statistique qualitative.
+\end{itemize}
+\end{exemples*}
+
+\begin{definition}
+On a aussi :
+\begin{itemize}
+	\item \emph{Effectif d'une valeur} : C'est le nombre de fois que la valeur d'un caract\`ere (la modalit\'e) revient dans la s\'erie ;
+	\item \emph{Fr\'equence d'une valeur} : C'est l'effectif de la modalit\'e divis\'e par l'effectif total ; elle est comprise entre 0 et 1.
+	\item \emph{Classes de valeurs} : s'il y a trop de valeurs diff\'erentes, elles sont rang\'ees par \emph{classe} (intervalle), l'effectif de la classe \'etant alors le nombre de modalit\'es appartenant \`a cet intervalle.
+\end{itemize}
+\end{definition}
+
+% Pour faire parler ces (souvent longues) s\'eries, il est n\'ecessaire de les r\'esumer : on produit alors \emph{des} statistiques. Tout r\'esum\'e met en \'evidence certaines caract\'eristiques de la s\'erie mais engendre une \emph{perte d'information}, toutes les donn\'ees n'\'etant plus accessibles.
+
+% Le r\'esum\'e peut \^etre un graphique : en Seconde vous avez vu le \emph{diagramme en bâtons} et l'\emph{histogramme} (pour des s\'eries rang\'ees en classes). Nous en verrons deux autres cette ann\'ee.
+
+% Il peut aussi \^etre num\'erique dans le cas d'une s\'erie satistique quantitative. Ces r\'esum\'es num\'eriques sont de deux types : les mesures centrales et les mesures de dispersion.
+
+%\sautpage
+
+\section{Mesures centrales}
+
+\begin{encadrer} \begin{Large}Elles visent \`a r\'esumer la s\'erie par une seule valeur repr\'esentative, d'une certaine mani\`ere, de toutes les valeurs de la s\'erie.                                                                                                                                                \end{Large}\end{encadrer}
+
+\subsection{Mode}
+
+\begin{definition}[Mode]
+Le \emph{mode} d'une s\'erie statistique est la donn\'ee la plus fr\'equente de la s\'erie.
+\end{definition}
+
+\begin{rmqs}~
+\begin{itemize}
+	\item S'il y a plusieurs donn\'ees arrivant \`a \'egalit\'e, il y a plusieurs modes.
+	\item Si les donn\'ees sont rang\'ees en classe, on parle de \emph{classe modale}.
+	\item Le mode est d\'efini aussi bien pour les s\'eries quantitatives que qualitatives.
+\end{itemize}
+\end{rmqs}
+
+Le mode est un r\'esum\'e sommaire d'une s\'erie qui fournit un type d'information assez limit\'e. Il pourra int\'eresser un publicitaire.
+
+\subsection{Moyenne arithm\'etique}
+
+\begin{definition}[Moyenne arithm\'etique]
+La \emph{moyenne arithm\'etique} d'une s\'erie statistique quantitative $S=\{x_1,x_2,\ldots,x_n\}$ est le nombre,
+not\'e $\overline{x}$ : \[\overline{x}=\frac{x_1+x_2+\ldots+x_n}{n}\]
+\end{definition}
+
+
+\begin{rmq} De la d\'efinition, on peut d\'eduire que $n\overline{x}=x_1+x_2+\ldots+x_n$, ce qui peut s'interpr\'eter de la mani\`ere suivante : \og La somme de toutes les valeurs de la s\'erie est inchang\'ee si on remplace chaque valeur par $\overline{x}$ \fg. 
+%\item Si la s\'erie $S$ comporte $n$ donn\'ees selon $p$ modalit\'es $x_1, x_2, \ldots, x_p$ d'effectifs respectifs (ou de fr\'equences respectives) $n_1$, $n_2$, \ldots, $n_p$, alors $\overline{x}=\frac{n_1x_1+n_2x_2+\ldots+n_px_p}{\underbrace{n_1+n_2+\ldots+n_p}_{\text{effectif total}}}$
+\end{rmq}
+
+ La moyenne a des avantages calculatoires : si l'on conna\^it les moyennes et les effectifs de deux s\'eries (ou deux sous-s\'eries), on peut obtenir la moyenne de la s\'erie constitu\'ee l'agr\'egation de ces deux s\'eries. Elle a le d\'efaut d'\^etre sensible aux valeurs extr\^emes.
+
+\subsection{M\'ediane}
+
+\begin{definition*}[M\'ediane dans le cas g\'en\'eral]
+On appelle \emph{m\'ediane} d'une s\'erie statistique quantitative tout nombre $m$ tel que :
+\begin{itemize}
+	\item la moiti\'e au moins des valeurs de la s\'erie est inf\'erieure \`a $m$
+	\item la moiti\'e au moins des valeurs de la s\'erie est sup\'erieure \`a $m$
+\end{itemize}
+\end{definition*}
+
+\begin{rmqs}~
+\begin{itemize}
+	\item Rappel : math\'ematiquement \og inf\'erieur \fg{} et \og sup\'erieur \fg{} signifient, en fran\c{c}ais, \og inf\'erieur ou \'egal \fg{} et \og sup\'erieur ou \'egal \fg.
+	\item On admettra qu'un tel nombre existe toujours.
+	\item La m\'ediane partage la s\'erie en deux sous-s\'eries ayant \emph{quasiment} le m\^eme effectif ; \emph{quasiment} car si plusieurs valeurs de la s\'erie sont \'egales \`a la m\'ediane, les donn\'ees inf\'erieures \`a la m\'ediane et les donn\'ees sup\'erieures \`a la m\'ediane ne seront pas forc\'ement en nombre \'egal.
+	\item Il faut comprendre la m\'ediane comme \og la valeur du milieu \fg.
+\end{itemize}
+\end{rmqs}
+
+Plusieurs valeurs peuvent parfois convenir pour la m\'ediane, aussi convient-on de prendre, dans le cadre scolaire\footnote{Les statisticiens, eux, prennent n'importe quel nombre convenant parmi les m\'edianes possibles ; sur des s\'eries de grande taille, ils ont tous le m\^eme ordre de grandeur}, les valeurs, uniques, suivantes :
+
+\begin{definition}[M\'ediane dans le cadre scolaire]
+Soit une s\'erie statistique quantitative comportant $n$ donn\'ees : $S=\{x_1,x_2,\ldots,x_i,\ldots,x_n\}$ telles que $x_1\leqslant x_2\leqslant \ldots \leqslant x_n$.
+\begin{itemize}
+	\item Si $n$ est impair, la $\frac{n+1}{2}^{\text{i\`eme}}$ donn\'ee de la s\'erie est la m\'ediane.
+	\item Si $n$ est pair, tout nombre compris entre le $\frac{n}{2}^{\text{i\`eme}}$ \'el\'ement de la s\'erie et le suivant est \textbf{une} m\'ediane ; dans le cadre scolaire \textbf{la} m\'ediane sera la moyenne des deux donn\'ees centrales de la s\'erie :
+	      \[m=\frac{\left(\frac{n}{2}\right)^{\text{i\`eme}}+\left(\frac{n}{2}+1\right)^{\text{i\`eme}}}{2}\]
+\end{itemize}
+\end{definition}
+
+C'est cette m\'ediane qui sera attendue syst\'ematiquement dans les exercices et les \'evaluations.
+
+\medskip
+
+La m\'ediane a l'avantage de ne pas \^etre influenc\'ee par les valeurs extr\^emes. Elle n'a aucun avantage pratique dans les calculs, puisque, pour conna\^itre la m\'ediane d'une s\'erie constitu\'ee de l'agr\'egation de deux s\'eries, il faut n\'ecessairement re-ordonner la nouvelle s\'erie pour trouver sa m\'ediane, qui n'aura pas de lien avec les deux m\'edianes des deux s\'eries initiales.
+
+%\sautpage
+
+\section{Mesures de dispersion}
+
+ \begin{encadrer}\begin{Large}Elles visent \`a indiquer comment les donn\'ees de la s\'erie statistique sont dispers\'ees par rapport aux mesures centrales. \end{Large}\end{encadrer}
+
+\subsection{Valeurs extr\^emes}
+
+\begin{definition}
+Les valeurs extr\^emes d'une s\'erie quantitative sont ses valeurs \emph{minimale} et \emph{maximale} et l'\emph{\'etendue} est la diff\'erence entre les valeurs extr\^emes de la s\'erie.
+\end{definition}
+
+\subsection{Quartiles}
+
+\begin{definition*}[Quartiles dans le cas g\'en\'eral]
+Soit $S$ une s\'erie statistique quantitative.
+
+\begin{itemize}
+%\renewcommand{\labelitemii}{$-$}
+	\item On appelle \emph{premier quartile}, not\'e $Q_1$, tout r\'eel tel que
+			\begin{itemize}
+				\item au moins 25\% des valeurs de la s\'erie ont une valeur inf\'erieure ou \'egale \`a $Q_1$
+			\item
+			au moins 75\% des valeurs de la s\'erie ont une valeur sup\'erieure ou \'egale \`a $Q_1$
+			\end{itemize}
+	\item On appelle \emph{deuxi\`eme quartile}, not\'e $Q_2$, tout r\'eel tel que
+			\begin{itemize}
+				\item au moins 50\% des valeurs de la s\'erie ont une valeur inf\'erieure ou \'egale \`a $Q_2$
+			\item
+			au moins 50\% des valeurs de la s\'erie ont une valeur sup\'erieure ou \'egale \`a $m$
+			\end{itemize}
+		\item On appelle \emph{troisi\`eme quartile}, not\'e $Q_3$, tout r\'eel tel que
+			\begin{itemize}
+				\item au moins 75\% des valeurs de la s\'erie ont une valeur inf\'erieure ou \'egale \`a $Q_3$
+			\item
+			au moins 25\% des valeurs de la s\'erie ont une valeur sup\'erieure ou \'egale \`a $Q_3$
+			\end{itemize}
+      
+	
+\end{itemize}
+\end{definition*}
+
+\begin{rmqs}~
+\begin{itemize}
+ \item $Q_2$ est, par d\'efinition, la m\'ediane de la s\'erie.
+ \item On admettra que de tels nombres existent toujours.
+ \item La m\'ediane partage une s\'erie en deux sous-s\'eries ayant quasiment le m\^eme effectif (environ 50\,\%) ; les premier, troisi\`eme quartiles et la m\'ediane partageront une s\'erie en quatre sous-s\'eries ayant quasiment le m\^eme effectif (environ 25\,\%). 
+\end{itemize}
+
+ 
+\end{rmqs}
+
+Comme pour la m\'ediane, selon le nombre $n$ de donn\'ees dans la s\'erie, il y a parfois plusieurs possibilit\'es. Aussi on convient de prendre, dans le cadre scolaire\footnote{Ce sont aussi ces quartiles que prennent les statisticiens}, syst\'ematiquement les nombres suivants :
+
+\begin{definition}[Quartiles dans le cadre scolaire]
+ Soit $S$ une s\'erie statistique quantitative dont les donn\'ees sont ordonn\'ees dans l'ordre croissant. On appelle :
+ \begin{itemize}
+  \item \emph{premier quartile}, not\'e $Q_1$, \textbf{la premi\`ere valeur de la s\'erie} telle qu'au moins 25\,\% des valeurs de la s\'erie ont une valeur inf\'erieure ou \'egale \`a $Q_1$ ;
+  \item \emph{troisi\`eme quartile}, not\'e $Q_3$, \textbf{la premi\`ere valeur de la s\'erie} telle qu'au moins 75\,\% des valeurs de la s\'erie ont une valeur inf\'erieure ou \'egale \`a $Q_3$.
+ \end{itemize}
+\end{definition}
+
+Ce sont ces quartiles qui seront attendus syst\'ematiquement dans les exercices et les \'evaluations.
+
+\begin{rmq}
+ Si l'on adopte le m\^eme type de d\'efinition pour le deuxi\`eme quartile on ne tombe pas forc\'ement sur la valeur de la m\'ediane telle que d\'efinie dans le cadre scolaire.\\ Par exemple la s\'erie $S=\{1\,;\,2\,;\,3\,;\,4\}$ a pour m\'ediane $m=\frac{2+3}{2}=2,5$ et pour deuxi\`eme quartile $Q_2=2$ car c'est la premi\`ere valeur de la s\'erie telle que au moins 50\,\% des valeurs de la s\'erie lui sont inf\'erieures.
+\end{rmq}
+
+%\sautpage
+
+La propri\'et\'e suivante permet de trouver ais\'ement $Q_1$ et $Q_3$ :
+
+\begin{prop}
+Soit une s\'erie statistique quantitative comportant $n$ donn\'ees : $S=\{x_1,x_2,\ldots,x_i,\ldots,x_n\}$ telles que $x_1\leqslant x_2\leqslant\ldots \leqslant x_n$. Alors :
+\begin{itemize}
+	\item La donn\'ee de rang $\frac{1}{4}n$ (ou sa valeur approch\'ee par exc\`es \`a l'entier sup\'erieur si $\frac{1}{4}n$ n'est pas un entier) convient toujours comme premier quartile.
+	\item La donn\'ee de rang $\frac{3}{4}n$ (ou sa valeur approch\'ee par exc\`es \`a l'entier sup\'erieur si $\frac{3}{4}n$ n'est pas un entier) convient toujours comme troisi\`eme quartile.
+	\end{itemize}
+\end{prop}
+
+ On l'admettra.
+
+\sautpage
+
+\begin{exemples*} \label{statsexemple}~
+\begin{itemize}
+ \item S'il y a $n=29$ donn\'ees dans la s\'erie, rang\'ees dans l'ordre croissant :
+\begin{itemize}
+	\item $\frac{1}{4}\times29=7,25$ donc la huiti\`eme (valeur approch\'ee par exc\`es de 7,25) donn\'ee de la s\'erie convient comme premier quartile ;
+	\item $\frac{3}{4}\times29=21,75$
+	donc la vingt-deuxi\`eme (valeur approch\'ee par exc\`es de 21,75) donn\'ee de la s\'erie convient comme troisi\`eme quartile.
+	\end{itemize}
+ \item S'il y a $n=64$ donn\'ees dans la s\'erie, rang\'ees dans l'ordre croissant : 
+\begin{itemize}
+	\item $\frac{1}{4}\times64=16$
+	donc la seizi\`eme donn\'ee de la s\'erie convient comme premier quartile ;
+	\item $\frac{3}{4}\times64=48$
+	donc la quarante huiti\`eme donn\'ee de la s\'erie convient comme troisi\`eme quartile.
+	\end{itemize}
+\end{itemize}
+
+
+
+\end{exemples*}
+
+\subsection{Interquartiles}
+
+Une fois les premier et troisi\`eme quartiles disponibles, on d\'efinit l'\'ecart et l'intervalle interquartiles de la mani\`ere suivante :
+
+\begin{definition}
+ Soit $S$ une s\'erie statistique quantitative et $Q_1$ et $Q_3$ ses premier et troisi\`eme quartiles. On appelle :
+ \begin{itemize}
+  \item \emph{\'ecart interquartile} la diff\'erence $Q_3 - Q_1$ ;
+  \item \emph{intervalle interquartile} l'intervalle $[Q_1 \,;\, Q_3]$.
+ \end{itemize}
+
+\end{definition}
+
+
+%\sautpage
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Repr\'esentations graphiques}
+
+Si les mesures centrales et les mesures de dispersion ont pour but de r\'esumer une s\'erie statistique en quelques nombres, les repr\'esentations graphiques, elles, visent \`a la visualiser.
+
+\subsection{Diagramme \`a bâtons}
+
+On consid\`ere la s\'erie :
+%\vspace{-1em}
+\begin{footnotesize}\begin{center}
+\begin{tabular}{|*{22}{c|}}\hline
+Valeurs $x_i$ & 0 & 1 & 2& 3 & 4& 5& 6& 7 & 8 & 9  & 10 & 11& 12& 13& 14& 15& 16& 17& 18 & 19& 20 \\ \hline
+Effectifs $n_i$ & 3 & 5 & 6& 5 & 6& 7& 7& 10& 13& 20 & 25	& 21& 23& 12& 10& 5 & 7 & 5 & 3  & 2 & 1\\ \hline
+\end{tabular}
+\end{center}\end{footnotesize}
+
+ On obtient le diagramme \`a bâtons de la figure \ref{batons}, \vpageref{batons}.
+
+\begin{figure}[!hbtp]
+\centering
+\caption{Diagramme en bâtons}\label{batons}
+\def\xmin{-1} \def\xmax{20.6} \def\ymin{-5.6} \def\ymax{25.9}
+\psset{xunit=0.75cm,yunit=0.15cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%\psgrid[griddots=7,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+\psaxes[labels=all,labelsep=1pt,Dx=1,Dy=5]{->}(\xmax,\ymax)
+\psline[linewidth=1.5pt](0,0)(0,3)
+\psline[linewidth=1.5pt](1,0)(1,5)
+\psline[linewidth=1.5pt](2,0)(2,6)
+\psline[linewidth=1.5pt](3,0)(3,5)
+\psline[linewidth=1.5pt](4,0)(4,6)
+\psline[linewidth=1.5pt](5,0)(5,7)
+\psline[linewidth=1.5pt](6,0)(6,7)
+\psline[linewidth=1.5pt](7,0)(7,10)
+\psline[linewidth=1.5pt](8,0)(8,13)
+\psline[linewidth=1.5pt](9,0)(9,20)
+\psline[linewidth=1.5pt](10,0)(10,25)
+\psline[linewidth=1.5pt](11,0)(11,21)
+\psline[linewidth=1.5pt](12,0)(12,23)
+\psline[linewidth=1.5pt](13,0)(13,12)
+\psline[linewidth=1.5pt](14,0)(14,10)
+\psline[linewidth=1.5pt](15,0)(15,5)
+\psline[linewidth=1.5pt](16,0)(16,7)
+\psline[linewidth=1.5pt](17,0)(17,5)
+\psline[linewidth=1.5pt](18,0)(18,3)
+\psline[linewidth=1.5pt](19,0)(19,2)
+\psline[linewidth=1.5pt](20,0)(20,1)
+\end{pspicture*}
+
+\end{figure}
+
+\subsection{Diagrammes bas\'es sur la fr\'equence}
+
+ Les s\'eries statistiques peuvent aussi \^etre repr\'esent\'ees en diagrammes circulaires, semi-circulaires, rectangulaires, etc.
+L'aire de chaque modalit\'e devra \^etre proportionnelle \`a l'effectif de cette modalit\'e.
+Les fr\'equences permettent d'obtenir assez facilement la part du diagramme qui devra \^etre consacr\'ee \`a chaque modalit\'e.
+
+ Ainsi si on consid\`ere la s\'erie suivante :
+\begin{small}\begin{center}
+\begin{tabular}{|*{5}{c|}}\hline
+Donn\'ees & Blonds 	& Bruns & Ch\^atains & Roux  \\ \hline
+Effectifs $n_i$ & 25		& 57		&91		&23 \\ \hline
+\end{tabular}
+\end{center}            \end{small}
+
+ On a alors :
+\begin{small}\begin{center}
+\begin{tabular}{|>{\centering}m{4cm}|*{5}{c|}}\hline
+$x_i$ & Blonds 	& Bruns & Ch\^atains & Roux & Total \\ \hline
+$n_i$ & 29		& 57		&91		&23 & 200\\ \hline
+Fr\'equence $f_i$ & $\delair{\frac{29}{200}=0,145}$ & 0,285 & 0,455 & 0,115 & 1 \\ \hline
+Part d'un diagramme circulaire & $0,145\times 360 = 52,2\,\degre$ & 102,6\,\degre & 163,8\,\degre & 41,4\,\degre & 360\,\degre \\ \hline
+Part d'un diagramme semi-circulaire & $0,145\times 180 = 26,1\,\degre$ & 51,3\,\degre & 81,9\,\degre & 20,7\,\degre & 180\,\degre \\ \hline
+Part d'un rectangle de 10\,cm & $0,145\times 10 = 1,45$\,cm & 2,85\,cm &4,55\,cm & 1,15\,cm & 10\,cm \\ \hline
+Fr\'equence en pourcentage & $0,145=\frac{14,5}{100}= 14,5$\,\% & 28,5\,\% &45,5\,\% & 11,5\,\% & 100\,\% \\ \hline
+\end{tabular}
+\end{center}            \end{small}
+
+ On obtient les diagrammes de la figure %ci-dessous.%
+ \ref{statssemicirculaires}, \vpageref{statssemicirculaires}.
+
+\begin{figure}[!h]
+ \centering
+ \caption{Diagrammes circulaire, semi-circulaire et rectangulaire}\label{statssemicirculaires}
+ 
+ \begin{multicols}{2}
+%\centering
+\def\xmin{-3.25} \def\xmax{3.25} \def\ymin{-3.25} \def\ymax{3.25}
+\psset{xunit=1cm,yunit=1cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\pswedge(0,0){3}{0}{52.2}
+\pswedge(0,0){3}{52.2}{154.8}
+\pswedge(0,0){3}{154.8}{318.6}
+\pswedge(0,0){3}{318.6}{360}
+\rput(1.5;26.1){Blonds}
+\rput(1.5;103.5){Bruns}
+\rput(1.5;236.7){Ch\^atains}
+\rput(1.5;339.3){Roux}
+\end{pspicture*}
+%\centering
+\def\xmin{-4.25} \def\xmax{4.25} \def\ymin{-0.25} \def\ymax{4.25}
+\psset{xunit=1cm,yunit=1cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\pswedge(0,0){4}{0}{26.1}
+\pswedge(0,0){4}{26.1}{77.4}
+\pswedge(0,0){4}{77.4}{159.3}
+\pswedge(0,0){4}{159.3}{180}
+\rput(2;13.05){Blonds}
+\rput(2;51.75){Bruns}
+\rput(2;118.35){Ch\^atains}
+\rput(2;169.65){Roux}
+\end{pspicture*}
+\end{multicols}
+%\vspace{-2em}
+%\begin{figure}[!hbtp]
+
+
+%\begin{center}
+\def\xmin{-0.25} \def\xmax{10.25} \def\ymin{-0.25} \def\ymax{1.75}
+\psset{xunit=1cm,yunit=1cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\pspolygon[linewidth=1pt](0,0)(0,1.5)(1.45,1.5)(1.45,0)
+\pspolygon[linewidth=1pt](1.45,0)(1.45,1.5)(4.3,1.5)(4.3,0)
+\pspolygon[linewidth=1pt](4.3,0)(4.3,1.5)(8.85,1.5)(8.85,0)
+\pspolygon[linewidth=1pt](8.85,0)(8.85,1.5)(10,1.5)(10,0)
+\rput(0.725,0.75){Blonds}
+\rput(2.875,0.75){Bruns}
+\rput(6.575,0.75){Ch\^atains}
+\rput(9.425,0.75){Roux}
+\end{pspicture*}                %\end{center}
+ 
+ 
+\end{figure}
+
+
+
+%\FloatBarrier
+\sautpage
+
+
+\subsection{Diagramme en boite}
+
+ On peut repr\'esenter graphiquement les valeurs extr\^emes, les quartiles et la m\'ediane par un \emph{diagramme en boite}, appel\'e aussi \emph{boite \`a moustaches}, con\c{c}u de la mani\`ere suivante :
+\begin{itemize}
+	\item au centre une boite allant du premier au troisi\`eme quartile, s\'epar\'ee en deux par la m\'ediane ;
+	\item de chaque côt\'e une moustache allant du minimum au premier quartile pour l'une, et du troisi\`eme quartile au maximum pour l'autre.
+\end{itemize}
+
+La figure \ref{chap4moustaches}, \vpageref{chap4moustaches} en est un exemple.
+
+\begin{figure}[!h]
+ \centering
+ \caption{Exemple de diagramme en boite}\label{chap4moustaches}
+
+ \psset{xunit=0.6cm,yunit=0.6cm}
+\begin{pspicture}(-0.3,0)(20.5,3)
+\psaxes[labels=all,labelsep=1pt, Dx=1,Dy=1]{->}(0,0)(0,0)(20.5,0)
+
+\psline{*-}(2,2)(5,2)(5,2.5)(7,2.5)(7,1.5)(5,1.5)(5,2)
+\psline{*-}(18,2)(15,2)(15,2.5)(7,2.5)(7,1.5)(15,1.5)(15,2)
+\uput[d](2,2){min}
+\uput[d](18,2){max}
+\uput[d](5,1.5){$Q_1$}
+\uput[d](7,1.5){$m$}
+\uput[d](15,1.5){$Q_3$}
+
+\end{pspicture}
+
+\end{figure}
+
+\medskip
+
+Ce type de diagramme permet une interpr\'etation visuelle et rapide de la dispersion des s\'eries statistiques. Il
+permet \'egalement d'appr\'ecier des diff\'erences entre des s\'eries (lorsqu'elles ont des ordres de grandeurs
+comparables).
+
+\FloatBarrier
+
+\begin{rmqs}~
+\begin{itemize}
+	\item La hauteur des boites est arbitraire (on les fait parfois proportionnelles \`a l'effectif total de la s\'erie).
+	\item La boite contient les 50\% des donn\'ees centrales.
+	%\item On coupe parfois les moustaches de part et d'autre \`a la hauteur du premier et neuvi\`eme d\'ecile ; on fait alors appara\^itre les minimum et maximum par un point.
+\end{itemize}
+\end{rmqs}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\FloatBarrier
+
+
+%\sautpage
+
+
+\section{Exercices}
+
+%\begin{multicols}{2}
+\begin{exo}
+Dans chaque cas, calculer la moyenne, le mode et la m\'ediane de la s\'erie, et conseiller le narrateur sur la meilleure strat\'egie pour minimiser son r\'esultat aupr\`es de ses parents qui ne connaissent rien en statistique :
+\begin{enumerate}
+	\item \og{} Je n'ai eu que 8 sur 20 au contrôle de statistiques. Nous sommes 10 en
+classe. La meilleure note est 19. Ensuite il y a un 10, quatre 9, un 8 (moi) et trois 2. \fg
+	\item \og{} Encore un 8 ! Cette fois les notes sont 2, 3, 4, 5, 7, 8  (moi), 9, 9, 18, 19. \fg
+\item \og{} Toujours un 8 ! Cette fois il y a eu trois 7 et un 19, 18, 12, 11, 10, 8(moi) et 2. \fg
+\end{enumerate}
+\end{exo}
+
+
+\begin{exo}
+On donne la s\'erie suivante : \begin{center}
+11, 12,  13, 4, 17, 5, 13, 13, 5, 6, 6, 10, 10, 8, 9, 9, 11, 11, 14, 5, 14, 9, 9, 15, 7, 8, 15.                                                                                                                              \end{center}
+\begin{enumerate}
+	\item D\'eterminer la moyenne de la s\'erie.
+	\item D\'eterminer la m\'ediane et les quartiles de la s\'erie.
+	\item Repr\'esenter le diagramme en bo\^ite correspondant.
+	\item Quel est l'\'ecart interquartile de la s\'erie ?
+	\item Quel est l'intervalle interquartile de la s\'erie ?
+\end{enumerate}
+\end{exo}
+
+\sautpage
+
+\begin{exo}
+ Dans une classe, les notes sont les suivantes : \begin{center}
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.                                                                                                                          \end{center}
+\begin{enumerate}
+	\item D\'eterminer la moyenne de la s\'erie.
+	\item D\'eterminer la m\'ediane et les quartiles de la s\'erie.
+	\item Repr\'esenter le diagramme en bo\^ite correspondant.
+	\item Que remarque-t-on sur ce diagramme ? Pouvait-on s'y attendre ?
+\end{enumerate}
+\emph{On gardera en t\^ete l'allure de cette s\'erie \og canonique \fg{} o\`u les donn\'ees sont parfaitement r\'eparties qui pourra servir de r\'ef\'erence pour d\'ecrire les autres s\'eries : plus on s'\'eloigne de ce cas particulier, plus on pourra parler \og d'irr\'egularit\'e \fg{} de dispersion.}
+\end{exo}
+
+%\sautpage
+
+\begin{exo}
+Soit $S_1$, $S_2$ et $S_3$ les trois s\'eries de notes suivantes :
+\begin{itemize}
+ \item $S_1 =\{2\,;\,2\,;\,4\,;\,4\,;\,6\,;\,10\,;\,14\,;\,16\,;\,16\,;\,18\,;\,18\}$ ;
+ \item $S_2 =\{2\,;\,8\,;\,9\,;\,10\,;\,10\,;\,10\,;\,11\,;\,12\,;\,18\}$ ;
+ \item $S_3 =\{2\,;\,5\,;\,5\,;\,5\,;\,5\,;\,6\,;\,6\,;\,7\,;\,9\,;\,10\,;\,11\,;\,13\,;\,14\,;\,14\,;\,15\,;\,15\,;\,15\,;\,15\,;\,18\}$.
+\end{itemize}
+
+
+\begin{enumerate}
+ \item D\'eterminer les mesures centrales et les mesures de dispersion les plus adapt\'ees pour d\'ecrire les diff\'erences entre ces trois s\'eries.
+ \item Construire les diagrammes qui vous semblent les plus adapt\'es.
+ \item Commenter.
+\end{enumerate}
+\end{exo}%\end{multicols}
+
+\begin{exo}
+Un entomologiste a fait des relev\'es sur la taille de 50 courtili\`eres adultes dont voici les r\'esultats :
+\begin{center}
+33, 35, 36, 36, 37, 37, 37, 38, 38, 38, 39, 39, 39, 39, 40, 40, 40, 40, 40, 41, 41, 41, 41, 41, 41, 41, 42, 42, 42, 42, 42, 42, 43, 43, 43, 43, 44, 44, 44, 44, 45, 45, 45, 46, 46, 47, 47, 48, 48, 50.\end{center}
+\begin{enumerate}
+	\item Organiser les relev\'es dans le tableau d'effectifs suivant :\\
+\footnotesize \begin{tabular}{|m{2.5cm}|*{18}{c|}}\hline
+Valeur & 33&34&35&36&37&38&39&40&41&42&43&44&45&46&47&48&49&50\\ \hline
+Effectif&&&&&&&&&&&&&&&&&&\\ \hline
+Effectif cumul\'e croissant&&&&&&&&&&&&&&&&&&\\\hline
+\end{tabular} \normalsize
+\item Repr\'esenter les donn\'ees par un diagramme \`a bâtons. Un diagramme circulaire serait-il int\'eressant ?
+\item Calculer la moyenne de la s\'erie. D\'eterminer sa m\'ediane.
+D\'eterminer les premier et troisi\`eme quartiles.
+\item Construire le diagramme en bo\^ite correspondant.
+\item Interpr\'eter les r\'esultats obtenus.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+Dans une classe de 30 \'el\`eves, la moyenne des 20 filles est 11,5 et la moyenne des 10 gar\c{c}ons est 8,5. Donner la moyenne de classe en prouvant la validit\'e de votre calcul.
+\end{exo}
+
+\sautpage
+
+\begin{exo}
+On a relev\'e le prix de vente d'un CD et le nombre de CD vendus chez diff\'erents fournisseurs. Les r\'esultats forment une s\'erie statistique \`a une variable donn\'ee par le tableau ci-dessous.
+\begin{center}
+\begin{tabular}{|*{6}{c|}}\hline
+Prix de vente (en \euro) & 15& 16&17&18&19\\ \hline
+Nombre de CD vendus & 83&48&32&20&17 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+	\item Quelles sont les diff\'erentes valeurs de la s\'erie.
+	\item Donner la fr\'equence correspondant \`a chacune de ces valeurs.
+	\item Donner la moyenne et la m\'ediane de la s\'erie. Que repr\'esentent ces nombres ?
+	\item Repr\'esenter la s\'erie par un diagramme semi-circulaire.
+\end{enumerate}
+\end{exo}
+
+
+
+\begin{exo}\label{chap4entreprises}
+Dans deux entreprises $A$ et $B$, les employ\'es sont
+class\'es en deux cat\'egories : ouvriers et cadres.\\
+Le tableau \ref{chap4entreprisestable}, \vpageref{chap4entreprisestable}, donne la
+r\'epartition des employ\'es en fonction de leur
+cat\'egorie professionnelle et de leur salaire
+mensuel net, en euros.
+
+\begin{table}[!h]
+ \centering
+ \caption{Salaires des entreprise $A$ et $B$ de l'exercice \ref{chap4entreprises}}\label{chap4entreprisestable}
+
+ %\medskip
+ 
+ \begin{multicols}{2}
+ \textbf{Entreprise $A$}
+
+\vskip 0.5em
+
+\begin{tabular}{|*{4}{c|}}
+\hline
+Salaires & 1\,500 & 2\,500 & 3\,500 \\ \hline
+Ouvriers & 114 & 66 & 0 \\ \hline
+Cadres & 0 & 8 & 12 \\ \hline
+\end{tabular}
+
+\sautcol
+
+\textbf{Entreprise $B$}
+
+\vskip 0.5em
+
+\begin{tabular}{|*{4}{c|}}
+\hline
+Salaires & 1\,500 & 2\,500 & 3\,500 \\ \hline
+Ouvriers & 84 & 42 & 0 \\ \hline
+Cadres & 0 & 12 & 12 \\ \hline
+\end{tabular}
+\end{multicols}
+ 
+ \end{table}
+
+
+\begin{enumerate}
+	\item
+\begin{enumerate}
+	\item Calculer la moyenne des salaires de tous
+les employ\'es de l'entreprise $A$
+\item Calculer la moyenne des salaires des
+ouvriers de l'entreprise $A$
+\item Calculer la moyenne des salaires des
+cadres de l'entreprise $A$
+\end{enumerate}
+\item Faire les m\^emes calculs pour l'entreprise $B$
+\item Le P.D.G. de l'entreprise $A$ dit \`a celui de l'entreprise $B$ : \og Mes employ\'es sont mieux pay\'es que les vôtres. \fg
+
+\og Faux \fg r\'epond ce dernier, \og mes ouvriers sont mieux pay\'es et mes cadres \'egalement. \fg\\
+Expliquer ce paradoxe.
+\end{enumerate}
+
+
+
+\end{exo}
+
+
+
+\begin{exo}
+  Le recensement de 1\,999 a permis d'observer l'existence en France de dix communes
+de plus de $200\, 000$ habitants. Le tableau ci-dessous donne la liste de ces communes et
+de leurs populations en milliers d'habitants.
+
+\begin{tabular}{cc}
+ \begin{minipage}[l]{0.70\linewidth}
+
+\begin{enumerate}
+	\item Quelle est l'\'etendue de cette s\'erie statistique ? Que devient l'\'etendue quand on
+retire Paris de la liste ?
+\item Comparer moyenne et m\'ediane des populations de ces dix villes. Que constate-ton
+? Comment expliquer ceci ?
+\item Faire de m\^eme si on retire Paris de la liste. Que constatez-vous maintenant ?
+\item Que choisiriez-vous entre \og moyenne \'etendue \fg et \og m\'ediane \'etendue \fg pour
+r\'esumer cette s\'erie statistique ? Expliquez votre choix.
+\end{enumerate}
+ \end{minipage}
+ &
+ \begin{minipage}[r]{0.30\linewidth}
+  \begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Paris & $2\,116$ \\ \hline
+Marseille & 798 \\ \hline
+Lyon & 445 \\ \hline
+Toulouse & 391 \\ \hline
+Nice & 341 \\ \hline
+Nantes & 269 \\ \hline
+Strasbourg & 264 \\ \hline
+Montpellier & 225 \\ \hline
+Bordeaux & 215 \\ \hline
+Rennes & 206 \\ \hline
+\end{tabular}
+\end{center}
+ \end{minipage}
+\end{tabular}
+
+
+
+\end{exo}
+%\end{multicols}
+
+\sautpage
+
+\begin{exo}\label{act3}
+Les tableaux dont il est question dans cet exercice sont ceux de la page \vpageref{tableact3}.
+\begin{enumerate}
+	\item Le tableau 1 pr\'esente la r\'epartition des salaires mensuels dans une entreprise (\emph{source : DoC TICE-MEN}).\\
+Calculer la moyenne des salaires de cette entreprise et d\'eterminer la m\'ediane.
+\item Une erreur a \'et\'e commise dans les relev\'es : les effectifs correspondant aux salaires de 1\,100\,\euro{} et 1\,400\,\euro{} ont
+\'et\'e permut\'es. Les donn\'ees exactes sont celles du tableau 2.\\
+Comparer les moyenne et m\'ediane de cette s\'erie \`a celles de la pr\'ec\'edente. Les variations \'etaient-elles
+pr\'evisibles ?
+\item R\^evons $\ldots$ 35 personnes ont un salaire de 3\,400\,\euro{} et l'effectif total est inchang\'e.
+Utiliser le tableau 3 pour imaginer une r\'epartition des effectifs telle que la m\'ediane ne soit pas modifi\'ee :
+comment va varier la moyenne ?\\
+Quelle r\'epartition des effectifs respectant ces contraintes donnera la moyenne des salaires la plus \'elev\'ee
+(calculer alors cette moyenne) ?
+Quelle r\'epartition des effectifs respectant ces contraintes donnera la moyenne des salaires la moins \'elev\'ee
+(calculer alors cette moyenne) ?\\
+Mathias pr\'etend qu'avec 35 personnes ayant un salaire de 3\,400\,\euro{}, la moyenne est obligatoirement plus
+\'elev\'ee. A-t-il raison ?
+\end{enumerate}
+
+\begin{table}[!h]
+\centering
+\caption{Donn\'ees de l'exercice \ref{act3}}\label{tableact3}
+
+
+\begin{multicols}{3}
+\centering
+\footnotesize
+\textbf{Tableau 1}
+\vskip 0.5em
+\begin{tabular}{|*{3}{m{1.3cm}|}}
+\hline
+Salaire en \euro{} & Effectif & Effectif cumul\'e croissant \\ \hline
+$1\,100$ &18 & 18\\ \hline
+$1\,200$ & 15& 33\\ \hline
+$1\,300$ & 20&53 \\ \hline
+$1\,400$ & 10&63 \\ \hline
+$1\,500$ & 25&88 \\ \hline
+$1\,600$ & 12&100 \\ \hline
+$1\,700$ & 4&104 \\ \hline
+$1\,800$ & 5&109 \\ \hline
+$1\,900$ & 3&112 \\ \hline
+$2\,000$ & 2&114 \\ \hline
+$2\,100$ & 6&120 \\ \hline
+$2\,200$ & 7&127 \\ \hline
+$2\,300$ & 0&127 \\ \hline
+$2\,400$ & 2&129 \\ \hline
+$2\,500$ & 0&129 \\ \hline
+$2\,600$ & 3&132 \\ \hline
+$2\,700$ & 0&132 \\ \hline
+$2\,800$ & 3&135 \\ \hline
+$2\,900$ & 0&135 \\ \hline
+$3\,000$ & 0&135 \\ \hline
+$3\,100$ & 3&138 \\ \hline
+$3\,200$ & 0&138 \\ \hline
+$3\,300$ & 5&143 \\ \hline
+$3\,400$ & 8&151  \\ \hline
+\end{tabular}
+
+\sautcol
+
+\textbf{Tableau 2}
+\vskip 0.5em
+\begin{tabular}{|*{3}{m{1.3cm}|}}
+\hline
+Salaire en \euro{} & Effectif & Effectif cumul\'e croissant \\ \hline
+$1\,100$ &\textbf{10}& \\ \hline
+$1\,200$ & 15& \\ \hline
+$1\,300$ & 20& \\ \hline
+$1\,400$ & \textbf{18}& \\ \hline
+$1\,500$ & 25& \\ \hline
+$1\,600$ & 12& \\ \hline
+$1\,700$ & 4& \\ \hline
+$1\,800$ & 5& \\ \hline
+$1\,900$ & 3& \\ \hline
+$2\,000$ & 2& \\ \hline
+$2\,100$ & 6& \\ \hline
+$2\,200$ & 7& \\ \hline
+$2\,300$ & 0& \\ \hline
+$2\,400$ & 2& \\ \hline
+$2\,500$ & 0& \\ \hline
+$2\,600$ & 3& \\ \hline
+$2\,700$ & 0& \\ \hline
+$2\,800$ & 3& \\ \hline
+$2\,900$ & 0& \\ \hline
+$3\,000$ & 0& \\ \hline
+$3\,100$ & 3& \\ \hline
+$3\,200$ & 0& \\ \hline
+$3\,300$ & 5& \\ \hline
+$3\,400$ & 8&  \\ \hline
+\end{tabular}
+
+\sautcol
+
+\textbf{Tableau 3}
+\vskip 0.5em
+\begin{tabular}{|*{3}{m{1.3cm}|}}
+\hline
+Salaire en \euro{}& Effectif & Effectif cumul\'e croissant \\ \hline
+$1\,100$ & & \\ \hline
+$1\,200$ & & \\ \hline
+$1\,300$ & & \\ \hline
+$1\,400$ & & \\ \hline
+$1\,500$ & & \\ \hline
+$1\,600$ & & \\ \hline
+$1\,700$ & & \\ \hline
+$1\,800$ & & \\ \hline
+$1\,900$ & & \\ \hline
+$2\,000$ & & \\ \hline
+$2\,100$ & & \\ \hline
+$2\,200$ & & \\ \hline
+$2\,300$ & & \\ \hline
+$2\,400$ & & \\ \hline
+$2\,500$ & & \\ \hline
+$2\,600$ & & \\ \hline
+$2\,700$ & & \\ \hline
+$2\,800$ & & \\ \hline
+$2\,900$ & & \\ \hline
+$3\,000$ & & \\ \hline
+$3\,100$ & & \\ \hline
+$3\,200$ & & \\ \hline
+$3\,300$ & & \\ \hline
+$3\,400$ & \textbf{35}&\textbf{151} \\ \hline
+\end{tabular}
+
+\normalsize
+\end{multicols}
+\end{table}
+\end{exo}
+
+\sautpage
+
+\begin{multicols}{2}
+
+\begin{exo}
+ Des salari\'es d'une entreprise se sont r\'eunis dans un restaurant o\`u ils sont les seuls clients pour f\^eter le changement de leur grille de salaire : d\'esormais ils touchent tous 1\,700\,\euro{} par mois.
+ \begin{enumerate}
+  \item Quelle est la moyenne et la m\'ediane de la s\'erie constitu\'ee par leurs salaires.
+  \item Bill Gates, qui a un salaire bien plus grand, entre dans le restaurant : que devient la moyenne et la m\'ediane de la s\'erie constitu\'ee par leurs salaires et celui de Bill Gates.
+ \end{enumerate}
+
+\end{exo}
+
+\begin{exo}
+ D'apr\`es Wikip\'edia, le salaire m\'edian des salari\'es de 25 \`a 55 ans en France en 2008 \'etait de 1\,655\,\euro{} nets et le salaire moyen de 2\,069\,\euro{} nets.\\
+ Conjecturer ce qui peut expliquer cette diff\'erence.
+\end{exo}
+
+\begin{exo}
+Trois s\'eries statistiques, comportant 10 donn\'ees chacune, ont les param\`etres
+suivants :
+\begin{itemize}
+	\item S\'erie A : Minimum 10 ; maximum 50 ; moyenne 28 ; m\'ediane 20.
+	\item S\'erie B : Minimum 10 ; maximum 50 ; moyenne 30 ; m\'ediane 30.
+	\item S\'erie C : Minimum 10 ; maximum 50 ; moyenne 21,5 ; m\'ediane 25.
+\end{itemize}
+Conjecturer pour chacune de ces s\'eries comment peuvent \^etre r\'eparties les
+donn\'ees.
+\end{exo}
+
+\sautcol
+
+%\sautpage
+
+\begin{exo}\label{chap4troisclassesenonce}
+Le tableau ci-dessous %\ref{chap4troisclasses}, \vpageref{chap4troisclasses}, 
+est le relev\'e de trois s\'eries de notes obtenues en math\'ematiques dans des classes de
+seconde (\`a effectifs tr\`es r\'eduits) lors d'un contrôle sur les statistiques.
+
+%\begin{table}[!h]
+% \centering
+% \caption{S\'eries de l'exercice \ref{chap4troisclassesenonce}}\label{chap4troisclasses}
+
+% \medskip
+\begin{center}
+\begin{small}
+\begin{tabular}{|c|c|c|}
+\hline
+Classe 1 & Classe 2 & Classe 3 \\ \hline
+2&2&8\\ \hline
+5&3&8\\ \hline
+6&4&9\\ \hline
+7&4&9\\ \hline
+9&4&10\\ \hline
+10&9&10\\ \hline
+10&10&10\\ \hline
+12&12&12\\ \hline
+13&12&13\\ \hline
+14&12&15\\ \hline
+15&12&15\\ \hline
+15&12&16\\ \hline
+16&13&17\\ \hline
+19&13&18\\ \hline
+\end{tabular}             \end{small}\end{center}
+%\end{table}
+
+\begin{enumerate}
+	\item D\'eterminer la note m\'ediane de chaque classe.
+	\item \textbf{SANS LA CALCULER}, conjecturer pour chaque s\'erie si la moyenne sera
+sup\'erieure, inf\'erieure ou proche de la m\'ediane.
+\end{enumerate}
+
+
+
+\end{exo}
+\end{multicols}
+
+%\sautpage
+
+\begin{exo}
+Le tableau suivant donne les effectifs des notes obtenues dans une classe en Math\'ematiques et en Histoire-G\'eographie :
+\begin{center}
+\begin{small}\begin{tabular}{|*{22}{c|}}
+\hline
+Notes & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7&  8 & 9 &10 &11 &12& 13 &14& 15 &16& 17& 18 &19 &20 \\ \hline
+Maths& 0& 0 &0 &0 &1& 0& 1 &1 &3 &4& 4& 1& 3& 2&2 &1 &1& 0& 0& 0& 0\\ \hline
+H.-G. &0 &1& 0& 0 &2 &0 &1 &2 &1& 1& 4& 2& 2& 0 &3& 2 &1 &0& 1& 0& 1\\ \hline
+\end{tabular}\end{small}
+\end{center}
+ Le but de l'exercice est de comparer la dispersion des notes en Maths et en Histoire-G\'eographie.
+
+\begin{enumerate}
+	\item Calculer $\overline{x}$ et $\overline{x'}$ les moyennes respectives de Maths et d'Histoire-G\'eographie.
+	\item Calculer m\'ediane $m_e$ et quartiles $Q_1$ et $Q_3$ en Maths.
+	\item Calculer m\'ediane $m'_e$ et quartiles $Q'_1$ et $Q'_3$ en Histoire-G\'eographie.
+	\item Repr\'esenter les diagrammes en bo\^ite des notes en Maths et en Histoire-G\'eographie.
+	\item Interpr\'eter les r\'esultats obtenus.
+\end{enumerate}
+
+\end{exo}
+
+
+%\begin{exo}
+%Le tableau suivant donne les effectifs des notes obtenues dans une classe en
+%Math\'ematiques et en Sciences de la vie et de la terre :
+%\begin{center}
+%\begin{tabular}{|*{22}{c|}}
+%\hline
+%Note & 0 &1 &2 &3 &4 &5 &6 &7 &8 &9 &10 &11 &12 &13 &14 &15 &16 &17 &18 &19 &20\\ \hline
+%Maths& 0 &1 &0 &2 &0 &1 &3 &0 &5 &0 &2 &1 &1 &0 &0 &0 &2 &1 &1 &0 &2\\ \hline
+%SVT& 0 &1& 0 &0 &0 &0 &0& 4& 4& 1 &0 &3 &1 &4 &2 &0 &1 &0 &0 &0 &1\\ \hline
+%\end{tabular}
+%\end{center}%\vspace{-1em}
+%\begin{enumerate}
+%	\item Calculer $\overline{x}$ et $\overline{x'}$ les moyennes respectives de Maths et de SVT.
+%	\item Calculer m\'ediane $m_e$ et quartiles $Q_1$ et $Q_3$ en Maths.
+%	\item Calculer m\'ediane $m'_e$ et quartiles $Q'_1$ et $Q'_3$ en SVT.
+%	\item Interpr\'eter les r\'esultats obtenus.
+%\end{enumerate}
+%\end{exo}
+
+%\end{multicols}
+
+%\sautpage
+
+

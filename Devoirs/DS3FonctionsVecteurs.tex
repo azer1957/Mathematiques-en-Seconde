@@ -1,0 +1,186 @@
+\cleardoublepage
+
+\fancyhead{} % Delete current head settings
+
+		\fancyhead[LE,LO]{\footnotesize \em Nom : }
+		\fancyhead[RE,RO]{\scriptsize \em Lundi 21 novembre 2016 -- 1h00}
+		\fancyfoot{}
+
+\setcounter{ds}{3} %c'est le numéro du DS	
+\setcounter{chaptertemp}{\thechapter} %stocke le numéro du chapitre courant dans un compteur temporaire
+\stepcounter{chapter} % avance le compteur de 1 et surtout remet tous les compteurs dépendant du chapitre à 0, dont les numéros d'exercice
+\setcounter{chapter}{\theds} % met le compteur de chapitre au numéro du ds
+		
+    
+\section*{Devoir surveill\'e n°\theds}\label{DS3}
+{\centering \large G\'en\'eralit\'es sur les fonctions -- Vecteurs}
+\addstarredchapter{Devoir surveill\'e n°\theds : G\'en\'eralit\'es sur les fonctions -- Vecteurs} 
+
+\begin{encadrer}
+ La calculatrice n'est pas autorsi\'ee.
+\end{encadrer}
+
+
+\begin{exo}[11,5 points]\label{ds3exo1}
+On donne ci-dessous le tableau de variations d'une fonction $f$ d\'efinie sur l'intervalle $[-10\,;\,8]$ :
+
+$$\tabvar{%
+\tx{x}&\tx{-10}&&\tx{-6}&&\tx{-3}&&\tx{1}&&\tx{5}&&\tx{8}\cr
+\tx{f}&\txh{3}&\fdh&\tx{0}&\fdb&\txb{-3}&\fmb&\tx{0}&\fmh&\txh{4}&\fd&\txb{2}\cr
+}$$
+
+
+%\medskip
+%\textsc{\textbf{Partie A}} (9 points)\textbf{.}
+\begin{enumerate}
+ \item Dans chacun des cas suivants, s'il est possible de r\'epondre, compl\'eter par \og < \fg{}, \og > \fg{} ou \og = \fg{} et justifier sa r\'eponse dans l'espace pr\'evu \`a cet effet. Sinon mettre une croix et ne pas justifier.
+ \begin{multicols}{2}
+ \begin{enumerate}
+  \item $f(7)\ldots\ldots f(6)$\\
+	.\dotfill.\\
+	.\dotfill.\\.\dotfill.\\
+	.\dotfill.
+  \item $f(-2)\ldots\ldots f(0)$\\
+	.\dotfill.\\
+	.\dotfill.\\.\dotfill.\\
+	.\dotfill. 
+    \item $f(-4)\ldots\ldots f(-2)$\\
+	.\dotfill.\\
+	.\dotfill.\\.\dotfill.\\
+	.\dotfill. %\sautcol
+  \item $f(-5)\ldots\ldots1$\\
+	.\dotfill.\\
+	.\dotfill.\\.\dotfill.\\
+	.\dotfill.
+  \item $f(-1)\ldots\ldots f(2)$\\
+	.\dotfill.\\
+	.\dotfill.\\.\dotfill.\\
+	.\dotfill. 
+  \item $f(4)\ldots\ldots f(6)$\\
+	.\dotfill.\\
+	.\dotfill.\\.\dotfill.\\
+	.\dotfill. 
+ \end{enumerate} 
+\end{multicols}
+ \item Lorsque c'est possible, d\'eterminer l'ensemble des solutions de chaque in\'equation ou, s'il n'est pas possible de d\'eterminer cet ensemble, mettre une croix. Dans tous les cas on n'attend aucune justification.
+\begin{multicols}{2}
+ \begin{enumerate}
+  \item $f(x)\leqslant0$\\
+	.\dotfill.\\
+	.\dotfill.
+   \item $f(x)\leqslant 4$\\
+	.\dotfill.\\
+	.\dotfill. \sautcol
+  \item $f(x)>5$\\
+	.\dotfill.\\
+	.\dotfill. 
+  \item $f(x)> 3$\\
+	.\dotfill.\\
+	.\dotfill.
+ \end{enumerate} 
+\end{multicols}
+ \item D\'eterminer le signe de $f(x)$ selon les valeurs de $x$. \emph{On pourra pr\'esenter sa r\'eponse sous la forme d'un tableau.}
+.\dotfill.\\
+.\dotfill.\\
+.\dotfill.\\
+.\dotfill.
+\end{enumerate}
+\end{exo}
+
+\medskip
+
+\hrule
+
+\sautpage
+
+\begin{exo}[3,5 points]\label{ds3exo2}
+Soit $f$ la fonction d\'efinie pour tout nombre $x$ par $f : x\longmapsto 3x^2-x+1$.
+\begin{enumerate}
+ \item Calculer les valeurs exactes de $f(x)$ pour les valeurs de $x$ suivantes, en d\'etaillant les calculs :
+ \begin{multicols}{2}
+ \begin{enumerate}
+  \item $x=1$ \dotfill \\
+  .\dotfill.\\
+  .\dotfill.\\
+  .\dotfill.
+  \item $x=2$ \dotfill \\
+  .\dotfill.\\
+  .\dotfill.\\
+  .\dotfill.
+  \item $x=-1$ \dotfill \\
+  .\dotfill.\\
+  .\dotfill.\\
+  .\dotfill.
+  \item $x=1+\sqrt{2}$ \dotfill \\
+  .\dotfill.\\
+  .\dotfill.\\
+  .\dotfill.
+ \end{enumerate}
+ \end{multicols}
+ \item R\'esoudre $f(x)=1$.\dotfill \\
+  .\dotfill.\\
+  .\dotfill.\\
+  .\dotfill.
+\end{enumerate}
+
+ 
+\end{exo}
+
+\medskip
+
+\hrule
+
+\begin{exo}[5 points]\label{ds2exo3}
+On donne le motif ci-dessous :
+\begin{center}
+\psset{xunit=0.75cm,yunit=0.75cm}
+\def\xmin{-3.1} \def\xmax{8.1} \def\ymin{-3.1} \def\ymax{7.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](\xmin,\ymin)(\xmax,\ymax)
+
+\psline[linewidth=1.2pt](0,2)(1,4)(5,4)(4,2)(4,0)(0,0)(0,2)
+
+\uput[l](0,2){$A$}
+\uput[ul](1,4){$B$}
+\uput[ur](5,4){$C$}
+\uput[r](4,2){$D$}
+\uput[dr](4,0){$E$}
+\uput[dl](0,0){$F$}
+
+\end{pspicture*}
+\end{center}
+
+\emph{On n'attend aucune justification.}
+
+\begin{enumerate}
+ \item En utilisant uniquement des points du motif, citer dans chacun des cas suivants \underline{un} vecteur \'egal au vecteur propos\'e :
+ \begin{multicols}{2}
+  \begin{enumerate}
+   \item $\V{AB}$.\dotfill \\
+  .\dotfill.
+   \item $\V{ED}+\V{DA}$.\dotfill \\
+  .\dotfill.
+  \item $\V{AD}+\V{AB}$.\dotfill \\
+  .\dotfill.
+  \item $\V{CB}+\V{FA}$.\dotfill \\
+  .\dotfill.
+  \end{enumerate}
+
+ \end{multicols}
+ \item Construire sur le quadrillage, en vert, un repr\'esentant du vecteur $\V{u}=\V{FA}+\V{FE}+\V{CE}$.
+\end{enumerate}
+
+\end{exo}
+
+\medskip
+
+\hrule
+
+
+
+
+
+
+
+
+\setcounter{chapter}{\thechaptertemp} % remet le numéro de chapitre à ce qu'il était

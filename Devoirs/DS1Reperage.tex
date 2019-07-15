@@ -1,0 +1,167 @@
+\cleardoublepage
+
+\fancyhead{} % Delete current head settings
+
+		\fancyhead[LE,LO]{\footnotesize \em Nom : }
+		\fancyhead[RE,RO]{\scriptsize \em Vendredi 23 septembre 2016 -- 1h00}
+		\fancyfoot{}
+
+\setcounter{ds}{1} %c'est le numéro du DS	
+\setcounter{chaptertemp}{\thechapter} %stocke le numéro du chapitre courant dans un compteur temporaire
+\stepcounter{chapter} % avance le compteur de 1 et surtout remet tous les compteurs dépendant du chapitre à 0, dont les numéros d'exercice
+\setcounter{chapter}{\theds} % met le compteur de chapitre au numéro du ds
+		
+    
+\section*{Devoir surveill\'e n°\theds}\label{DS1}
+{\centering \large Rep\'erage}
+\addstarredchapter{Devoir surveill\'e n°\theds : Rep\'erage} 
+
+\begin{exo}[7 points]\label{ds1exo1}
+Le plan est muni d'un rep\`ere quelconque $(O,I,J)$ comme indiqu\'e sur la figure \ref{ds2exo1fig} \vpageref{ds2exo1fig}.
+
+\begin{enumerate}
+ \item Tracer et graduer les axes du rep\`ere.
+ \item Sans justifier, lire les coordonn\'ees des points $A$, $B$, $C$ et $D$.
+ \item On donne : $M\,(-1\,;\,1)$, $N\,(2\,;\,2)$, $P\,(-1\,;\,-2)$ et $Q\,(2\,;\,-1)$
+	\begin{enumerate}
+	 \item Placer les points dans le rep\`ere.
+	 \item Montrer que le quadrilat\`ere $MNQP$ est un parall\'elogramme.
+	\end{enumerate}
+\end{enumerate}
+
+\begin{figure}[htbp]
+ \centering
+ \caption{Figure de l'exercice \ref{ds2exo1}}\label{ds2exo1fig}
+
+
+
+\psset{xunit=1cm , yunit=1cm}
+\def\xmin{-0.5} \def\xmax{15.5} \def\ymin{-0.5} \def\ymax{9.5}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+%\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+%\psaxes[labels=all,labelsep=1pt, Dx=1,Dy=1]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+
+\multido{\i=0+1}{18}{%
+\psline[linestyle=dotted](\i,\ymin)(\i,\ymax)
+\psset{algebraic=true}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {x*0.5-8+\i}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {-x*0.5+16-\i}}
+
+%\psline{->}(7,4.5)(7,6.5)
+%\psline(7,\ymin)(7,\ymax)
+%\rput{90}(7.3,5.5){$\vec{i}$}
+%\psline{->}(7,4.5)(6,4)
+%\psplot[algebraic=true]{\xmin}{\xmax} {0.5*x+1}
+%\rput{90}(6.7,4){$\vec{j}$}
+\psdots[dotstyle=x, dotscale=2.0000](5,1.5)(4,5)(9,8.5)(12,3)(7,4.5)(7,5.5)(5,3.5)%(6,2)(5,6.5)(9,4.5)(8,9)
+
+\rput{90}(7.2,4.3){$O$}
+\rput{90}(7.2,5.7){$I$}
+\rput{90}(5.2,3.8){$J$}
+\rput{90}(5.2,1.7){$A$}
+\rput{90}(4.2,5.2){$B$}
+\rput{90}(9.2,8.7){$C$}
+\rput{90}(12.2,3.2){$D$}
+
+%\rput{90}(6.2,2.2){$M$}
+%\rput{90}(5.2,6.7){$N$}
+%\rput{90}(9.2,4.7){$P$}
+%\rput{90}(8.2,9.2){$Q$}
+\end{pspicture*}
+\end{figure}
+\end{exo}
+
+\medskip
+
+\hrule
+
+\begin{exo}[3 points]\label{ds1exo2}
+ Que fait l'algorithme suivant, en rapport avec le chapitre \og Rep\'erage \fg{} ?\\ \emph{On indiquera pr\'ecis\'ement ce que repr\'esentent les nombres $a$, $b$, $c$, $d$, $e$ et $f$ dans son explication.
+}
+\begin{algo}
+ \begin{verbatim}
+  ENTREES
+    a, b, c, d : nombres
+  INSTRUCTIONS
+    e prend la valeur (a+c)/2
+    f prend la valeur (b+d)/2
+  SORTIES
+    Afficher e
+    Afficher f
+ \end{verbatim}
+
+\end{algo}
+\end{exo}
+
+
+\medskip
+
+%\hrule
+
+\begin{exo}[10 points]\label{ds1exo3}
+Le rep\`ere $(O,I,J)$ sur la figure \ref{ds1exo3fig} \vpageref{ds1exo3fig} est orthonorm\'e. \\ On consid\`ere les points $A\,(-3\,;\,2)$, $B\,(-1\,;\,6)$ et $C\,(3\,;\,8)$.\\
+ \emph{On compl\`etera la figure au fur et \`a mesure des questions avec les \'eventuels points mentionn\'es dans les questions.}
+\begin{enumerate}
+ \item Placer les points $A$, $B$ et $C$ dans le rep\`ere.
+ \item \begin{enumerate}
+        \item Montrer que $K\,(0\,;\,5)$ est le milieu de $[AC]$.
+	\item D\'eterminer les coordonn\'ees de $D$ sachant que $K$ est le milieu de $[BD]$.
+	\item Que peut-on d\'eduire des deux questions pr\'ec\'edentes concernant la nature du quadrilat\`ere $ABCD$ ? \emph{Justifier.}
+       \end{enumerate}
+ \item \begin{enumerate}
+        \item D\'eterminer quelle est la nature du triangle $AKB$.
+        \item Que peut-on en d\'eduire concernant la nature du quadrilat\`ere $ABCD$ ? \emph{Justifier.}
+       \end{enumerate}
+
+\end{enumerate}
+
+\end{exo}
+
+
+%\hrulefill
+
+
+ 
+ \begin{figure}[!h]
+  \centering
+  \caption{Rep\`ere de l'exercice \ref{ds1exo3}}\label{ds1exo3fig}
+
+
+    \def\xmin{-6.1} \def\xmax{9.1} \def\ymin{-4.6} \def\ymax{9.6}
+\psset{unit=1cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psset{unit=0.5cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.5pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-12,-9)(18,19)
+\psset{unit=1cm}
+\psaxes[labels=all,labelsep=1pt, Dx=1,Dy=1]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\psdots(0,0)(1,0)(0,1)%(-1,2)(5,-1)(2,5)(-4,8)(-1,6.5)(2,0.5)(1,4)
+%\psline{->}(0,0)(1,0)
+%\psline{->}(0,0)(0,1)
+%\uput[d](0.5,0){$\vec{\imath}$}
+%\uput[l](0,0.5){$\vec{\jmath}$}
+\uput[dl](0,0){$O$}
+\uput[u](1,0){$I$}
+\uput[r](0,1){$J$}
+%\uput[ul](-1,2){$A$}
+%\uput[ur](5,-1){$B$}
+%\uput[dr](2,5){$C$}
+%\uput[dl](-4,8){$D$}
+%\uput[dr](-1,6.5){$I$}
+%\uput[ur](2,0.5){$J$}
+%\uput[dl](1,4){$M$}
+
+
+%\psline(1,2)(5,2)(4,0)(0,0)(1,2)
+\end{pspicture*}                \end{figure}
+
+
+
+%\FloatBarrier
+
+
+
+
+
+
+\setcounter{chapter}{\thechaptertemp} % remet le numéro de chapitre à ce qu'il était

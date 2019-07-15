@@ -1,0 +1,192 @@
+
+
+
+
+\fancyhead{} % Delete current head settings
+
+\fancyhead{} % efface les entêtes pr\'ec\'edentes
+%\fancyhead[LE,RO]{\footnotesize \em \rightmark} % section en entête
+\fancyhead[RE,LO]{\scriptsize \em Seconde} % classe et ann\'ee en entête
+
+%\setcounter{ds}{1} %c'est le num\'ero du DS
+%\setcounter{chaptertemp}{\thechapter} %stocke le num\'ero du chapitre courant dans un compteur temporaire
+%\stepcounter{chapter} % avance le compteur de 1 et surtout remet tous les compteurs d\'ependant du chapitre à 0, dont les num\'eros d'exercice
+%\setcounter{chapter}{\theds} % met le compteur de chapitre au num\'ero du ds
+
+\chapter{Boucle \og pour \fg}
+
+
+%\pagenumbering{roman} %\setcounter{page}{1}
+
+
+
+
+\begin{exo}\label{algobouclespourenonce}
+
+
+
+
+\'Ecrire des algorithmes qui permettent de faire les dessins ci-dessous . %de la figure \ref{algobouclespour} \vpageref{algobouclespour}.
+
+%\begin{figure*}[!h]
+
+%\centering
+
+%\caption{Figures de l'exercice \ref{algobouclespourenonce}}\label{algobouclespour}
+
+%%%%%%%%%%%%%%%%
+
+\begin{multicols}{3}
+\begin{center}Dessin \no1
+
+\psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture}(-2,-0.5)(11,11)
+\psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(10,10)  
+\psaxes{->}(0,0)(10.5,10.5)
+\multido{\n=0+1}{11}{\psline[linewidth=2pt,linecolor=blue](\n,0)(\n,10)}
+ \end{pspicture} \end{center}
+ 
+\sautcol
+
+\begin{center}Dessin \no2
+
+\psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture}(-2,-0.5)(11,11)
+\psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(10,10)  
+\psaxes{->}(0,0)(10.5,10.5)
+\multido{\n=0+1}{11}{\psline[linewidth=2pt,linecolor=blue](\n,\n)(\n,10)}
+ \end{pspicture} \end{center}
+ 
+ \sautcol
+ 
+ \begin{center}Dessin \no3
+ 
+ \psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture}(-2,-0.5)(11,11)
+\psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(10,10)  
+\psaxes{->}(0,0)(10.5,10.5)
+\multido{\n=0+1}{11}{\psline[linewidth=2pt,linecolor=blue](10,\n)(0,0)}
+ \end{pspicture} \end{center}
+
+
+
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{center}Dessin \no4
+
+\psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture}(-2,-0.5)(11,11)
+\psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(10,10)  
+\psaxes{->}(0,0)(10.5,10.5)
+\multido{\n=0+1}{11}{\psline[linewidth=2pt,linecolor=blue](0,\n)(\n,\n)(\n,0)}
+ \end{pspicture} \end{center}
+ 
+\sautcol
+
+\begin{center}Dessin \no5
+
+\psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture}(-2,-0.5)(11,11)
+\psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(10,10)  
+\psaxes{->}(0,0)(10.5,10.5)
+\multido{\n=0+1}{11}{\psline[linewidth=2pt,linecolor=blue](10,\n)(0,0)(\n,10)}
+ \end{pspicture} \end{center}
+ 
+ \sautcol
+ 
+ \begin{center}Dessin \no6
+
+\psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture}(-2,-0.5)(11,11)
+\psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(10,10)  
+\psaxes{->}(0,0)(10.5,10.5)
+\multido{\n=0+1}{11}{%
+    \FPeval{coord}{10-\n}
+    \psline[linewidth=2pt,linecolor=blue](\n,\n)(\coord,\n)
+    \psline[linewidth=2pt,linecolor=blue](\n,\n)(\n,\coord)}
+ \end{pspicture} \end{center}
+
+\end{multicols}
+
+\sautpage
+
+
+\begin{multicols}{3}
+\begin{center}Dessin \no7
+
+\psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture}(-2,-0.5)(11,11)
+\psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(10,10)  
+\psaxes{->}(0,0)(10.5,10.5)
+\multido{\n=0+1}{11}{\psline[linewidth=2pt,linecolor=blue](\n,0)(10,\n)}
+ \end{pspicture} \end{center}
+ 
+\sautcol
+
+\begin{center}Dessin \no8
+
+\psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture}(-2,-0.5)(11,11)
+\psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(10,10)  
+\psaxes{->}(0,0)(10.5,10.5)
+\multido{\n=0+1}{11}{
+	\FPeval{coord}{10-\n} 
+	\psline[linewidth=2pt,linecolor=blue](\n,0)(10,\n)(\coord,10)(0,\coord)(\n,0)}
+ \end{pspicture} \end{center}
+ 
+ \sautcol
+ 
+ \begin{center}Dessin \no9
+
+\psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture}(-2,-0.5)(11,11)
+\psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(10,10)  
+\psaxes{->}(0,0)(10.5,10.5)
+\multido{\n=0+1}{11}{%
+	\FPeval{coord}{10-\n} 
+	\psline[linewidth=2pt,linecolor=blue](\n,0)(\coord,10)
+	\psline[linewidth=2pt,linecolor=blue](0,\n)(10,\coord)}
+ \end{pspicture} \end{center}
+
+\end{multicols}
+
+
+
+
+
+
+
+
+%\end{figure*}
+
+
+\end{exo}
+
+\begin{exo}
+ \'Ecrire un algorithme prenant comme argument un nombre entier $n$ et affichant tous les nombres entiers de $0$ \`a $n$.
+\end{exo}
+
+\begin{exo}
+ \'Ecrire un algorithme prenant comme argument un nombre entier $n$ et affichant la somme de tous les nombres entiers de $0$ \`a $n$.
+\end{exo}
+
+\begin{exo}
+ \'Ecrire un algorithme prenant comme argument un nombre entier $n$ et affichant le produit de tous les nombres entiers de $1$ \`a $n$.
+\end{exo}
+
+\begin{exo}
+ \'Ecrire un algorithme prenant comme argument un nombre entier $n$ et affichant tous les diviseurs de $n$.
+\begin{rmq}
+ En langage Algobox, le reste de la division de $x$ par $y$ s'\'ecrit $x\%y$.
+\end{rmq}
+
+\end{exo}
+
+\begin{exo}
+ \'Ecrire un algorithme prenant comme argument un nombre entier $n$ et affichant le nombre de diviseurs de $n$.
+\end{exo}
+
+
+
+

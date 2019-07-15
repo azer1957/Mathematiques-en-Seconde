@@ -1,0 +1,414 @@
+\chapter{Vecteurs et rep\'erage} \label{vecreperes}
+\minitoc
+
+\fancyhead{}
+\fancyfoot{} % efface les entêtes précédentes
+\fancyhead[LE,RO]{\footnotesize \em \rightmark}
+		\fancyhead[RE,LO]{\scriptsize \em Seconde}
+		\fancyfoot[RE]{\scriptsize \em \href{http://perpendiculaires.free.fr/}{http://perpendiculaires.free.fr/}}
+		\fancyfoot[LO]{\scriptsize \em David ROBERT}
+    \fancyfoot[LE,RO]{\textbf{\thepage}}
+
+Le notion de rep\'erag a d\'ej\`a \'et\'e abord\'ee lors du chapitre \ref{reperes}. Elle peut \^etre revisit\'ee au travers des vecteurs.
+
+\section{Rep\`eres et coordonn\'ees}
+
+\subsection{Rep\`eres}
+\begin{definition}
+ Soient $O$ un point du plan et $\I$ et $\J$ deux vecteurs de ce plan de directions diff\'erentes (non colin\'eaires), alors $\Oij$ est appel\'e \emph{rep\`ere} du plan.
+\end{definition}
+
+\begin{rmq}
+ $O$ est appel\'ee \emph{origine} du rep\`ere et le couple $\left(\I,\J\right)$ est appel\'e \emph{base} du rep\`ere.
+\end{rmq}
+
+\begin{definition}
+ Soit un rep\`ere $\Oij$ du plan.
+\begin{itemize}
+ \item Si les directions de $\I$ et de $\J$ sont orthogonales, le rep\`ere est dit \emph{orthogonal}.
+ \item Si les normes de $\I$ et de $\J$ sont \'egales \`a 1, le rep\`ere est dit \emph{norm\'e}.
+ \item Si les directions de $\I$ et de $\J$ sont orthogonales et que les normes de $\I$ et de $\J$ sont \'egales \`a 1, le rep\`ere est dit \emph{orthonorm\'e}.
+ \item Sinon, le rep\`ere est dit \emph{quelconque}.
+\end{itemize}
+\end{definition}
+
+\begin{tabular}{ccc}
+ Rep\`ere orthogonal & Rep\`ere norm\'e & Rep\`ere orthonorm\'e \\
+\psset{xunit=1cm,yunit=1cm}
+\def\xmin{-2} \def\xmax{3} \def\ymin{-1} \def\ymax{2}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psline[linestyle=dashed](\xmin,0)(\xmax,0)
+\psline[linestyle=dashed](0,\ymin)(0,\ymax)
+\psline[linewidth=1.5pt]{->}(0,0)(2,0)
+\psline[linewidth=1.5pt]{->}(0,0)(0,1)
+\uput[dl](0,0){$O$}
+\uput[d](1,0){$\I$}
+\uput[l](0,0.5){$\J$}
+\end{pspicture*}&
+\psset{xunit=0.5cm,yunit=0.5cm}
+\def\xmin{-4} \def\xmax{6} \def\ymin{-2} \def\ymax{4}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psplot[algebraic=true,linestyle=dashed]{\xmin}{\xmax}{0}
+\psplot[algebraic=true,linestyle=dashed]{\xmin}{\xmax}{1.732050808*x}
+\psline[linewidth=1.5pt]{->}(0,0)(2,0)
+\psline[linewidth=1.5pt]{->}(0,0)(1,1.732050808)
+\uput[dl](0,0){$O$}
+\uput[d](1,0){$\I$}
+\uput[l](0.5,0.866525404){$\J$}
+\end{pspicture*}&
+\psset{xunit=1cm,yunit=1cm}
+\def\xmin{-2} \def\xmax{3} \def\ymin{-1} \def\ymax{2}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psline[linestyle=dashed](\xmin,0)(\xmax,0)
+\psline[linestyle=dashed](0,\ymin)(0,\ymax)
+\psline[linewidth=1.5pt]{->}(0,0)(1,0)
+\psline[linewidth=1.5pt]{->}(0,0)(0,1)
+\uput[dl](0,0){$O$}
+\uput[d](0.5,0){$\I$}
+\uput[l](0,0.5){$\J$}
+\end{pspicture*}
+\end{tabular}
+
+\subsection{Coordonnées de vecteur}
+
+\begin{prop}[admise]
+Le plan est muni d'une base $\left(\vec{i},\vec{j}\right)$. 
+Pour tout vecteur $\vec{u}$ du plan, il existe un unique couple $(x;y)$, appelé \emph{coordonnées de $\vec{u}$}, tel que $\vec{u}=x\vec{i}+y\vec{j}$.\\
+\end{prop}
+
+On notera indifférement $\vec{u}(x;y)$, ou $\vec{u}=(x;y)$, ou $\vec{u}\left(\begin{array}{c}x\\ y\\  \end{array}\right)$, ou $\vec{u}=\left(\begin{array}{c}x\\ y\\  \end{array}\right)$ (m\^eme si l'\'egalit\'e est un abus d'\'ecriture).
+
+La notation en colonne est particulièrement pratique dans les calculs que nous verrons plus tard.
+
+\begin{rmq} On notera que l'origine du repère n'a pas d'importance dans les coordonnées d'un vecteur et que le vecteur nul a pour coordonn\'ees $(0\,;\,0)$.
+\end{rmq}
+
+\begin{act} \label{coord}
+ Sur la figure \ref{coordfig} \vpageref{coordfig} o\`u le plan est muni du rep\`ere \Oij :
+\begin{enumerate}
+	\item Déterminer les coordonnées des vecteurs suivants :
+			$\V{AB}$ ; $\quad\V{AC}$ ; $\quad\V{OA}$ ; $\quad\V{OB}$ ; $\quad\V{OC}$ ; $\quad\V{OD}$ ; $\quad\vec{i}\quad$ et $\quad\vec{j}$.
+	\item \begin{enumerate} \item Soit $E$ tel que $\V{CE}=\V{AB}$.  Construire $E$ puis déterminer les coordonnées de $\V{CE}$.
+	\item Soit $F$ tel que $\V{FD}=\V{OC}$. Construire $F$ puis déterminer les coordonnées de $\V{FD}$.\end{enumerate}
+	                                                                                                   
+	\item
+			\begin{enumerate}
+				\item Construire un représentant de $\V{AB}+\V{CD}$.
+				\item Donner les coordonnées de $\V{AB}$, de $\V{CD}$ et de $\V{AB}+\V{CD}$.
+				\item Que remarque-t-on ?
+			\end{enumerate}
+	\item \begin{enumerate} \item D\'eterminer les coordonn\'ees de $\V{BD}$ et de $\V{DB}$. 
+	      Que remarque-t-on ?
+	\item Construire un repr\'esentant du vecteur $\vec{v}=2\V{OA}$. D\'eterminer ses coordonn\'ees et les comparer \`a celles de $\V{OA}$.
+	\item Soit $K$ le milieu de $[AD]$. D\'eterminer les coordonn\'ees des vecteurs $\V{AK}$ et $\V{AD}$. Que remarque-t-on ?
+	\end{enumerate}
+	
+
+
+\end{enumerate}
+
+\begin{figure}[!h]
+ \centering
+ \caption{Figure de l'activit\'e \ref{coord}}\label{coordfig}
+
+
+
+\psset{xunit=1cm , yunit=0.75cm}
+\begin{pspicture*}(-0.7,-0.7)(15.7,9.7)
+\def\xmin{-0.5} \def\xmax{15.5} \def\ymin{-0.5} \def\ymax{9.5}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+
+\multido{\i=0+1}{18}{%
+\psline[linestyle=dotted](\i,\ymin)(\i,\ymax)
+\psset{algebraic=true}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {x*0.5-8+\i}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {-x*0.5+16-\i}}
+\psline{->}(7,4.5)(7,5.5)
+\rput{90}(7.3,5){$\vec{i}$}
+\psline{->}(7,4.5)(5,5.5)
+\rput{90}(6,4.5){$\vec{j}$}
+\psdots[dotstyle=x, dotscale=2.0000](7,4.5)(7,2.5)(8,6)(5,7.5)(3,6.5)
+\rput{90}(7.2,4.2){$O$}
+\rput{90}(7.2,2.2){$B$}
+\rput{90}(8.2,5.7){$A$}
+\rput{90}(5.2,7.2){$C$}
+\rput{90}(3.2,6.2){$D$}
+\end{pspicture*}
+\end{figure}
+\end{act}
+
+\sautpage
+
+Plus g\'en\'eralement, on a les propri\'et\'es suivantes :
+
+\begin{prop}
+Le plan est muni d'un repère. Soient $\vec{u}\,\left(x\,;\,y\right)$ et $\vec{v}\,\left(x'\,;\,y'\right)$ deux vecteurs et $k$ un nombre.
+\begin{itemize}
+ \item $\vec{u}=\vec{v} \ssi \ldots\ldots\ldots=\ldots\ldots\ldots \text{ et } \ldots\ldots\ldots=\ldots\ldots\ldots$.
+  \item Le vecteur $\vec{u}+\vec{v}$ a pour coordonnées $\left( \ldots\ldots\ldots\,;\, \ldots\ldots\ldots\right)$.
+  \item Le vecteur $k\vec{u}$ a pour coordonnées $\left( \ldots\ldots\ldots\,;\, \ldots\ldots\ldots\right)$.
+\end{itemize}
+\end{prop}
+
+Elles seront d\'emontr\'ees en classe.
+
+
+\subsection{Coordonn\'ees de point}
+
+\begin{definition}
+ Le plan \'etant muni d'un rep\`ere $\Oij$, on appelle \emph{coordonn\'ees} du point $M$ le couple $(x\,;\,y)$ tel que $\V{OM}=x\vec{\imath}+y\vec{\jmath}$, $x$ \'etant appel\'e \emph{abscisse} de $M$ et $y$ \'etant appel\'e \emph{ordonn\'ee} de $M$.
+\end{definition}
+
+Les coordonn\'ees du point $M$ sont donc les coordonn\'ees du vecteur $\V{OM}$. Cela implique qu'elles d\'ependent de l'origine du rep\`ere.
+
+\section{Propri\'et\'es}
+
+%\subsection{Activit\'es}
+
+\begin{act}\label{coordmilieu}
+Sur la figure \ref{coordmilieufig} \vpageref{coordmilieufig} ci-dessous, o\`u le plan est muni du rep\`ere \Oij :
+\begin{enumerate}
+	\item Graduer les axes trac\'es de fa\c{c}on \`a permettre une lecture plus ais\'ee des coordonn\'ees.\\
+	\emph{L'axe ayant pour direction $\I$ est appel\'e \emph{axe des abscisses}, l'axe ayant pour direction $\J$ est appel\'e \emph{axe des ordonn\'ees}. Les deux axes sont appel\'es les \emph{axes de coordonn\'ees}.}
+	\item Placer les points $M(3;1)$, $N(-1;1,5)$, $P(-2;-1)$ et $Q(3;-1)$.	
+	\item Donner graphiquement les coordonn\'ees des points $A$, $B$, $C$ et $D$.
+	\item Par lectures graphiques, compl\'eter le tableau suivant :
+\begin{center}
+\begin{tabular}{c*{4}{|c}}
+Point $X$ & Coordonn\'ees de $X$  & Point $Y$ & Coordonn\'ees de $Y$ & Coordonn\'ees de $\V{XY}$ \\
+\hline
+$A$ & &$B$ &  & \\
+\hline
+$A$ & &$C$ &  & \\
+\hline
+$A$ & &$D$ &  & \\
+\hline
+$B$ & &$A$ &  & \\
+\hline
+$B$ & &$C$ &  & \\
+\hline
+$B$ & &$D$ &  & \\
+\end{tabular}
+\end{center}
+	Quel lien peut-on conjecturer entre les coordonn\'ees des points $X$ et $Y$ et celles du vecteur $\V{XY}$ ?
+\end{enumerate}
+\end{act}
+
+\begin{figure}[!h]
+\centering
+\caption{Figure de l'activit\'e \ref{coordmilieu}}\label{coordmilieufig}
+
+
+
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.7,-0.7)(15.7,9.7)
+\def\xmin{-0.5} \def\xmax{15.5} \def\ymin{-0.5} \def\ymax{9.5}
+
+\multido{\i=0+1}{18}{%
+\psline[linestyle=dotted](\i,\ymin)(\i,\ymax)
+\psset{algebraic=true}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {x*0.5-8+\i}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {-x*0.5+16-\i}}
+\psline[linestyle=dashed](7,\ymin)(7,\ymax)
+\psplot[algebraic=true,linestyle=dashed]{\xmin}{\xmax} {-0.5*x+8}
+\psline[linewidth=1.5pt]{->}(7,4.5)(7,5.5)
+\rput{90}(7.3,4.75){$\vec{i}$}
+\psline[linewidth=1.5pt]{->}(7,4.5)(6,5)
+\rput{90}(6.5,4.3){$\vec{j}$}
+\psdots[dotstyle=x, dotscale=2.0000](7,4.5)(9,2.5)(8,6)(5,7.5)(3,5.5)
+\rput{90}(7.2,4.2){$O$}
+\rput{90}(9.2,2.2){$B$}
+\rput{90}(8.2,5.7){$A$}
+\rput{90}(5.2,7.2){$C$}
+\rput{90}(3.2,5.2){$D$}
+
+\end{pspicture*}
+\end{figure}
+
+
+
+\sautpage
+
+\subsection*{Bilan et compl\'ements}
+
+Les propri\'et\'es suivantes seront d\'emontr\'ees en classe :
+
+\begin{prop}
+ Soient $A\,(x_A\,;\,y_A)$ et $B\,(x_B\,;\,y_B)$ deux points du plan. \\Alors les coordonn\'ees du vecteur $\V{AB}$ sont $(\ldots\dots\dots\ldots\,;\,\dots\dots\ldots\ldots)$.
+\end{prop}
+
+\begin{prop}
+ Le plan est muni d'un rep\`ere.
+  Soient $\vec{u}\,(x\,;\,y)$ et $\vec{v}\,(x'\,;\,y')$ deux vecteurs du plan.
+  Alors :
+ \[\vec{u} \text{ et } \vec{v} \text{ colin\'eaires } \ssi \ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\]
+\end{prop}
+
+Les propri\'et\'es suivantes ont d\'ej\`a \'et\'e vues lors du chapitre \ref{reperes}. Elles peuvent \^etre d\'emontr\'ees \`a l'aide des vecteurs.
+
+\begin{prop*}
+ Soit $P$ un plan muni d'un rep\`ere quelconque.\\
+ Soit $A(x_A;y_A)$ et $B(x_B;y_B)$ et $I(x_I;y_I)$ milieu de $[AB]$. \\
+Alors $\qquad x_I=\ldots\ldots\ldots\ldots \qquad $ et $\qquad  y_I=\ldots\ldots\ldots\ldots$
+\end{prop*}
+
+
+\begin{prop*}
+ Soit $P$ un plan muni d'un rep\`ere \underline{\textbf{orthonorm\'e}}.\\
+ Soient $A$ et $B$ deux points du plan $P$ de coordonn\'ees respectives $(x_A\,;\,y_A)$ et $(x_B\,;\,y_B)$.\\
+ Alors la distance $AB$ est donn\'ee par :
+ \[AB=\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\]
+\end{prop*}
+
+
+
+
+\sautpage
+
+\section{Exercices}
+
+\subsection{Rep\`ere donn\'e}
+
+%\sautpage
+
+\begin{multicols}{2}
+ 
+\begin{exo}
+ Le plan est muni du rep\`ere \Oij. Soient les points $A\,(2\,;\,-4)$, $B\,(-1\,;\,3)$, $C\,(-3\,;\,-2)$.
+\begin{enumerate}
+ \item D\'eterminer les coordonn\'ees du vecteur $\V{CA}$, du vecteur $\V{CB}$ et du vecteur $\vec{u}=\V{CA}+\V{CB}$.
+  \item \begin{enumerate}
+         \item D\'eterminer les coordonn\'ees du point $D$ tel que $\V{OD}=\vec{u}$.
+	 \item D\'eterminer les coordonn\'ees du point $E$ tel que $\V{AE}=\vec{u}$.        \end{enumerate}
+  \item Quelles sont les coordonn\'ees du point $F$ tel que $\V{CF}=\frac{1}{2}\V{BD}$ ?
+  \item Montrer que $F$ milieu de $[OA]$.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}\label{rep1}
+Sur le schéma ci-dessous o\`u le plan est muni du rep\`ere \Oij :
+\begin{enumerate}
+	\item Placer les points $A(1\,;\,2)$, $B(3\,;\,1,5)$, $C(4\,;\,0,5)$ et $D(2\,;\,1)$ ;
+	\item Montrer que le quadrilat\`ere $ABCD$ est un parall\'elogramme.
+\end{enumerate}
+
+
+
+\begin{center}
+
+\psset{xunit=1cm , yunit=0.66cm}
+\def\xmin{-1.1} \def\xmax{6.1} \def\ymin{-1.1} \def\ymax{6.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+
+%\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+%\psaxes[labels=all,labelsep=1pt, Dx=10,Dy=10]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+
+
+\multido{\i=0+1}{18}{%
+\psline[linestyle=dotted](\i,\ymin)(\i,\ymax)
+\psset{algebraic=true}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {x*0.5-8+\i}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {-x*0.5+16-\i}}
+%\psline{->}(7,4.5)(7,5.5)
+%\psline(0,\ymin)(0,\ymax)
+%\rput{90}(7.3,5){$\vec{i}$}
+%\psline{->}(7,4.5)(5,5.5)
+%\psplot[algebraic=true]{\xmin}{\xmax} {0.5*x}
+%\rput{90}(6,4.5){$\vec{j}$}
+%\psdots[dotstyle=x, dotscale=2.0000](0,0)(1,0.5)(0,2)
+\uput[dl](0,0){$O$}
+%\uput[ul](1,0.5){$I$}
+%\uput[l](0,2){$J$}
+\psline{->}(0,0)(1,0.5)
+\psline{->}(0,0)(0,2)
+\uput[d](0.5,0.25){$\I$}
+\uput[l](0,1){$\J$}
+\end{pspicture*}
+\end{center}
+\end{exo}
+
+%\sautpage
+
+
+
+
+
+\begin{exo}
+ Le plan est muni du rep\`ere \Oij. Soient les points $A\,(-9\,;\,-10)$, $B\,(2\,;\,9)$, $C\,(5\,;\,3)$, $D\,(-1\,;\,-8)$ et $E\,(3\,;\,0)$.
+\begin{enumerate}
+ \item Les points $C$, $D$ et $E$ sont-ils align\'es ?
+  \item Les droites $(AB)$ et $(CD)$ sont-elles parall\`eles ?
+\end{enumerate}
+\end{exo}
+
+
+
+\begin{exo}
+ $ABCD$ est un parall\'elogramme.\\
+ $A'$ est le sym\'etrique de $A$ par rapport \`a $B$ et $E$ est le milieu de $[BC]$.
+\begin{enumerate}
+ %\item Faire une figure.
+  \item D\'eterminer les coordonn\'ees des points $A'$, $E$ et $D$ dans le rep\`ere $\left(A\,;\,\V{AB},\V{AD}\right)$
+ \item Montrer que les points $A'$, $E$ et $D$ sont align\'es
+\end{enumerate}
+
+\end{exo}
+
+\end{multicols}
+
+%\sautpage
+
+\subsection{Rep\`ere \`a choisir}
+
+\begin{multicols}{2}
+
+\begin{exo}
+Le quadrilat\`ere $ABCD$ donn\'e ci-dessous est un losange de centre $O$.\\
+ Dans chacun des cas ci-dessous, dire de quel type est le rep\`ere et donner les coordonn\'ees de tous les points dans ce rep\`ere.
+%\begin{multicols}{2}
+\begin{itemize}
+ \item $\left(A\,;\,\V{AD},\V{AB}\right)$
+  \item $\left(O\,;\,\V{OC},\V{OB}\right)$
+  \item $\left(O\,;\,\V{OB},\V{OC}\right)$
+  \item $\left(D\,;\,\V{DC},\V{DO}\right)$
+\end{itemize}
+%\end{multicols}
+
+\begin{center}
+\psset{xunit=0.5cm , yunit=0.25cm}
+\def\xmin{-6.1} \def\xmax{6.1} \def\ymin{-5.1} \def\ymax{5.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+\psline(-5,0)(0,3)(5,0)(0,-3)(-5,0)
+\psline[linestyle=dotted](-5,0)(5,0)
+\psline[linestyle=dotted](0,-3)(0,3)
+\uput[dl](0,0){$O$}
+\uput[l](-5,0){$A$}
+\uput[u](0,3){$B$}
+\uput[r](5,0){$C$}
+\uput[d](0,-3){$D$}
+\end{pspicture*}
+\end{center}
+
+\end{exo}
+
+
+\begin{exo}
+ $ABCD$ est un parall\'elogramme, $I$ est le milieu de $[AD]$, $E$ est le sym\'etrique de $B$ par rapport \`a $I$.
+\begin{enumerate}
+ \item Faire une figure.
+ \item Choisir un rep\`ere et montrer que $D$ est le milieu de $[EC]$
+\end{enumerate}
+\end{exo}
+
+
+
+
+
+
+\end{multicols}
+
+
+
+

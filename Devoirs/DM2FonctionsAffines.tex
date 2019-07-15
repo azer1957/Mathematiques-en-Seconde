@@ -1,0 +1,115 @@
+\cleardoublepage
+ 
+
+
+
+\fancyhead{} % Delete current head settings
+\fancyfoot{}
+
+%		\fancyhead[LE,LO]{\footnotesize \em Nom : }
+%		\fancyhead[RE,RO]{\scriptsize \em Pour le vendredi 28 septembre}
+
+\setcounter{ds}{2} %c'est le numéro du DS
+\setcounter{chaptertemp}{\thechapter} %stocke le numéro du chapitre courant dans un compteur temporaire
+\stepcounter{chapter} % avance le compteur de 1 et surtout remet tous les compteurs dépendant du chapitre à 0, dont les numéros d'exercice
+\setcounter{chapter}{\theds} % met le compteur de chapitre au numéro du ds
+
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{landscape}
+ 
+
+
+\setlength{\columnsep}{80pt} %defaut = 10 pt
+\begin{multicols}{2}
+
+
+\section*{Devoir maison n°\theds}\label{DM2}
+{\centering \large Fonctions affines}
+\addstarredchapter{Devoir maison n°\theds : Fonctions affines}
+
+\begin{flushright}
+\emph{\`A rendre pour le vendredi 3 f\'evrier}\end{flushright}
+
+
+
+%\begin{prob}[Comparaison de tarifs]
+Le tableau ci-dessous présente un extrait des tarifs des forfaits non bloqués pour téléphones portables, proposés par une société de téléphonie fictive.
+
+
+
+
+\begin{center}
+\begin{tabular}{|c|*{3}{p{2.5cm}|}}
+		\hline
+		Forfait & Min comprises dans le forfait	& Co\^ut du forfait (en \euro{}) & Par min de dépassement (en \euro{}) \\ \hline
+		1 & 90 & 33	& 0,30	\\ \hline
+		2 & 180 & 43 & 0,25 \\ \hline
+		3 & 300 & 57 & 0,18 \\ \hline
+		\end{tabular}
+\end{center}
+
+
+
+\noindent Pour les forfaits 1, 2 et 3 on désigne, respectivement, par $f_1(x)$, $f_2(x)$ et $f_3(x)$ le prix à payer en euros pour une durée totale de communications de $x$ minutes.
+
+\begin{enumerate}
+	\item
+		\begin{enumerate}
+			\item Exprimer $f_1(x)$ en fonction de $x$ lorsque $0\leqslant x \leqslant 90$ puis lorsque $x>90$.
+			\item Dans un repère orthogonal, représenter graphquement la fonction $f_1$ pour $x$ compris entre 0 et 400.
+		\end{enumerate}
+	\item Exprimer $f_2(x)$ et $f_3(x)$ en fonction de $x$ et représenter sur le graphique précédent ces deux fonctions.
+	\item Lire sur le graphique quel est le tarif le plus avantageurx en fonction de la durée mensuelle des communications.
+	\item \'Ecrire un algorithme prenant comme argument une dur\'ee de communication et indiquant quel forfait est le plus avantageux pour cette dur\'ee ainsi que le prix total \`a payer.
+\end{enumerate}
+%\end{prob}
+
+
+\sautcol
+
+\section*{Devoir maison n°\theds}\label{DM2}
+{\centering \large Fonctions affines}
+%\addstarredchapter{Devoir maison n°\theds : Fonctions affines}
+
+\begin{flushright}
+\emph{\`A rendre pour le vendredi 3 f\'evrier}\end{flushright}
+
+
+
+%\begin{prob}[Comparaison de tarifs]
+Le tableau ci-dessous présente un extrait des tarifs des forfaits non bloqués pour téléphones portables, proposés par une société de téléphonie fictive.
+
+
+\begin{center}
+\begin{tabular}{|c|*{3}{p{2.5cm}|}}
+		\hline
+		Forfait & Min comprises dans le forfait	& Co\^ut du forfait (en \euro{}) & Par min de dépassement (en \euro{}) \\ \hline
+		1 & 90 & 33	& 0,30	\\ \hline
+		2 & 180 & 43 & 0,25 \\ \hline
+		3 & 300 & 57 & 0,18 \\ \hline
+		\end{tabular}
+\end{center}
+
+
+\noindent Pour les forfaits 1, 2 et 3 on désigne, respectivement, par $f_1(x)$, $f_2(x)$ et $f_3(x)$ le prix à payer en euros pour une durée totale de communications de $x$ minutes.
+
+\begin{enumerate}
+	\item
+		\begin{enumerate}
+			\item Exprimer $f_1(x)$ en fonction de $x$ lorsque $0\leqslant x \leqslant 90$ puis lorsque $x>90$.
+			\item Dans un repère orthogonal, représenter graphquement la fonction $f_1$ pour $x$ compris entre 0 et 400.
+		\end{enumerate}
+	\item Exprimer $f_2(x)$ et $f_3(x)$ en fonction de $x$ et représenter sur le graphique précédent ces deux fonctions.
+	\item Lire sur le graphique quel est le tarif le plus avantageurx en fonction de la durée mensuelle des communications.
+	\item \'Ecrire un algorithme prenant comme argument une dur\'ee de communication et indiquant quel forfait est le plus avantageux pour cette dur\'ee ainsi que le prix total \`a payer.
+\end{enumerate}
+%\end{prob}
+
+\end{multicols}
+
+\end{landscape}
+
+\setcounter{chapter}{\thechaptertemp} % remet le numéro de chapitre à ce qu'il était
+
+\renewcommand{\headrulewidth}{0.5pt}

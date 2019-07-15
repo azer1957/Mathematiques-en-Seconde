@@ -1,0 +1,181 @@
+\cleardoublepage
+
+\fancyhead{} % Delete current head settings
+
+		\fancyhead[LE,LO]{\footnotesize \em Nom : }
+		\fancyhead[RE,RO]{\scriptsize \em Vendredi 16 novembre 2016 -- 1h30}
+		\fancyfoot{}
+
+\setcounter{ds}{4} %c'est le numéro du DS	
+\setcounter{chaptertemp}{\thechapter} %stocke le numéro du chapitre courant dans un compteur temporaire
+\stepcounter{chapter} % avance le compteur de 1 et surtout remet tous les compteurs dépendant du chapitre à 0, dont les numéros d'exercice
+\setcounter{chapter}{\theds} % met le compteur de chapitre au numéro du ds
+		
+    
+\section*{Devoir surveill\'e n°\theds}\label{DS4}
+{\centering \large Vecteurs}
+\addstarredchapter{Devoir surveill\'e n°\theds : Vecteurs} 
+
+
+
+\begin{exo}[3 points]\label{ds4exo1}
+Sur la figure ci-dessous, $ABCD$ est un parall\'elogramme et $I$, $J$, $K$ et $L$ sont les milieux respectifs des segments $[AB]$, $[BC]$, $[CD]$ et $[DA]$.
+
+\begin{center}
+\psset{xunit=1cm,yunit=1cm}
+\def\xmin{-2.1} \def\xmax{12.1} \def\ymin{-1.1} \def\ymax{3.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](\xmin,\ymin)(\xmax,\ymax)
+
+\psline[linewidth=1.2pt](0,0)(2,2)(10,2)(8,0)(0,0)
+\psdots(0,0)(1,1)(2,2)(6,2)(10,2)(9,1)(8,0)(4,0)
+
+\uput[ul](2,2){$A$}
+\uput[ur](10,2){$B$}
+\uput[dr](8,0){$C$}
+\uput[dl](0,0){$D$}
+\uput[ul](1,1){$L$}
+\uput[u](6,2){$I$}
+\uput[dr](9,1){$J$}
+\uput[d](4,0){$K$}
+
+\end{pspicture*}
+\end{center}
+
+Compl\'eter les \'egalit\'es suivantes \`a l'aide des points de la figure. \emph{Aucune justification n'est attendue.}
+
+\vspace{-1em}\begin{multicols}{2}
+\begin{enumerate}
+ \item $\V{AL}+\V{KJ}=\V{A\ldots}$
+ \item $\V{LJ}-\V{AC}=\V{D\ldots}$
+ \item $\V{BD}+\V{CJ}=\V{\ldots D}$
+ \item $\V{AK}+\V{DL}+\V{BI}=\ldots\ldots$
+\end{enumerate}
+\end{multicols}\vspace{-1em}
+
+\end{exo}
+
+\medskip
+
+\hrule
+
+\begin{exo}[4 points]
+ En utilisant les points de la figure, indiquer :
+ \begin{multicols}{2}\begin{enumerate}
+  \item un vecteur \'egal \`a $\V{DE}$ : \dotfill \\.\dotfill
+  \item un vecteur oppos\'e \`a $\V{AF}$ : \dotfill \\.\dotfill
+  \item un vecteur \'egal \`a $\V{FE}$ d'origine $A$ : \dotfill \\.\dotfill
+  \item un vecteur oppos\'e \`a $\V{CD}$ et d'extr\'emit\'e $B$ :\\ .\dotfill\\.\dotfill
+  \item deux vecteurs de m\^eme norme (longueur) mais de directions diff\'erentes :\dotfill \\ .\dotfill\\ .\dotfill
+ \end{enumerate}
+ 
+\begin{center}
+\psset{xunit=1cm,yunit=1cm}
+\def\xmin{-1.1} \def\xmax{7.1} \def\ymin{-1.1} \def\ymax{6.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](\xmin,\ymin)(\xmax,\ymax)
+
+\psline[linewidth=1.2pt](2,1)(0,0)(1,3)(2,1)(4,2)(1,3)(5,5)(4,2)(6,3)(5,5)
+\psdots(0,0)(1,3)(2,1)(4,2)(5,5)(6,3)
+
+\uput[dl](0,0){$A$}
+\uput[dr](2,1){$B$}
+\uput[ul](1,3){$F$}
+\uput[dr](4,2){$C$}
+\uput[dr](6,3){$D$}
+\uput[ur](5,5){$E$}
+
+\end{pspicture*}
+\end{center} 
+\end{multicols}
+\end{exo}
+
+
+\medskip
+
+\hrule
+
+\begin{exo}[3 points]
+ Simplifier au maximum les \'ecritures des vecteurs suivants :
+ \begin{enumerate}
+  \item $\V{u}=\V{AB}-\V{AC}+\V{BC}-\V{BA}=\dotfill \\ .\dotfill \\ .\dotfill $
+  \item $\V{v}=\V{OA}-\V{OB}+\V{AC}=\dotfill \\ .\dotfill \\ .\dotfill $
+  \item $\V{w}=\V{MA}-\V{MB}+\V{MC}-\V{MD}=\dotfill \\ .\dotfill \\ .\dotfill $
+ \end{enumerate}
+
+ 
+\end{exo}
+
+\medskip
+
+\hrule
+
+\medskip
+
+\emph{Les exercices suivants sont \`a faire sur une feuille et plus sur l'\'enonc\'e.}
+
+\medskip
+
+\hrule
+
+\begin{exo}[3,5 points]
+ $EFGH$ est un parall\'elogramme de centre $O$.
+ \begin{enumerate}
+  \item Construire les points $S$ et $T$ tels que $\V{OT}=\V{OE}+\V{OF}$ et $\V{OS}=\V{OG}+\V{OH}$.
+  \item D\'emontrer que $\V{OT}+\V{OS}=\V{0}$ ; que peut-on en d\'eduire ?
+ \end{enumerate}
+
+\end{exo}
+
+\medskip
+
+\hrule
+
+\begin{exo}[6,5 points]
+ Soit $ABCD$ un parall\'elogramme. Soit $E$ et $F$ les points d\'efinis par $V{BE}=2\V{AB}$ et $\V{AF}=\frac{3}{2}\V{AD}$.
+ \begin{enumerate}
+  \item Faire une figure.
+  \item Exprimer $\V{CE}$ en fonction de $\V{AB}$ et $\V{BC}$.
+  \item Exprimer $\V{CF}$ en fonction de $\V{AB}$ et $\V{BC}$.
+  \item D\'emontrer que les points $C$, $E$ et $F$ sont align\'es.
+ \end{enumerate}
+\end{exo}
+
+\medskip
+
+\hrule
+
+\begin{exo}
+ \emph{Cet exercice est en bonus ; il est hors bar\`eme.}\\
+ Sur la figure ci-contre, $ABC$ est un triangle.
+ \begin{enumerate}
+  \item Placer sur cette figure les points $D$ et $E$ tels que $\V{AD}=3\V{AC}$ et $\V{AE}=\V{AB}+\V{AC}$.
+  \item Placer sur cette m\^eme figure le point $F$ tel que $\V{AF}=3\V{BF}$.\\ \emph{Conseil : exprimer $\V{AF}$ en fonction de $\V{AB}$.}
+  \item D\'emontrer que $(DE)$ et $(EF)$ sont parall\`eles.
+ \end{enumerate}
+ 
+ \begin{center}
+\psset{xunit=0.5cm,yunit=0.5cm}
+\def\xmin{-0.1} \def\xmax{22.1} \def\ymin{-0.1} \def\ymax{14.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](\xmin,\ymin)(\xmax,\ymax)
+
+\psline[linewidth=1.2pt](2,7)(8,5)(10,11)(2,7)
+\psdots(8,5)(10,11)(2,7)
+
+\uput[l](2,7){$A$}
+\uput[d](8,5){$C$}
+\uput[u](10,11){$B$}
+
+
+\end{pspicture*}
+\end{center} 
+
+\end{exo}
+
+
+
+
+
+
+\setcounter{chapter}{\thechaptertemp} % remet le numéro de chapitre à ce qu'il était

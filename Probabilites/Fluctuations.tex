@@ -1,0 +1,1067 @@
+\chapter{Fluctuations d'\'echantillonage} \label{fluctuation1}
+\minitoc
+
+\fancyhead{} % efface les ent\^etes pr\'ec\'edentes
+\fancyhead[LE,RO]{\footnotesize \em \rightmark} % section en ent\^ete
+\fancyhead[RE,LO]{\scriptsize \em Seconde} % classe et ann\'ee en ent\^ete
+
+    \fancyfoot{}
+		\fancyfoot[RE]{\scriptsize \em \href{http://perpendiculaires.free.fr/}{http://perpendiculaires.free.fr/}}
+		\fancyfoot[LO]{\scriptsize \em David ROBERT}
+    \fancyfoot[LE,RO]{\textbf{\thepage}}
+
+
+
+%\sautpage
+
+
+\section{Activit\'es}
+
+\emph{Rappels :
+\begin{itemize}
+	\item l'effectif d'un r\'esultat est le nombre de fois que ce r\'esultat appara\^it ;
+	\item la fr\'equence d'un r\'esultat est l'effectif de ce r\'esultat divis\'e par l'effectif total.
+\end{itemize}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lancers de d\'es puis regroupements des r\'esultats %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{act}[Simulations de s\'eries de lancers de d\'es]\label{fluctuact1}
+L'objectif de cette activit\'e est de produire des s\'eries de 50 lancers de d\'e \`a 6 faces et d'observer la distribution des fr\'equences de chacune des faces.\\
+Pour \'eviter des lancers de d\'es qui peuvent \^etre bruyants, on va simuler ces lancers \`a l'aide de la fonction \emph{random} de la calcultrice.
+\begin{enumerate}
+  \item La fonction \emph{random} de la calculatrice permet d'obtenir un nombre al\'eatoire comportant 10 d\'ecimales et compris dans l'intervalle $[0\,;\,1[$.
+    \begin{enumerate}
+     \item Faire quelques essais.
+     \item Parfois la calculatrice n'affiche que 9 d\'ecimales. Pourquoi ?
+     \item Comment peut-on simuler le lancer d'un d\'e \`a 6 faces avec cette fonction ?
+    \end{enumerate}
+  Pour la suite de l'activit\'e, on appelera \emph{lancer de d\'e} la simulation d'un d\'e obtenu \`a la calculatrice.
+  \item \textbf{Par groupe de deux \'el\`eves}
+    \begin{enumerate}
+	\item Lancers.\\
+	\emph{On notera les r\'esultats dans les tableaux \ref{fluctu1} \vpageref{fluctu1}.}
+	    \begin{itemize}
+		    \item l'un lance un d\'e 50 fois, l'autre note le r\'esultat obtenu ;
+		    \item on recommence en permuttant les rôles ;
+		    \item chaque groupe de deux obtient alors deux tableaux de cinquante r\'esultats et compl\`ete les trois tableaux de fr\'equence.
+	    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Tableaux de r\'esultats pour un groupe %%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fin de tableaux de r\'esultats pour un groupe %%%%%%%%%%%%%%%%%%%%%%%%
+
+				\item Graphiques.\\ \emph{Les graphiques sont \`a faire dans les rep\`eres de la \vpageref{graphique1}.}\\
+				On note en abscisses les num\'eros des faces du d\'e et en ordonn\'ees les fr\'equences de chacun de chacun des num\'eros.
+						\begin{itemize}
+							\item Faire les diagrammes des fr\'equences de vos r\'esultats et de ceux de votre voisin sur un m\^eme graphique en utilisant deux couleurs diff\'erentes.
+							\item Faire les diagrammes des fr\'equences de votre groupe sur le graphique suivant.
+						\end{itemize}
+
+			\end{enumerate}
+
+	\item \textbf{Par colonne puis pour la classe}
+
+		\begin{enumerate}
+
+			\item Lancers. \\ \emph{On notera les r\'esultats dans les tableaux \ref{fluctu2} \vpageref{fluctu2}.}
+					\begin{itemize}
+						\item relever les r\'esultats de tous les groupes de deux \'el\`eves de votre colonne et compl\'eter le quatri\`eme tableau de fr\'equence ;
+						\item relever enfin les r\'esultats de tous les \'el\`eves de la classe et compl\'eter le dernier tableau.
+					\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%% Tableaux des r\'esultats pour une colonne puis pour la classe %%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%% Fin tableaux des r\'esultats pour une colonne puis pour la classe %%%%%%%%%%
+
+			\item Graphiques.\\ \emph{Les graphiques sont \`a faire dans les rep\`eres de la \vpageref{graphique2}.}
+					\begin{itemize}
+							\item Faire les diagrammes des fr\'equences de votre colonne.
+							\item Faire les diagrammes des fr\'equences de votre classe sur le graphique suivant.
+					\end{itemize}
+		\end{enumerate}
+
+	\item \textbf{Comparaison des graphiques}
+
+			\begin{enumerate}
+				\item Comparer le diagramme de vos fr\'equences \`a celui de votre voisin.
+				\item Comparer le diagramme des fr\'equences de votre groupe \`a celui d'autres groupes.
+				\item Comparer le diagramme des fr\'equences de votre colonne \`a celui d'autres colonnes puis \`a celui de la classe.
+				\item Que constate-t-on ?\\
+				Ce ph\'enom\`ene s'appelle \emph{fluctuation d'\'echantillonage sur des s\'eries de taille 50}.
+			\end{enumerate}
+
+\end{enumerate}
+
+\begin{table}[h]
+	\centering
+	\caption{Groupe de deux \'el\`eves}\label{fluctu1}
+
+\begin{tabular}{cc}
+
+		\begin{tabular}{|*{10}{m{0.5cm}|}}
+			\multicolumn{10}{m{5cm}}{\centering Mes 50 lancers} \tabularnewline \hline
+			 & & & &&&&&& \\ \hline
+			 & & & &&&&&& \\ \hline
+			 & & & &&&&&& \\ \hline
+			 & & & &&&&&& \\ \hline
+			 & & & &&&&&& \\ \hline
+		\end{tabular}
+&
+		\begin{tabular}{|*{3}{m{2cm}|}}
+			\multicolumn{3}{m{6cm}}{\centering Tableau de fr\'equence de mes r\'esultats} \tabularnewline \hline
+			Face & Effectif & Fr\'equence \\ \hline
+			1 & & \\ \hline
+			2 & & \\ \hline
+			3 & & \\ \hline
+			4 & & \\ \hline
+			5 & & \\ \hline
+			6 & & \\ \hline
+			Total & 50 & \\ \hline
+		\end{tabular}
+
+\\
+& \\
+
+		\begin{tabular}{|*{10}{m{0.5cm}|}}
+			\multicolumn{10}{m{5cm}}{\centering Ceux de mon voisin} \tabularnewline \hline
+			 & & & &&&&&& \\ \hline
+			 & & & &&&&&& \\ \hline
+			 & & & &&&&&& \\ \hline
+			 & & & &&&&&& \\ \hline
+			 & & & &&&&&& \\ \hline
+		\end{tabular}
+&
+		\begin{tabular}{|*{3}{m{2cm}|}}
+			\multicolumn{3}{m{6cm}}{\centering Tableau de fr\'equence des r\'esultats de mon voisin} \tabularnewline \hline
+			Face & Effectif & Fr\'equence \\ \hline
+			1 & & \\ \hline
+			2 & & \\ \hline
+			3 & & \\ \hline
+			4 & & \\ \hline
+			5 & & \\ \hline
+			6 & & \\ \hline
+			Total & 50 & \\ \hline
+		\end{tabular}
+\\
+& \\
+
+\multicolumn{2}{c}{%
+		\begin{tabular}{|*{3}{m{2cm}|}}
+			\multicolumn{3}{m{6cm}}{\centering Tableau de fr\'equence de mon groupe} \tabularnewline \hline
+			Face & Effectif & Fr\'equence \\ \hline
+			1 & & \\ \hline
+			2 & & \\ \hline
+			3 & & \\ \hline
+			4 & & \\ \hline
+			5 & & \\ \hline
+			6 & & \\ \hline
+			Total & 100 & \\ \hline
+		\end{tabular}
+} \\
+\end{tabular}
+
+%\end{table}
+\vfill
+%\begin{table}[h]
+%\centering
+
+		\caption{Pour la colonne puis pour la classe}\label{fluctu2}
+
+\begin{tabular}{cc}
+
+		\begin{tabular}{|*{3}{m{2cm}|}}
+			\multicolumn{3}{m{6cm}}{\centering Tableau de fr\'equence de ma colonne} \tabularnewline \hline
+			Face & Effectif & Fr\'equence \\ \hline
+			1 & & \\ \hline
+			2 & & \\ \hline
+			3 & & \\ \hline
+			4 & & \\ \hline
+			5 & & \\ \hline
+			6 & & \\ \hline
+			Total & & \\ \hline
+		\end{tabular}
+
+&
+
+		\begin{tabular}{|*{3}{m{2cm}|}}
+			\multicolumn{3}{m{6cm}}{\centering Tableau de fr\'equence de la classe} \tabularnewline \hline
+			Face & Effectif & Fr\'equence \\ \hline
+			1 & & \\ \hline
+			2 & & \\ \hline
+			3 & & \\ \hline
+			4 & & \\ \hline
+			5 & & \\ \hline
+			6 & & \\ \hline
+			Total & & \\ \hline
+		\end{tabular}
+\\
+\end{tabular}
+\end{table}
+
+%\FloatBarrier %%%% Pour placer les flottants (tableaux) obligatoirement avant les graphiques
+
+
+%%%%%%%%%%%%%%%%%%% Les rep\`eres pour les fr\'equences %%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[h]
+	\centering
+	\label{graphique1}
+
+\begin{tabular}{cc}
+
+Mes fr\'equences et celles de mon voisin & Les fr\'equences de mon groupe\\
+
+\def\xmin{-1} \def\xmax{6.6} \def\ymin{-0.1} \def\ymax{1.1}
+\psset{xunit=1cm,yunit=10cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psset{xunit=1cm,yunit=1cm}
+\psgrid[griddots=7,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(0,0)(6.5,10.5)
+\psset{xunit=1cm,yunit=10cm}
+\psaxes[labels=all,labelsep=1pt, Dx=1,Dy=0.1]{->}(0,0)(0,0)(\xmax,\ymax)
+\uput[dl](\xmax,0){$x$}
+\uput[dr](0,\ymax){$y$}
+\end{pspicture*}
+	&
+
+\def\xmin{-1} \def\xmax{6.6} \def\ymin{-0.1} \def\ymax{1.1}
+\psset{xunit=1cm,yunit=10cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psset{xunit=1cm,yunit=1cm}
+\psgrid[griddots=7,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(0,0)(6.5,10.5)
+\psset{xunit=1cm,yunit=10cm}
+\psaxes[labels=all,labelsep=1pt, Dx=1,Dy=0.1]{->}(0,0)(0,0)(\xmax,\ymax)
+\uput[dl](\xmax,0){$x$}
+\uput[dr](0,\ymax){$y$}
+\end{pspicture*}
+\\
+\end{tabular}
+
+%\end{figure}
+
+\vfill
+
+
+%\begin{figure}[p]
+%	\centering
+	\label{graphique2}
+
+	\begin{tabular}{cc}
+
+Les fr\'equences de ma colonne & Les fr\'equences de la classe \\
+
+\def\xmin{-1} \def\xmax{6.6} \def\ymin{-0.1} \def\ymax{1.1}
+\psset{xunit=1cm,yunit=10cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psset{xunit=1cm,yunit=1cm}
+\psgrid[griddots=7,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(0,0)(6.5,10.5)
+\psset{xunit=1cm,yunit=10cm}
+\psaxes[labels=all,labelsep=1pt, Dx=1,Dy=0.1]{->}(0,0)(0,0)(\xmax,\ymax)
+\uput[dl](\xmax,0){$x$}
+\uput[dr](0,\ymax){$y$}
+\end{pspicture*}
+
+	&
+
+\def\xmin{-1} \def\xmax{6.6} \def\ymin{-0.1} \def\ymax{1.1}
+\psset{xunit=1cm,yunit=10cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psset{xunit=1cm,yunit=1cm}
+\psgrid[griddots=7,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(0,0)(6.5,10.5)
+\psset{xunit=1cm,yunit=10cm}
+\psaxes[labels=all,labelsep=1pt, Dx=1,Dy=0.1]{->}(0,0)(0,0)(\xmax,\ymax)
+\uput[dl](\xmax,0){$x$}
+\uput[dr](0,\ymax){$y$}
+\end{pspicture*}\\
+
+\end{tabular}
+\end{figure}
+\end{act}
+
+\FloatBarrier %%%%% Pour forcer le placement des rep\`eres avant l'activit\'e suivante
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% Marche \`a 5 pas %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{act}[Marche \`a cinq pas]\label{fluctuact2}
+On se pose la question suivante :\\
+\emph{On place un pion sur un axe gradu\'e \`a la position 0. Au hasard, le pion avance ou recule d'un pas. Il fait cinq pas. Quelle est sa position d'arriv\'ee sur l'axe ?}\newline
+
+Il y a diff\'erentes mani\`eres de jouer \`a ce jeu. Expliquez comment vous feriez :
+\vspace{-1em}\begin{multicols}{3}
+\begin{itemize}
+	\item avec une pi\`ece de monnaie ;\sautcol
+	\item avec un d\'e ;\sautcol
+	\item avec la touche \emph{random} de la calculatrice.
+\end{itemize}
+\end{multicols}
+
+C'est la derni\`ere m\'ethode que nous allons utiliser dans une premi\`ere partie puis nous regarderons ce qu'un ordinateur peut donner comme r\'esultats.\newline
+
+\noindent \textbf{Partie A : Avec la touche \emph{random} de la calculatrice}
+
+\begin{enumerate}
+	\item Par groupe de deux
+
+				\begin{enumerate}
+					\item 25 marches
+						 \begin{itemize}
+									\item l'un indique le r\'esultat de la calculatrice ;
+									\item l'autre effectue la marche dans le tableau \ref{marche1} \vpageref{marche1} et note d'une croix bien visible \textbf{la case d'arriv\'ee au bout de cinq pas} ;
+									\item le groupe proc\`ede ainsi 25 marches \`a cinq pas ;
+									\item le groupe fait ensuite le total des arriv\'ees et calcule les fr\'equences ;
+									\item on inverse les rôles pour 25 nouvelles marche \`a cinq pas.
+								\end{itemize}
+
+
+
+						\item Tableaux des fr\'equences puis graphiques
+						\begin{itemize}
+							\item Le groupe compl\`ete ensuite les tableaux de fr\'equence et construit les diagrammes des fr\'equences.
+						\end{itemize}
+				\end{enumerate}
+
+
+					\item Par colonne puis pour la classe\\
+	Relever les r\'esultats de votre colonne puis de la classe pour compl\'eter les derniers tableaux de fr\'equence et construire les diagrammes des fr\'equences.
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Tableau des relev\'es des 25 marches \`a cinq pas %%%%%%%%%%%%%%%%
+
+\begin{table}[!h]
+	\centering
+		\caption{Les 25 marches \`a cinq pas}
+	\label{marche1}\small
+		\begin{tabular}{|m{2cm}|*{11}{>{\centering}m{0.75cm}|}} \hline
+		 & $-5$ & $-4$ & $-3$ & $-2$ & $-1$ & 0 & 1 & 2 & 3 & 4 & 5 \tabularnewline \hline \hline
+		 Marche 1 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 2 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 3 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 4 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 5 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 6 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 7 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 8 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 9 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 10 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 11 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 12 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 13 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 14 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 15 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 16 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 17 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 18 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 19 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 20 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 21 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 22 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 23 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 24 & & & & & & & & & & & \tabularnewline \hline
+		 Marche 25 & & & & & & & & & & & \tabularnewline \hline\hline
+		 Total & & & & & & & & & & & \tabularnewline \hline\hline
+		 Fr\'equences & & & & & & & & & & & \tabularnewline \hline
+		\end{tabular}\normalsize
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%% fin des relev\'es %%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%% Tableaux des fr\'equences %%%%%%%%%%%%%%%%%%%
+
+\begin{table}[p]
+	\centering
+	\caption{Tableaux des fr\'equences}
+	\label{frequencesmarchegroupe}
+	\small
+		\begin{tabular}{ccc}
+
+		Fr\'equences de mes 25 marches & Fr\'equences de celles de mon voisin & Fr\'equences de mon groupe \\
+
+		\begin{tabular}{|c|c|c|}\hline
+		Arriv\'ee & Effectif & Fr\'equence\\ \hline
+		$-5$ &  & \\ \hline
+		$-3$ &  & \\ \hline
+		$-1$ &  & \\ \hline
+		$1$ &  & \\ \hline
+		$3$ &  & \\ \hline
+		$5$ &  & \\ \hline
+		\end{tabular}
+
+	&
+
+	\begin{tabular}{|c|c|c|}\hline
+		Arriv\'ee & Effectif & Fr\'equence\\ \hline
+		$-5$ &  & \\ \hline
+		$-3$ &  & \\ \hline
+		$-1$ &  & \\ \hline
+		$1$ &  & \\ \hline
+		$3$ &  & \\ \hline
+		$5$ &  & \\ \hline
+		\end{tabular}
+
+	&
+	\begin{tabular}{|c|c|c|}\hline
+		Arriv\'ee & Effectif & Fr\'equence\\ \hline
+		$-5$ &  & \\ \hline
+		$-3$ &  & \\ \hline
+		$-1$ &  & \\ \hline
+		$1$ &  & \\ \hline
+		$3$ &  & \\ \hline
+		$5$ &  & \\ \hline
+		\end{tabular}
+	\\
+
+		\end{tabular}\normalsize
+
+		\caption{Colonne et classe}\label{frequencesmarcheclasse}
+		\small
+		\begin{tabular}{cc}
+
+		Fr\'equences des 25 marches de ma colonne & Fr\'equences de celles de la classe \\
+
+		\begin{tabular}{|c|c|c|}\hline
+		Arriv\'ee & Effectif & Fr\'equence\\ \hline
+		$-5$ &  & \\ \hline
+		$-3$ &  & \\ \hline
+		$-1$ &  & \\ \hline
+		$1$ &  & \\ \hline
+		$3$ &  & \\ \hline
+		$5$ &  & \\ \hline
+		\end{tabular}
+
+		&
+		\begin{tabular}{|c|c|c|}\hline
+		Arriv\'ee & Effectif & Fr\'equence\\ \hline
+		$-5$ &  & \\ \hline
+		$-3$ &  & \\ \hline
+		$-1$ &  & \\ \hline
+		$1$ &  & \\ \hline
+		$3$ &  & \\ \hline
+		$5$ &  & \\ \hline
+		\end{tabular}
+		\\
+		\end{tabular}
+	\normalsize
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%Fin des tableaux des fr\'equences %%%%%%%%%%%
+
+
+%\FloatBarrier
+%%%%%%%%%%%%%%%%%%% Les rep\`eres pour les fr\'equences %%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[p]
+	\centering
+	\label{graphiquemarche1}
+
+\begin{tabular}{cc}
+
+Mes fr\'equences et celles de mon voisin & Les fr\'equences de mon groupe\\
+
+\def\xmin{-8.6} \def\xmax{5.6} \def\ymin{-0.1} \def\ymax{1.05}
+\psset{xunit=0.5cm,yunit=6cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psset{xunit=0.5cm,yunit=0.6cm}
+\psgrid[griddots=7,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-7,0)(5.5,10.5)
+\psset{xunit=0.5cm,yunit=6cm}
+%\psaxes[labels=none,labelsep=1pt, Dx=2,Dy=0.1]{->}(-7,0)(-5,0)(5,\ymax)
+\psline{->}(-7,0)(-7,\ymax)
+\multido{\n=-5+2}{6}{%
+\psline{-}(\n,0.01)(\n,-0.01)
+\uput[d](\n,0){\n}
+}
+\psline{->}(-7,0)(5.5,0)
+\multido{\n=0+0.1}{11}{%
+\psline{-}(-7.1,\n)(-6.9,\n)
+\uput[l](-7,\n){\n}
+}
+\end{pspicture*}
+	&
+
+\def\xmin{-8.6} \def\xmax{5.6} \def\ymin{-0.1} \def\ymax{1.05}
+\psset{xunit=0.5cm,yunit=6cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psset{xunit=0.5cm,yunit=0.6cm}
+\psgrid[griddots=7,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-7,0)(5.5,10.5)
+\psset{xunit=0.5cm,yunit=6cm}
+%\psaxes[labels=none,labelsep=1pt, Dx=2,Dy=0.1]{->}(-7,0)(-5,0)(5,\ymax)
+\psline{->}(-7,0)(-7,\ymax)
+\multido{\n=-5+2}{6}{%
+\psline{-}(\n,0.01)(\n,-0.01)
+\uput[d](\n,0){\n}
+}
+\psline{->}(-7,0)(5.5,0)
+\multido{\n=0+0.1}{11}{%
+\psline{-}(-7.1,\n)(-6.9,\n)
+\uput[l](-7,\n){\n}
+}
+\end{pspicture*}	\\
+\end{tabular}
+
+\end{figure}
+
+\begin{figure}[p]
+	\centering
+	\label{marchegraphique2}
+
+	\begin{tabular}{cc}
+
+Les fr\'equences de ma colonne & Les fr\'equences de la classe \\
+
+\def\xmin{-8.6} \def\xmax{5.6} \def\ymin{-0.1} \def\ymax{1.05}
+\psset{xunit=0.5cm,yunit=6cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psset{xunit=0.5cm,yunit=0.6cm}
+\psgrid[griddots=7,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-7,0)(5.5,10.5)
+\psset{xunit=0.5cm,yunit=6cm}
+%\psaxes[labels=none,labelsep=1pt, Dx=2,Dy=0.1]{->}(-7,0)(-5,0)(5,\ymax)
+\psline{->}(-7,0)(-7,\ymax)
+\multido{\n=-5+2}{6}{%
+\psline{-}(\n,0.01)(\n,-0.01)
+\uput[d](\n,0){\n}
+}
+\psline{->}(-7,0)(5.5,0)
+\multido{\n=0+0.1}{11}{%
+\psline{-}(-7.1,\n)(-6.9,\n)
+\uput[l](-7,\n){\n}
+}
+\end{pspicture*}		&
+
+\def\xmin{-8.6} \def\xmax{5.6} \def\ymin{-0.1} \def\ymax{1.05}
+\psset{xunit=0.5cm,yunit=6cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psset{xunit=0.5cm,yunit=0.6cm}
+\psgrid[griddots=7,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-7,0)(5.5,10.5)
+\psset{xunit=0.5cm,yunit=6cm}
+%\psaxes[labels=none,labelsep=1pt, Dx=2,Dy=0.1]{->}(-7,0)(-5,0)(5,\ymax)
+\psline{->}(-7,0)(-7,\ymax)
+\multido{\n=-5+2}{6}{%
+\psline{-}(\n,0.01)(\n,-0.01)
+\uput[d](\n,0){\n}
+}
+\psline{->}(-7,0)(5.5,0)
+\multido{\n=0+0.1}{11}{%
+\psline{-}(-7.1,\n)(-6.9,\n)
+\uput[l](-7,\n){\n}
+}
+\end{pspicture*}	\\
+
+\end{tabular}
+\end{figure}
+\FloatBarrier
+
+\noindent \textbf{Partie B : R\'esultats de simulation par ordinateur}
+
+Le tableau ci-dessous donne une liste de 10 s\'eries de 100 marches, obtenues avec un ordinateur.
+
+\begin{center}
+\begin{tabular}{|*{7}{c|}}\hline
+ & $-5$ & $-3$ & $-1$ & 1 & 3 & 5 \\ \hline\hline
+ S\'erie 1 &4&11&42&26&13&4 \\ \hline
+ S\'erie 2 &3&21&33&21&20&2 \\ \hline
+ S\'erie 3 &4&14&33&27&18&4 \\ \hline
+ S\'erie 4 &6&19&34&20&14&7 \\ \hline
+ S\'erie 5 &4&11&34&31&16&4 \\ \hline
+ S\'erie 6 &2&23&25&28&19&3 \\ \hline
+ S\'erie 7 &4&14&36&28&16&2 \\ \hline
+ S\'erie 8 &0&15&38&26&19&2 \\ \hline
+ S\'erie 9 &3&12&29&29&24&3 \\ \hline
+ S\'erie 10 &1&16&31&34&14&4 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+	\item Remplir le tableau des fr\'equences :
+
+	\begin{center}
+\begin{tabular}{|*{7}{m{1.5cm}|}}\hline
+ & $-5$ & $-3$ & $-1$ & 1 & 3 & 5 \\ \hline\hline
+ S\'erie 1 &&&&&& \\ \hline
+ S\'erie 2 &&&&&& \\ \hline
+ S\'erie 3 &&&&&& \\ \hline
+ S\'erie 4 &&&&&& \\ \hline
+ S\'erie 5 &&&&&& \\ \hline
+ S\'erie 6 &&&&&& \\ \hline
+ S\'erie 7 &&&&&& \\ \hline
+ S\'erie 8 &&&&&& \\ \hline
+ S\'erie 9 &&&&&& \\ \hline
+ S\'erie 10 &&&&&& \\ \hline
+\end{tabular}
+\end{center}
+
+\item Donner un encadrement des fr\'equences pour chaque \'ev\'enement :
+
+\begin{center}
+\begin{tabular}
+{>{$\ldots\ldots\leq$ Fr\'equence de l'arriv\'ee }c<{ $\leq\ldots\ldots$}}
+$-5$ \\ $-3$ \\ $-1$ \\ 1 \\ 3 \\ 5 \\ \end{tabular}
+\end{center}
+
+\item Calculer les fr\'equences des \'ev\'enements pour ces 1\,000 marches.
+\item Comparer ces r\'esultats obtenus avec un ordinateur avec ceux obtenus par simulation avec la touche \emph{random} de la calculatrice.
+\item R\'epondre aux questions suivantes :
+\begin{itemize}
+	\item Si je fais 10 marches, suis-je sûr que $0,25\leqslant$ fr\'equence de l'arriv\'ee $-1\leqslant 0,36$ ?
+	\item Si je fais 100 marches, suis-je sûr que $0,25\leqslant$ fr\'equence de l'arriv\'ee $-1\leqslant 0,36$ ?
+\end{itemize}
+
+
+\end{enumerate}
+
+\end{act}
+
+\sautpage
+
+\section{Loi des grands nombres et intervalle de fluctuation}
+
+\subsection{Un exemple}
+
+ Dans la classe de Seconde 14 pour l'ann\'ee scolaire 2010--2011, il y avait 9 gar\c cons et 28 filles, ce qui para\^it disproportionn\'e.\\
+ On peut se demander toutefois si, lorsqu'on choisit 37 \'el\`eves au hasard dans une population constitu\'ee d'une moiti\'e de filles et d'une moiti\'e de gar\c cons, cette distribution est rare.
+
+\begin{enumerate}
+ \item Quelle \'etait la fr\'equence des filles dans la classe de Seconde 14 ?
+ \item Expliquer comment simuler le choix de 37 \'el\`eves au hasard dans une population d'une moiti\'e de filles et d'une moiti\'e de gar\c cons \`a l'aide de la fonction \emph{random} de la calculatrice.
+ \item Proc\'eder \`a cette simulation en notant le nombre de filles et de gar\c cons obtenus et calculer la fr\'equence des filles dans votre simulation (arrondie au centi\`eme).
+ \item \'Ecrire cette fr\'equence au tableau et noter les r\'esultats des simulations de la classe dans le tableau ci-dessous :
+    \begin{center}
+    \begin{tabular}{|*{10}{m{1cm}|}}\hline
+      & & & & & & & & & \\ \hline
+      & & & & & & & & & \\ \hline
+      & & & & & & & & & \\ \hline
+      & & & & & & & & & \\ \hline
+    \end{tabular}
+    \end{center}
+ \item D\'eterminer, pour cette s\'erie statistique :
+      \begin{enumerate}
+       \item les valeurs extr\^emes, les premier et troisi\`eme quartiles, les premier et neuvi\`eme d\'eciles, la m\'ediane et la moyenne ;
+       \item repr\'esenter le diagramme en boite correspondant ;
+       \item d\'eterminer l'intervalle interquartile et interpr\'eter le r\'esultat ;
+       %\item d\'eterminer l'intervalle interd\'ecile et interpr\'eter le r\'esultat.
+      \end{enumerate}
+ \item D'apr\`es ces r\'esultats, peut-il arriver que le hasard produise une distribution comparable \`a celle de la Seconde 14 ? Si oui, est-ce fr\'equent ?
+ \end{enumerate}
+ 
+ \subsection{Loi des grands nombres et intervalle de fluctuation}
+ 
+ Nous avons vu dans l'activit\'e \ref{fluctuact1} que, lorsque qu'on r\'ep\`ete une exp\'erience al\'eatoire un grand nombre de fois, les diff\'erentes fr\'equences d'apparition ont tendance \`a se stabiliser.
+ 
+Ce constat est un r\'esultat math\'ematique appel\'e \emph{La loi des grands nombres} :
+
+\begin{theo}[Loi des grands nombres]
+Pour une exp\'erience donn\'ee, dans le mod\`ele d\'efini par une loi de probabilit\'e, les distributions des fr\'equences calcul\'ees sur des s\'eries de taille $n$ se
+rapprochent de la loi de probabilit\'e quand $n$ devient grand.
+\end{theo}
+
+Nous l'admettrons.
+
+Les math\'ematiciens ont obtenu des r\`egles assez pr\'ecises sur la fa\c con dont les fr\'equences se rapprochent de la probabilit\'e et une premi\`ere approximation de ces r\`egles, la seule au programme de la Seconde, est la suivante, qu'on admettra :
+
+
+  \begin{prop*}[Intervalle de fluctuation en statistiques]
+   Dans une population, la proportion d'un caract\`ere est $p$.\\
+   On produit un \'echantillon de taille $n$ de cette population et on d\'etermine la fr\'equence $f$ du caract\`ere dans cet \'echantillon.\\
+   D\`es lors que $n\geqslant 30$, $np\geqslant 5$ et $n(1-p)$, alors, dans 95\,\% des cas au moins, $f$ appartient \`a l'intervalle $\left[p-\frac{1}{\sqrt{n}}\,;\,p+\frac{1}{\sqrt{n}}\right]$, qui est une bonne approximation de ce qu'on appelle \emph{intervalle de fluctuation au seuil de 95\,\%} (ou \emph{au risque de 5\,\%})
+  \end{prop*}
+  
+  On peut aussi reformuler la propri\'et\'e en termes de probabilit\'es :
+  
+  \begin{prop}[Intervalle de fluctuation en probabilit\'e]
+   Soit une exp\'erience al\'eatoire o\`u la probabilit\'e d'un \'ev\`enement $A$ est $p$. On reproduit cette exp\'erience $n$ fois et on d\'etermine la fr\'equence $f$ d'apparition de l'\'ev\`enement $A$.\\
+    D\`es lors que $n\geqslant 30$, $np\geqslant 5$ et $n(1-p)$, alors, dans 95\,\% des cas au moins, $f$ appartient \`a l'intervalle $\left[p-\frac{1}{\sqrt{n}}\,;\,p+\frac{1}{\sqrt{n}}\right]$, qui est une bonne approximation de ce qu'on appelle \emph{intervalle de fluctuation au seuil de 95\,\%} (ou \emph{au risque de 5\,\%})
+  \end{prop}
+
+  
+\begin{rmq}
+On remarquera que plus $n$ est grand et plus l'intervalle de fluctuation est petit. En effet :
+	\begin{itemize}
+	 \item avec $n=25$, l'intervalle de fluctuation est de la forme $[p-0,2\,;\,p+0,2]$ (soit $p\pm 20\%$) 
+	 \item avec $n=100$, l'intervalle de fluctuation est de la forme $[p-0,1\,;\,p+0,1]$ (soit $p\pm 10\%$) 
+	 \item avec $n=400$, l'intervalle de fluctuation est de la forme $[p-0,05\,;\,p+0,05]$ (soit $p\pm 5\%$)  
+	 \item avec $n=10000$, l'intervalle de fluctuation est de la forme $[p-0,01\,;\,p+0,01]$ (soit $p\pm 1\%$)  
+	 \item etc.
+	\end{itemize}
+Cela est coh\'erent avec la loi de grands nombres : plus $n$ est grand et plus la fr\'equence d'un \'ev\`enement tend vers la probabilit\'e de cet \'ev\'enement.
+\end{rmq}
+
+\subsection{Retour \`a notre exemple d'introduction}
+  
+  
+    Essayons de r\'epondre \`a la question suivante : \\
+    \og Dans le cas de la classe de Seconde 14, peut-on avancer, au risque de 5\,\% de se tromper, que l'\'echantillon (la classe) est repr\'esentatif d'une population (le lyc\'ee) comportant une moiti\'e de filles et d'une moiti\'e de gar\c cons ?\\
+    Et si ce n'est pas le cas, quelles peuvent \^etre les raisons ? \fg
+    
+\begin{enumerate}
+ \item \begin{enumerate}
+	\item Dans notre population de r\'ef\'erence, quelle est la valeur de $p$ qu'on a suppos\'ee ?
+	\item Quelle est la valeur de $n$ ?
+	\item D\'eterminer alors l'intervalle de fluctuation correspondant \`a cette \'exp\'erience.
+	\item Quel pourcentage des fr\'equences obtenues par les simulations de la classe appartient \`a cet intervalle ?
+	\item R\'epondre \`a la question.
+	\end{enumerate}
+ \item Et si notre supposition, pour $p$, \'etait fausse ? \\
+    \`A l'administration du lyc\'ee, on pouvait obtenir l'information suivante : \og Au Lyc\'ee Dupuy de L\^ome, pour l'ann\'ee scolaire 2010--2011, il y a en Seconde 524 \'el\`eves, dont 329 filles et 195 gar\c cons\fg.
+    \begin{enumerate}
+     \item D\'eterminer l'intervalle de fluctuation (toujours pour un \'echantillon de taille 37).
+     \item La fr\'equence des filles de la Seconde 14 appartient-elle \`a cet intervalle ? Qu'en conclure ?
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+\sautpage
+
+\section{Exercices}
+
+\subsection{Simulations}
+
+\begin{exo}\label{fluctuex1}
+On lance deux d\'es cubiques et on note \textbf{la somme des deux nombres obtenus}.
+\begin{enumerate}
+	\item Quels sont les r\'esultats possibles ?
+	\item Avec la table de nombres al\'eatoires entiers de 0 \`a 9 donn\'ee ci-dessous, simuler 25 lancers en expliquant votre façon de proc\'eder.
+
+\reinitrand[first=0, last=9] %fixe les bornes pour les nombres \'al\'eatoires
+\begin{center}
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+\end{center}
+
+\item Donner la suite des 25 r\'esultats obtenus.
+	\item Calculer les fr\'equences obtenues pour chaque r\'esultat possible.
+
+	\item Norbert a proc\'ed\'e lui aussi \`a une simulation de 25 lancers, avec une autre table de nombres al\'eatoires, et il a obtenu les r\'esultats suivants :
+
+	\begin{small}\begin{center}
+\begin{tabular}{|c|*{12}{>{\centering}m{0.75cm}|}}\hline
+Face & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \tabularnewline \hline
+Effectif & 1 & 1 & 2 & 2 & 1 & 4 & 4 & 4 & 3 & 2 & 1 \tabularnewline \hline
+\end{tabular}
+\end{center}	\end{small}
+
+	Comparer ces r\'esultats \`a ceux de votre simulation.
+
+	\item Une simulation \`a l'ordinateur a donn\'e les r\'esultats suivants :
+
+
+\begin{small}\begin{center}
+\begin{tabular}{|c|*{12}{>{\centering}m{0.75cm}|}}\hline
+Face & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \tabularnewline \hline
+Effectif & 24 & 49 & 86 & 103 & 145 & 178 & 139 & 114 & 77 & 55 & 30 \tabularnewline \hline
+\end{tabular}
+\end{center}\end{small}
+
+Comparer ces r\'esultats \`a ceux de votre simulation.
+\end{enumerate}
+
+\end{exo}
+
+\begin{exo}\label{fluctuex2}
+On lance deux d\'es cubiques et on note \textbf{le plus grand des deux nombres obtenus}.
+\begin{enumerate}
+	\item Quels sont les r\'esultats possibles ?
+	\item Avec la table de nombres al\'eatoires entiers de 1 \`a 6 donn\'ee ci-dessous, simuler 50 lancers en expliquant votre façon de proc\'eder.
+
+\reinitrand[first=1, last=6] %fixe les bornes pour les nombres \'al\'eatoires
+\begin{center}
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+\end{center}
+
+	\item Donner la suite des 50 r\'esultats obtenus.
+	\item Calculer les fr\'equences obtenues pour chaque r\'esultat possible.
+	\item Une simulation \`a l'ordinateur a donn\'e les r\'esultats suivants :
+
+
+\begin{center}
+\begin{tabular}{|c|*{6}{>{\centering}m{1.5cm}|}}\hline
+Face & 1 & 2 & 3 & 4 & 5 & 6 \tabularnewline \hline
+Effectif & 25 & 79 & 141 & 203 & 234 & 318 \tabularnewline \hline
+\end{tabular}
+\end{center}
+
+Comparer ces r\'esultats \`a ceux de votre simulation.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}\label{fluctuex3}
+Une urne contient 10 boules : \textbf{cinq} rouges, \textbf{trois} noires et \textbf{deux} blanches. On tire une boule et on regarde sa couleur.
+\begin{enumerate}
+	\item Sur un tr\`es grand nombre de tirages, quelle fr\'equence pr\'evoyez-vous pour le tirage d'une boule rouge ? d'une boule noire ? d'une boule blanche ?
+	\item Avec la table de nombres al\'eatoires entiers de 0 \`a 9 donn\'ee ci-dessous, simuler 25 tirages en expliquant votre m\'ethode. \\
+	Calculer les fr\'equences obtenues pour chaque couleur.
+	\item Comparer les r\'esultats obtenus question 2. avec vos pr\'evisions de la question 1.
+\end{enumerate}
+\reinitrand[first=0, last=9] %fixe les bornes pour les nombres \'al\'eatoires
+\begin{center}
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+\end{center}
+\end{exo}
+
+\begin{exo}\label{fluctuex4}
+Le li\`evre et la tortue font la course.
+
+Le li\`evre se divertit longuement mais quand il part, il file \`a l'arriv\'ee. La tortue, quant \`a elle, avance inexorablement mais lentement vers l'arriv\'ee.
+
+On consid\`ere qu'on peut assimiler cette course au lancement d'un d\'e :
+\begin{itemize}
+	\item si le 6 sort, le li\`evre avance ;
+	\item sinon la tortue avance d'une case et au bout de 4 cases la tortue a gagn\'e.
+\end{itemize}
+
+\begin{small}\begin{center}
+\def\xmin{-1.5} \def\xmax{8.5} \def\ymin{-0.5} \def\ymax{3.5}
+\psset{xunit=1cm,yunit=1cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+\pspolygon(-0.5,0)(3,0)(3,1)(-0.5,1)
+\rput(1.25,0.5){D\'epart du li\`evre}
+\psline{->}(3,0.5)(5,0.5)
+\pspolygon(5,0)(8,0)(8,1)(5,1)
+\rput(6.5,0.5){Arriv\'ee}
+
+\pspolygon(-0.5,2)(3,2)(3,3)(-0.5,3)
+\rput(1.25,2.5){D\'epart de la tortue}
+
+\psline{->}(3,2.5)(3.5,2.5)
+\pspolygon(3.5,2)(4.5,2)(4.5,3)(3.5,3)
+\rput(4,2.5){1}
+
+\psline{->}(4.5,2.5)(5,2.5)
+\pspolygon(5,2)(6,2)(6,3)(5,3)
+\rput(5.5,2.5){2}
+
+\psline{->}(6,2.5)(6.5,2.5)
+\pspolygon(6.5,2)(7.5,2)(7.5,3)(6.5,3)
+\rput(7,2.5){3}
+
+\psline{->}(7,2)(7,1)
+
+\end{pspicture*}
+\end{center}\end{small}
+
+\`A l'aide de la table de nombres entiers al\'eatoires de 1 \`a 6 donn\'ee estimez lequel de ces deux animaux a la situation la plus avantageuse et indiquez dans quelle proportion, d'apr\`es votre simulation, il va gagner.
+
+\reinitrand[first=1, last=6] %fixe les bornes pour les nombres \'al\'eatoires
+\begin{footnotesize}\begin{center}
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+
+\end{center}            \end{footnotesize}
+\end{exo}
+
+
+
+\subsection{Intervalle de fluctuation}
+
+\begin{exo}
+ On se r\'ef\`ere dans cet exercice aux lancers de d\'es de l'activit\'e \ref{fluctuact1}.
+ \begin{enumerate}
+  \item Quelle est la probabilit\'e de chacune des faces de ce d\'e ?
+  \item D\'eterminer les intervalles de fluctuations au seuil de 95\,\% pour des \'echantillons de taille 50, 100, $n$ (o\`u $n$ est le nombre de lancers dans la colonne) et $p$ (o\`u $p$ est le nombre de lancers dans la classe pour chacune des faces.
+  \begin{rmq}
+   \emph{La probabilit\'e de chacune des faces est normalement trop petite pour d\'eterminer cet intervalle, mais on n'en tiendra pas compte.}
+  \end{rmq}
+  \item Indiquer si les fr\'equences observ\'ees appartiennent \`a ces intervalles.
+ \end{enumerate}
+
+\end{exo}
+
+\begin{exo}
+ On se r\'ef\`ere dans cet exercice aux marches \`a cinq pas de l'activit\'e \ref{fluctuact2}.
+ \begin{enumerate}
+  \item En imaginant un arbre des possibles, montrer que les probabilit\'es des \'ev\'enements (terminer en) $-5$ ; $-3$ ; $-1$ ; 1 ; 3 ; 5 sont, respectivement, $\frac{1}{2^5}$ ; $\frac{5}{2^5}$ ; $\frac{10}{2^5}$ ; $\frac{10}{2^5}$ ; $\frac{5}{2^5}$ ; $\frac{1}{2^5}$.
+  \item D\'eterminer les intervalles de fluctuations au seuil de 95\,\% pour des \'echantillons de taille 25, 50, $n$ (o\`u $n$ est le nombre de lancers dans la colonne), $p$ (o\`u $p$ est le nombre de lancers dans la classe) et 1000 pour chacune des arriv\'ees dont la probabilit\'e est suffisamment grande.
+  \item Indiquer si les fr\'equences observ\'ees appartiennent \`a ces intervalles.
+ \end{enumerate}
+
+\end{exo}
+
+\begin{exo}
+ On se r\'ef\`ere dans cet exercice aux lancers de d\'es de l'exercice \ref{fluctuex1}.
+ \begin{enumerate}
+  \item Quelle est la probabilit\'e de chacune des sommes ?\\
+  \emph{On pourra s'aider d'un arbre des possibles ou d'un tableau.}
+  \item D\'eterminer les intervalles de fluctuations au seuil de 95\,\% pour des \'echantillons de taille 25 et 1000 pour les sommes dont la probabilit\'e le permet.
+  \item Indiquer si les fr\'equences observ\'ees appartiennent \`a ces intervalles.
+ \end{enumerate}
+
+\end{exo}
+
+\begin{exo}
+ On se r\'ef\`ere dans cet exercice aux lancers de d\'es de l'exercice \ref{fluctuex2}.
+ \begin{enumerate}
+  \item Quelle est la probabilit\'e de chacun des r\'esultats ?\\
+  \emph{On pourra s'aider d'un arbre des possibles ou d'un tableau.}
+  \item D\'eterminer les intervalles de fluctuations au seuil de 95\,\% pour des \'echantillons de taille 50 et 1000 pour les r\'esultats dont la probabilit\'e le permet.
+  \item Indiquer si les fr\'equences observ\'ees appartiennent \`a ces intervalles.
+ \end{enumerate}
+
+\end{exo}
+
+\begin{exo}
+ On se r\'ef\`ere dans cet exercice aux tirages dans l'urne de l'exercice \ref{fluctuex3}.
+ \begin{enumerate}
+  \item Quelle est la probabilit\'e de chacune des couleurs ?
+  \item D\'eterminer les intervalles de fluctuations au seuil de 95\,\% pour des \'echantillons de taille 25 pour les couleurs dont la probabilit\'e le permet.
+  \item Indiquer si les fr\'equences observ\'ees appartiennent \`a ces intervalles.
+ \end{enumerate}
+
+\end{exo}
+
+\sautpage
+
+\begin{exo}
+ \emph{D'apr\`es le site de l'\href{http://dutarte.club.fr/Sitestat/affaire\%20castaneda.htm}{IREM de Paris 13}.}\\
+L'ensemble des faits \'evoqu\'es ci-dessous est r\'eel.\\
+En novembre 1976 dans un comt\'e du sud du Texas, \textsc{Rodrigo Partida} \'etait condamn\'e \`a huit ans de prison pour cambriolage d'une r\'esidence et tentative de viol.\\
+Il attaqua ce jugement au motif que la d\'esignation des jur\'es de ce comt\'e \'etait discriminante \`a l'\'egard des Am\'ericains d'origine mexicaine. Alors que 79,1\,\% de la population de comt\'e \'etait d'origine mexicaine, sur les 870 personnes convoqu\'ees pour \^etre jur\'es lors d'une certaine p\'eriode de r\'ef\'erence, il n'y eût que 339 personnes d'origine mexicaine.
+\begin{enumerate}
+  \item D\'eterminer l'intervalle de fluctuation correspondant \`a la proportion d'origine mexicaine pour un \'echantillon de taille 870.
+  \item La fr\'equence des personnes d'origine mexicaine dans les personnes convoqu\'ees est-elle dans cet intervalle ?
+  \item Qu'en conclure ?
+\end{enumerate}
+
+\end{exo}
+
+\begin{exo}
+\emph{Les questions 1 et 2 sont ind\'ependantes.}
+\begin{enumerate}
+ \item \`A Dupuy de L\^ome, pour la session 2009 du baccaulaur\'eat g\'en\'eral, il y a eu 290 re\c cus pour 320 candidats se pr\'esentant \`a l'\'epreuve.
+Les fr\'equences des re\c cus en S\'erie L, ES et S \'etaient, respectivement, 0,766, 0,896 et 0,963.\\
+ D\'eterminer si les diff\'erences de r\'eussite entre les fili\`eres peuvent \^etre dues aux fluctuations d'\'echantillonage.
+ \item Dans le village chinois de Xicun en 2000, il est n\'e 20 enfants dont 16 gar\c cons. On suppose que la proportion de gar\c cons et de filles est la m\^eme \`a la naissance dans toute l'esp\`ece humaine.\\
+D\'eterminer si la fr\'equence des naissances de gar\c cons dans le village de Xicun en 2009 peut \^etre due aux fluctuations d'\'echantillonage.
+ \item Avez-vous v\'erifi\'e que toutes les conditions \'etaient remplies pour appliquer les intervalles de fluctuation dans les deux questions pr\'ec\'edentes ?
+\end{enumerate}
+
+
+\end{exo}
+
+
+
+\begin{exo}
+ Au premier tour de l'\'election pr\'esidentielle fran\c caise de mai 2007, parmi les suffrages exprim\'es, les proportions, en pourcentage, pour les candidats ayant obtenu pour de 2\,\% des suffrages, \'etaient les suivantes :
+ \vspace{-1em}\begin{center}
+               \begin{tabular}{c|c|c|c|c|c}
+                Bayrou & Besancenot & De Villiers & Le Pen & Royal & Sarkozy \\ \hline
+		18,57	& 4,08	    & 2,23	  & 10,44  & 25,87 & 31,18
+               \end{tabular}
+              \end{center}
+ Cinq mois plus t\^ot, le 13 d\'ecembre 2006, l'institut de sondage BVA faisait para\^itre un sondage effectu\'e sur un \'echantillon de 797 personnes dont voici les r\'esultats, en pourcentage, concernant les candidats pr\'ec\'edemment cit\'es :
+\vspace{-1em}\begin{center}
+               \begin{tabular}{c|c|c|c|c|c}
+                Bayrou & Besancenot & De Villiers & Le Pen & Royal & Sarkozy \\ \hline
+		7	& 4	    & 2	  & 10  & 34 & 32
+               \end{tabular}
+              \end{center}
+  \begin{enumerate}
+   \item Pour quels candidats peut-on appliquer les intervalles de fluctuation parmi ceux pr\'esents au premier tour ?
+   \item Pour ces candidats d\'eterminer les intervalles de fluctuation pour un \'echantillon de taille 797.
+   \item Les r\'esultats du sondage donnent-ils des fr\'equences appartenant \`a ces intervalles ?
+   \item Qu'en conclure ?
+  \end{enumerate}
+
+\end{exo}
+
+\sautpage
+
+\begin{exo}
+\emph{Les questions 1 et 2 sont ind\'ependantes.}
+\begin{enumerate}
+ \item On consid\`ere que la proportion de femmes dans la population fran\c caise est $\frac{1}{2}$. \`A l'assembl\'ee nationale, il y a 577 d\'eput\'es, dont 108 femmes.\\
+ Peut-on consid\'erer que cette r\'epartition est un effet de la fluctuation d'\'echantillonage ou bien dire que la parit\'e des sexes n'est pas respect\'ee \`a l'assembl\'ee nationale ?
+ \item En 1990, les employ\'es et ouvriers constituaient 58,7\,\% de la population fran\c caise (d'apr\`es le recensement de l'INSEE). Suite \`a l'\'election l\'egislative de 1993 on recensait 1,6\,\% de d\'eput\'es dont l'ancien m\'etier \'etait employ\'e ou ouvrier.\\
+ Peut-on consid\'erer que cette r\'epartition est un effet de la fluctuation d'\'echantillonage ?
+\end{enumerate}
+
+ 
+\end{exo}
+
+
+
+\begin{exo}
+ Dans une r\'egion o\`u il y a autant de femmes que d'hommes, les entreprises sont tenues de respecter la parit\'e.\\
+ L'entreprise A a un effectif de 100 personnes dont 43 femmes. L'entreprise B a un effectif de 2\,500 personnes dont 1\,150 femmes.
+\begin{enumerate}
+ \item Calculer le pourcentage de femmes dans ces deux entreprises. Qu'en conclure ?
+ \item Si respecter la parit\'e revient \`a ne pas tenir compte du caract\`ere homme-femme, on peut alors consid\'erer l'ensemble des salari\'es d'une entreprise comme un \'echantillon pr\'elev\'e au hasard dans la population de la r\'egion.
+    \begin{enumerate}
+     \item D\'eterminer les intervalles de fluctuation relatifs aux deux \'echantillons.
+     \item Les r\'esultats confirment-ils la conclusion de la premi\`ere question ?
+    \end{enumerate}
+
+
+\end{enumerate}
+
+\end{exo}
+
+
+
+

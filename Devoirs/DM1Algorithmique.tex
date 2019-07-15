@@ -1,0 +1,80 @@
+\cleardoublepage
+ 
+
+
+
+\fancyhead{} % Delete current head settings
+\fancyfoot{}
+
+%		\fancyhead[LE,LO]{\footnotesize \em Nom : }
+%		\fancyhead[RE,RO]{\scriptsize \em Pour le vendredi 28 septembre}
+
+\setcounter{ds}{1} %c'est le numéro du DS
+\setcounter{chaptertemp}{\thechapter} %stocke le numéro du chapitre courant dans un compteur temporaire
+\stepcounter{chapter} % avance le compteur de 1 et surtout remet tous les compteurs dépendant du chapitre à 0, dont les numéros d'exercice
+\setcounter{chapter}{\theds} % met le compteur de chapitre au numéro du ds
+
+%\setlength{\columnsep}{80pt} %defaut = 10 pt
+%\begin{multicols}{2}
+
+
+\section*{Devoir maison n°\theds}\label{DM1}
+{\centering \large Algorithmique}
+\addstarredchapter{Devoir maison n°\theds : Algorithmique}
+
+\begin{flushright}
+\emph{\`A rendre pour le vendredi 4 novembre}\end{flushright}
+
+
+\medskip
+
+\'Ecrire, avec le logiciel Algobox, un algorithme prenant comme arguments (entr\'ees) les coordonn\'ees de trois points et renvoyant (sortie) la nature du triangle dont les sommets sont ces trois points.
+
+\medskip
+
+Plus pr\'ecis\'ement, l'objectif de l'algorithme est de donner la nature du triangle :
+\begin{itemize}
+ \item isoc\`ele et, le cas \'ech\'eant, en quel sommet
+ \item rectangle et, le cas \'ech\'eant, en quel sommet
+ \item \'equalit\'eral
+ \item ou quelconque
+\end{itemize}
+
+\medskip
+
+L'algorithme \textbf{ne devra pas} afficher ce que le triangle n'est pas. Ainsi, il \underline{ne faudra pas} qu'il affiche :
+\begin{itemize}
+ \item que le triangle \underline{n'est pas} isoc\`ele ou rectangle en tel sommet
+ \item qu'il \underline{n'est pas} \'equilat\'eral ou  qu'il \underline{n'est pas} quelconque
+ \item si le triangle est \'equilat\'eral, \underline{qu'il est aussi} isoc\`ele en chacun de ses sommets
+\end{itemize}
+
+\medskip
+
+On pourra tester l'algorithme avec les point suivants :
+\begin{itemize}
+ \item $A\,(0\,;\,0)$, $B\,(4\,;\,0)$, $C\,(0\,;\,4)$
+  \item $A\,(0\,;\,0)$, $B\,(4\,;\,0)$, $C\,(0\,;\,2)$
+ \item $A\,(0\,;\,0)$, $B\,(-2\,;\,1)$, $C\,(3\,;\,1)$
+ \item $A\,(0\,;\,2)$, $B\,(2\,;\,0)$, $C\,(0\,;\,0)$
+ \item $A\,(0\,;\,0)$, $B\,(1\,;\,-6)$, $C\,(2\,;\,0)$ 
+ \item $A\,(0\,;\,0)$, $B\,(4\,;\,0)$, $C\,(2\,;\,5)$
+ \item $A\,(1\,;\,5)$, $B\,(0\,;\,0)$, $C\,(2\,;\,0)$
+ \item $A\,(5\,;\,0)$, $B\,(0\,;\,0)$, $C\,(0\,;\,2)$
+ \item $A\,(0\,;\,3)$, $B\,(4\,;\,0)$, $C\,(0\,;\,0)$
+\item $A\,(0\,;\,0)$, $B\,(2\,;\,0)$, $C\,(1\,;\,\sqrt{3})$
+ \item $A\,(0\,;\,5)$, $B\,(0\,;\,0)$, $C\,(5\,;\,0)$
+\end{itemize}
+
+\medskip
+
+Certains des triangles d\'efinis par ces points sont isoc\`eles (en chacun des sommets), rectangles (en chacun des sommets), \'equilat\'eraux ou quelconques. Pour tester le programme il faut d'abord savoir la nature du triangle et v\'erifier si le programme l'indique bien.
+
+\medskip
+
+On enverra le fichier \`a david.robert@ac-rennes.fr.
+
+
+\setcounter{chapter}{\thechaptertemp} % remet le numéro de chapitre à ce qu'il était
+
+%\renewcommand{\headrulewidth}{0.5pt}

@@ -1,0 +1,633 @@
+\chapter{Rep\'erage} \label{reperes}
+\minitoc
+
+\fancyhead{}
+\fancyfoot{} % efface les entêtes précédentes
+\fancyhead[LE,RO]{\footnotesize \em \rightmark}
+		\fancyhead[RE,LO]{\scriptsize \em Seconde}
+		\fancyfoot[RE]{\scriptsize \em \href{http://perpendiculaires.free.fr/}{http://perpendiculaires.free.fr/}}
+		\fancyfoot[LO]{\scriptsize \em David ROBERT}
+    \fancyfoot[LE,RO]{\textbf{\thepage}}
+
+
+\section{Rep\`ere d'une droite}
+
+\begin{definition}
+ Soit $d$ une droite, $O$ et $I$ deux points distincts de cette droite, alors $(O,I)$ est appel\'e \emph{rep\`ere} de la droite $d$ ; $O$ est appel\'e \emph{origine} du rep\`ere et $OI$ est appel\'e \emph{unit\'e} du rep\`ere.
+\end{definition}
+
+
+
+\begin{prop}
+ Soit $d$ une droite munie du rep\`ere $(O,I)$, alors tout point $M$ de la droite est associ\'e \`a un unique nombre $x$ d\'efini par :
+\vspace{-1em}\begin{multicols}{2}\begin{itemize}
+ \item $x=\frac{OM}{OI}$ si $M\in[OI)$ ;
+ \item $x=-\frac{OM}{OI}$ si $M\notin[OI)$.
+\end{itemize}\end{multicols}%\vspace{-1em}
+$x$ est appel\'e \emph{abscisse} de $M$.
+\end{prop}
+
+\noindent On l'admettra.
+
+\begin{exemple*}
+Sur la droite $d$ ci-dessous, les points $O$ et $I$ sont distincts donc $(O,I)$ est un rep\`ere de $d$.\\
+$M\in[OI)$ est tel que $OM=4OI$ donc son abscisse est 4.\\
+$N\notin[OI)$ est tel que $ON=1,5OI$ donc son abscisse est $-1,5$.
+\begin{center}
+\def\xmin{0} \def\xmax{10} \def\ymin{-2} \def\ymax{0}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-6,-2)(14,6)
+%\psaxes[labels=all,labelsep=1pt, Dx=1,Dy=1]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+%\uput[dl](0,0){$O$}
+%\pcline[linewidth=1pt]{->}(0,0)(1,0) \uput[d](0.5,0){\small $\vec i$}
+%\pcline[linewidth=1pt]{->}(0,0)(0,1) \uput[l](0,0.5){\small $\vec j$}
+\psplot[algebraic=true]{\xmin}{\xmax}{0.2*x-2}
+\psdots(5,-1)(6,-0.8)(9,-0.2)(3.5,-1.3)
+\uput[dr](5,-1){$O$}
+\uput[dr](6,-0.8){$I$}
+\uput[dr](9,-0.2){$M$}
+\uput[dr](3.5,-1.3){$N$}
+\uput[u](1,-1.6){$d$}
+\end{pspicture*}                \end{center}
+\end{exemple*}
+
+%\sautpage
+
+\section{Rep\`ere d'un plan}
+
+\subsection{D\'efinitions}
+\begin{definition}
+ Soit $P$ un plan, $O$, $I$ et $J$ trois points non align\'es de ce plan, alors $(O,I,J)$ est appel\'e \emph{rep\`ere} du plan ; $O$ est appel\'ee \emph{origine} du rep\`ere et les droites $(OI)$ et $(OJ)$ sont appel\'ees \emph{axes} du rep\`ere.
+\end{definition}
+
+
+
+\noindent Soit $P$ un plan muni du rep\`ere $(O,I,J)$, alors, pour tout point $M$ du plan,
+ il existe deux uniques points $M_x$ et $M_y$ tels que
+ $M_x\in(OI)$, $M_y\in(OJ)$ et $OM_xMM_y$ parall\'elogramme (on l'admettra).\\
+ On note $x$ l'abscisse de $M_x$ sur la droite $(OI)$ munie du rep\`ere $(O,I)$ et
+ $y$ l'abscisse de $M_y$ sur la droite $(OJ)$ munie du rep\`ere $(O,J)$.
+
+\begin{center}
+\def\xmin{-2} \def\xmax{10} \def\ymin{-2} \def\ymax{6}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-6,-2)(14,6)
+%\psaxes[labels=all,labelsep=1pt, Dx=1,Dy=1]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+%\uput[dl](0,0){$O$}
+%\pcline[linewidth=1pt]{->}(0,0)(1,0) \uput[d](0.5,0){\small $\vec i$}
+%\pcline[linewidth=1pt]{->}(0,0)(0,1) \uput[l](0,0.5){\small $\vec j$}
+\psplot[algebraic=true]{\xmin}{\xmax}{0.4*x-1}
+\psplot[algebraic=true]{\xmin}{\xmax}{2*x-1}
+\psdots(0,-1)(3,0.2)(1,1)(8,5)(6.25,1.5)(1.75,2.5)
+\uput[dr](0,-1){$O$}
+\uput[dr](3,0.2){$I$}
+\uput[ul](1,1){$J$}
+\uput[ur](8,5){$M$}
+\uput[dr](6.25,1.5){$M_x$}
+\uput[ul](1.75,2.5){$M_y$}
+\psline[linestyle=dashed](6.25,1.5)(8,5)(1.75,2.5)
+\end{pspicture*}                \end{center}
+
+\noindent On a alors :
+
+\begin{prop}
+ Soit $P$ un plan muni d'un rep\`ere $(O,I,J)$, alors tout point $M$ de ce plan est associ\'e \`a un unique couple $(x\,;\,y)$, d\'efini ci-dessus,
+ appel\'e \emph{coordonn\'ees} de $M$.\\
+ $x$ est appel\'e \emph{abscisse} de $M$ et $y$ est appel\'e \emph{ordonn\'ee} de $M$.
+\end{prop}
+
+\noindent On l'admettra.
+
+\begin{exemple*}
+Sur le sch\'ema ci-dessus, $x=3,125$ et $y=1,5$ donc les coordonn\'ees de $M$ sont $(3,125\,;\,1,5)$.\\
+L'abscisse de $M$ est 3,125, l'ordonn\'ee de $M$ est 1,5.
+\end{exemple*}
+
+%\sautpage
+
+\subsection{Types de rep\`eres}
+
+\begin{definition}
+ Soit $P$ un plan muni d'un rep\`ere $(O,I,J)$.
+\begin{itemize}
+ \item Si le triangle $OIJ$ est quelconque, le rep\`ere est dit \emph{quelconque}.
+ \item Si le triangle $OIJ$ est rectangle en $O$, le rep\`ere est dit \emph{orthogonal}.
+ \item Si le triangle $OIJ$ est isoc\`ele en $O$, le rep\`ere est dit \emph{norm\'e}.
+ \item Si le triangle $OIJ$ est rectangle et isoc\`ele en $O$, le rep\`ere est dit \emph{orthonorm\'e}.
+\end{itemize}
+\end{definition}
+
+\begin{tabular}{ccc}
+ Rep\`ere orthogonal & Rep\`ere norm\'e & Rep\`ere orthonorm\'e \\
+\psset{xunit=0.5cm,yunit=0.5cm}
+\def\xmin{-4} \def\xmax{6} \def\ymin{-4} \def\ymax{6}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-6,-2)(14,6)
+%
+\psaxes[labels=none,labelsep=1pt, Dx=10,Dy=10]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+%\uput[dl](0,0){$O$}
+%\pcline[linewidth=1pt]{->}(0,0)(1,0) \uput[d](0.5,0){\small $\vec i$}
+%\pcline[linewidth=1pt]{->}(0,0)(0,1) \uput[l](0,0.5){\small $\vec j$}
+
+\psdots(0,0)(2,0)(0,1)
+\uput[dr](0,0){$O$}
+\uput[dr](2,0){$I$}
+\uput[ul](0,1){$J$}
+
+
+\end{pspicture*}&
+\psset{xunit=0.5cm,yunit=0.5cm}
+\def\xmin{-4} \def\xmax{6} \def\ymin{-4} \def\ymax{6}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-6,-2)(14,6)
+%
+%\psaxes[labels=none,labelsep=1pt, Dx=10,Dy=10]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+%\uput[dl](0,0){$O$}
+%\pcline[linewidth=1pt]{->}(0,0)(1,0) \uput[d](0.5,0){\small $\vec i$}
+%\pcline[linewidth=1pt]{->}(0,0)(0,1) \uput[l](0,0.5){\small $\vec j$}
+
+\psdots(0,0)(2,0)(1,1.732050808)
+\uput[dr](0,0){$O$}
+\uput[dr](2,0){$I$}
+\uput[ul](1,1.732050808){$J$}
+\psplot[algebraic=true]{\xmin}{\xmax}{0}
+\psplot[algebraic=true]{\xmin}{\xmax}{1.732050808*x}
+\end{pspicture*}&
+\psset{xunit=0.5cm,yunit=0.5cm}
+\def\xmin{-4} \def\xmax{6} \def\ymin{-4} \def\ymax{6}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-6,-2)(14,6)
+%
+\psaxes[labels=none,labelsep=1pt, Dx=10,Dy=10]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+%\uput[dl](0,0){$O$}
+%\pcline[linewidth=1pt]{->}(0,0)(1,0) \uput[d](0.5,0){\small $\vec i$}
+%\pcline[linewidth=1pt]{->}(0,0)(0,1) \uput[l](0,0.5){\small $\vec j$}
+
+\psdots(0,0)(1,0)(0,1)
+\uput[dl](0,0){$O$}
+\uput[dr](1,0){$I$}
+\uput[ul](0,1){$J$}
+
+
+\end{pspicture*}
+\end{tabular}
+
+\subsection{Coordonn\'ees du milieu d'un segment}
+
+\begin{act}
+Sur le schéma ci-dessous :
+\begin{enumerate}
+	\item Placer les points $M(3;1)$, $N(-1;1,5)$, $P(-2;-1)$ et $Q(3;-1)$ ;
+	\item Donner graphiquement les coordonnées des points $A$, $B$, $C$ et $D$ ;
+	\item En faisant quelques essais, conjecturer le lien existant entre les coordonnées de deux points et les coordonnées du milieu de ces deux points.
+\end{enumerate}
+\end{act}
+\begin{center}
+
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.7,-0.7)(15.7,9.7)
+\def\xmin{-0.5} \def\xmax{15.5} \def\ymin{-0.5} \def\ymax{9.5}
+
+\multido{\i=0+1}{18}{%
+\psline[linestyle=dotted](\i,\ymin)(\i,\ymax)
+\psset{algebraic=true}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {x*0.5-8+\i}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {-x*0.5+16-\i}}
+%\psline{->}(7,4.5)(7,5.5)
+\psline(7,\ymin)(7,\ymax)
+%\rput{90}(7.3,5){$\vec{i}$}
+%\psline{->}(7,4.5)(5,5.5)
+\psplot[algebraic=true]{\xmin}{\xmax} {-0.5*x+8}
+%\rput{90}(6,4.5){$\vec{j}$}
+\psdots[dotstyle=x, dotscale=2.0000](7,4.5)(7,2.5)(8,6)(5,7.5)(3,6.5)(7,5.5)(5,5.5)
+\rput{90}(7.2,4.2){$O$}
+\rput{90}(7.2,2.2){$B$}
+\rput{90}(8.2,5.7){$A$}
+\rput{90}(5.2,7.2){$C$}
+\rput{90}(3.2,6.2){$D$}
+\rput{90}(7.2,5.2){$I$}
+\rput{90}(5.2,5.2){$J$}
+\end{pspicture*}
+\end{center}
+
+
+\begin{prop}
+ Soit $P$ un plan muni d'un rep\`ere quelconque.\\
+ Soit $A(x_A;y_A)$ et $B(x_B;y_B)$ et $I(x_I;y_I)$ milieu de $[AB]$. \\
+Alors
+\vspace{-1em}\begin{itemize}\begin{multicols}{2}
+	\item $x_I=\ldots\ldots\ldots$
+	\item $y_I=\ldots\ldots\ldots$
+\end{multicols}\end{itemize}
+\end{prop}
+
+\begin{proof} La preuve sera faite en classe \`a partir de cette figure :
+\begin{center}
+ \psset{xunit=0.5cm,yunit=0.5cm}
+\def\xmin{-2} \def\xmax{15} \def\ymin{-2} \def\ymax{10}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-6,-2)(14,6)
+%
+%\psaxes[labels=none,labelsep=1pt, Dx=10,Dy=10]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+%\uput[dl](0,0){$O$}
+%\pcline[linewidth=1pt]{->}(0,0)(1,0) \uput[d](0.5,0){\small $\vec i$}
+%\pcline[linewidth=1pt]{->}(0,0)(0,1) \uput[l](0,0.5){\small $\vec j$}
+
+\psplot[algebraic=true]{\xmin}{\xmax}{0}
+\psplot[algebraic=true]{\xmin}{\xmax}{2*x}
+\psplot[algebraic=true,linestyle=dotted]{\xmin}{\xmax}{7}
+\psplot[algebraic=true,linestyle=dotted]{\xmin}{\xmax}{5}
+\psplot[algebraic=true,linestyle=dotted]{\xmin}{\xmax}{3}
+\psplot[algebraic=true,linestyle=dotted]{\xmin}{\xmax}{2*x-5}
+\psplot[algebraic=true,linestyle=dotted]{\xmin}{\xmax}{2*x-11}
+\psplot[algebraic=true,linestyle=dotted]{\xmin}{\xmax}{2*x-17}
+
+\psdots(0,0)(6,7)(8,5)(10,3)
+\uput[ul](0,0){$O$}
+\uput[ur](6,7){$A$}
+\uput[ur](8,5){$I$}
+\uput[ur](10,3){$B$}
+
+\psline(6,7)(10,3)
+
+
+
+\end{pspicture*}                \end{center}
+\end{proof}
+
+\subsection{Distance entre deux points dans un rep\`ere orthonorm\'e}
+
+\begin{prop}
+ Soit $P$ un plan muni d'un rep\`ere \underline{\textbf{orthonorm\'e}}.\\
+ Soient $A$ et $B$ deux points du plan $P$ de coordonn\'ees respectives $(x_A\,;\,y_A)$ et $(x_B\,;\,y_B)$.\\
+ Alors la distance $AB$ est donn\'ee par :
+ \[AB=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}\]
+\end{prop}
+
+\begin{proof} La preuve sera faite en classe \`a partir de cette figure :
+\begin{center}
+ \psset{xunit=0.5cm,yunit=0.5cm}
+\def\xmin{-2} \def\xmax{15} \def\ymin{-2} \def\ymax{10}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-6,-2)(14,6)
+%
+\psaxes[labels=none,labelsep=1pt, Dx=20,Dy=20]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+%\uput[dl](0,0){$O$}
+%\pcline[linewidth=1pt]{->}(0,0)(1,0) \uput[d](0.5,0){\small $\vec i$}
+%\pcline[linewidth=1pt]{->}(0,0)(0,1) \uput[l](0,0.5){\small $\vec j$}
+
+\psline[linestyle=dotted](6,\ymin)(6,\ymax)
+
+\psline[linestyle=dotted](10,\ymin)(10,\ymax)
+\psplot[algebraic=true,linestyle=dotted]{\xmin}{\xmax}{7}
+
+\psplot[algebraic=true,linestyle=dotted]{\xmin}{\xmax}{3}
+
+\psdots(0,0)(6,7)(10,3)
+\uput[ul](0,0){$O$}
+\uput[ur](6,7){$A$}
+
+\uput[ur](10,3){$B$}
+
+\psline(6,7)(10,3)
+
+
+
+\end{pspicture*}                \end{center}
+\end{proof}
+
+\sautpage
+
+\section{Exercices et probl\`emes}
+
+\subsection{Rep\`ere donn\'e}
+
+\begin{exo}
+Sur le schéma ci-dessous :
+\begin{enumerate}
+	\item Placer les points $M(2;1)$, $N(-1,5;1)$, $P(-2;-1)$ et $Q(1,5;-1)$ ;
+	\item Donner graphiquement les coordonnées des points $A$, $B$, $C$ et $D$ ;
+\end{enumerate}
+\begin{center}
+
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.7,-0.7)(15.7,9.7)
+\def\xmin{-0.5} \def\xmax{15.5} \def\ymin{-0.5} \def\ymax{9.5}
+
+\multido{\i=0+1}{18}{%
+\psline[linestyle=dotted](\i,\ymin)(\i,\ymax)
+\psset{algebraic=true}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {x*0.5-8+\i}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {-x*0.5+16-\i}}
+%\psline{->}(7,4.5)(7,5.5)
+\psline(7,\ymin)(7,\ymax)
+%\rput{90}(7.3,5){$\vec{i}$}
+%\psline{->}(7,4.5)(5,5.5)
+\psplot[algebraic=true]{\xmin}{\xmax} {0.5*x+1}
+%\rput{90}(6,4.5){$\vec{j}$}
+\psdots[dotstyle=x, dotscale=2.0000](7,4.5)(7,2.5)(8,6)(5,7.5)(3,6.5)(7,6.5)(6,4)
+\rput{90}(7.2,4.2){$O$}
+\rput{90}(7.2,2.2){$B$}
+\rput{90}(8.2,5.7){$A$}
+\rput{90}(5.2,7.2){$C$}
+\rput{90}(3.2,6.2){$D$}
+\rput{90}(7.2,6.2){$I$}
+\rput{90}(6.2,4.2){$J$}
+\end{pspicture*}
+\end{center}
+\end{exo}
+
+\begin{multicols}{2}
+\begin{exo}
+Le quadrilat\`ere $ABCD$ donn\'e ci-dessous est un losange de centre $O$.\\
+ Dans chacun des cas ci-dessous, dire de quel type est le rep\`ere et donner les coordonn\'ees de tous les points dans ce rep\`ere.
+\begin{multicols}{2}
+\begin{itemize}
+ \item $(A,D,B)$
+ \item $(O,C,B)$
+ \item $(O,B,C)$
+ \item $(D,C,O)$
+\end{itemize}
+\end{multicols}
+
+\begin{center}
+\psset{xunit=0.5cm , yunit=0.5cm}
+\def\xmin{-6.1} \def\xmax{6.1} \def\ymin{-4.1} \def\ymax{4.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+\psline(-5,0)(0,3)(5,0)(0,-3)(-5,0)
+\psline[linestyle=dotted](-5,0)(5,0)
+\psline[linestyle=dotted](0,-3)(0,3)
+\uput[dl](0,0){$O$}
+\uput[l](-5,0){$A$}
+\uput[u](0,3){$B$}
+\uput[r](5,0){$C$}
+\uput[d](0,-3){$D$}
+\end{pspicture*}
+\end{center}
+
+\end{exo}
+
+\sautcol
+
+\begin{exo}
+ Le plan est muni d'un rep\`ere orthonorm\'e.\\
+ Dans chacun des cas suivants, d\'eterminer la nature du triangle $ABC$.
+\begin{enumerate}
+ \item $A\,(-4\,;\,-1)$, $B\,(4\,;\,-2)$ et $C\,(-2\,;\,2)$
+ \item $A\,(-5\,;\,0)$, $B\,(3\,;\,-4)$ et $C\,(2\,;\,4)$
+ \item $A\,(0\,;\,0)$, $B\,(4\,;\,2\sqrt{3})$ et $C\,(-1\,;\,3\sqrt{3})$
+\end{enumerate}
+
+\end{exo}
+
+\begin{exo}
+ Dans le rep\`ere orthonorm\'e $(O,I,J)$, on donne $A\,(-1\,;\,2)$, $B\,(-3\,;\,-1)$ et $C\,(5\,;\,-2)$.
+\begin{enumerate}
+ \item Quelle est la nature du triangle $ABC$ ?
+ \item Montrer que :
+       \begin{enumerate}
+        \item Le p\'erim\`etre $p$ de $ABC$ vaut $\sqrt{13}(3+\sqrt{5})$ ;
+	\item L'aire $a$ de $ABC$ est un nombre entier.
+       \end{enumerate}
+
+\end{enumerate}
+
+\end{exo}
+
+\sautpage
+
+\begin{exo}
+Dans le rep\`ere orthonorm\'e $(O,I,J)$, on donne $A\,(1\,;\,1)$, $B\,(4\,;\,5)$ et $C\,(10\,;\,8)$.
+\begin{enumerate}
+ \item D\'eterminer les longueurs $AB$, $AC$ et $BC$.
+ \item Que peut-on en d\'eduire pour les points $A$, $B$ et $C$ ?
+\end{enumerate}
+
+\end{exo}
+
+\begin{exo}
+ Le plan est muni d'un rep\`ere quelconque.\\
+  On donne les points $A\,(2\,;\,3)$ et $I\,(-4\,;\,1)$.\\
+  On sait que $I$ est le milieu de $[AB]$.\\
+ D\'eterminer les coordonn\'ees de $B$.
+\end{exo}
+
+%\sautcol
+
+
+
+
+\begin{exo}
+ Dans le rep\`ere orthonorm\'e $(O,I,J)$, on a trac\'e le cercle $\mathcal{C}$ de centre $O$ et de rayon 3.
+\begin{enumerate}
+ \item $A$ est le point de $\mathcal{C}$ d'abscisse 2.\\
+D\'eterminer l'ordonn\'ee de $A$.
+ \item Pour chacun des points suivants, d\'eterminer, par le calcul, s'il est sur le cercle $\mathcal{C}$ et, sinon, s'il est sur le disque d\'elimit\'e par $\mathcal{C}$.
+  %\vspace{-1em}\begin{multicols}{3}
+  \begin{itemize}
+   \item $B\,(-1\,;\,-2,8)$
+   \item $C\,(2,5\,;\,-1,7)$
+   \item $D\,(-1,5\,;\,2,5)$
+  \end{itemize}%\end{multicols}
+\end{enumerate}
+
+
+
+\begin{center}
+\psset{unit=0.5cm}
+\def\xmin{-4.1} \def\xmax{4.1} \def\ymin{-4.1} \def\ymax{4.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+\psaxes[labels=none,labelsep=1pt, Dx=10,Dy=10]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\psdots(0,0)(1,0)(0,1)(2,2.2)
+\pscircle(0,0){3}
+\uput[dl](0,0){$O$}
+\uput[d](1,0){$I$}
+\uput[l](0,1){$J$}
+
+\uput[u](2,2.2){$A$}
+\end{pspicture*}
+\end{center}
+
+\end{exo}
+
+
+\begin{exo}\label{rep1}
+Sur le schéma ci-contre :
+\begin{enumerate}
+	\item Placer les points $A(1\,;\,2)$, $B(3\,;\,1,5)$, $C(4\,;\,-0,5)$ et $D(2\,;\,0)$ ;
+	\item Montrer que le quadrilat\`ere $ABCD$ est un parall\'elogramme.
+\end{enumerate}
+
+
+
+\begin{center}
+
+\psset{xunit=1cm , yunit=1cm}
+\def\xmin{-1.1} \def\xmax{6.1} \def\ymin{-1.1} \def\ymax{6.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+
+%\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+%\psaxes[labels=all,labelsep=1pt, Dx=10,Dy=10]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+
+
+\multido{\i=0+1}{18}{%
+\psline[linestyle=dotted](\i,\ymin)(\i,\ymax)
+\psset{algebraic=true}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {x*0.5-8+\i}
+\psplot[linestyle=dotted]{\xmin}{\xmax} {-x*0.5+16-\i}}
+%\psline{->}(7,4.5)(7,5.5)
+\psline(0,\ymin)(0,\ymax)
+%\rput{90}(7.3,5){$\vec{i}$}
+%\psline{->}(7,4.5)(5,5.5)
+\psplot[algebraic=true]{\xmin}{\xmax} {0.5*x}
+%\rput{90}(6,4.5){$\vec{j}$}
+\psdots[dotstyle=x, dotscale=2.0000](0,0)(1,0.5)(0,2)
+\uput[ul](0,0){$O$}
+\uput[ul](1,0.5){$I$}
+\uput[l](0,2){$J$}
+\end{pspicture*}
+\end{center}
+\end{exo}
+
+%\sautpage
+
+\begin{exo}
+Le plan est muni d'un rep\`ere orthonorm\'e.\\
+Dans chacun des cas suivants, d\'eterminer la nature du quadrilat\`ere $ABCD$ :
+\begin{enumerate}
+ \item $A\,(1\,;\,0)$, $B\,(1\,;\,3)$, $C\,(2\,;\,3)$ et $D\,(3\,;\,1)$ ;
+ \item $A\,(1\,;\,2)$, $B\,(4\,;\,7)$, $C\,(1\,;\,6)$ et $D\,(-2\,;\,1)$ ;
+ \item $A\,(1\,;\,0)$, $B\,(0\,;\,2)$, $C\,(4\,;\,4)$ et $D\,(5\,;\,2)$ ;
+ \item $A\,(-4\,;\,-1)$, $B\,(4\,;\,-2)$, $C\,(8\,;\,5)$ et $D\,(0\,;\,6)$ ;
+ \item $A\,(0\,;\,-2)$, $B\,(3\,;\,-1)$, $C\,(2\,;\,2)$ et $D\,(-1\,;\,1)$.
+\end{enumerate}
+
+\end{exo}
+
+%\sautpage
+
+\begin{exo}
+ Le plan est muni d'un rep\`ere orthonorm\'e.\\
+ On donne les points $A\,(-3\,;\,-4)$, $B\,(3\,;\,2)$, $C\,(7\,;\,-2)$ et $D\,(1\,;\,-8)$.
+\begin{enumerate}
+ \item Montrer que :
+	\begin{enumerate}
+	 \item $[AC]$ et $[BD]$ ont m\^eme milieu ;
+	 \item $AC=BD$.
+	\end{enumerate}
+ \item \begin{enumerate}
+        \item Quelle est la nature du quadrilat\`ere $ABCD$ ?
+	\item Calculer le rayon du cercle circonscrit \`a ce quadrilat\`ere.
+       \end{enumerate}
+
+
+\end{enumerate}
+
+\end{exo}
+
+
+
+\begin{exo}\label{rep2}
+ Le plan est muni d'un rep\`ere quelconque.\\
+ On donne les points $A\,(-5\,;\,3)$, $B\,(-4\,;\,1)$ et $C\,(1\,;\,-4)$.
+\begin{enumerate}
+ \item D\'eterminer les coordonn\'ees de $I$, milieu de $[AC]$.
+ \item D\'eterminer les coordonn\'ees de $D$ tel que $ABCD$ soit un parall\'elogramme.
+\end{enumerate}
+
+\end{exo}
+
+\subsection{Rep\`ere \`a choisir}
+
+\begin{exo}
+ $ABCD$ est un parall\'elogramme, $I$ est le milieu de $[AD]$, $E$ est le sym\'etrique de $B$ par rapport \`a $I$.
+\begin{enumerate}
+ \item Faire une figure.
+ \item Choisir un rep\`ere et montrer que $D$ est le milieu de $[EC]$
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+ $ABCD$ est un rectangle tel que $AB=8$\,cm et $AD=5$\,cm.\\
+ $J$ est le point de $[AD]$ tel que $AJ=3$\,cm.\\
+ $M$ est le point de $[AB]$ tel que $AM=3$\,cm.
+\begin{enumerate}
+ \item Faire une figure.
+ \item Choisir un rep\`ere et d\'eterminer la nature du triangle $MJC$.
+\end{enumerate}
+
+\end{exo}
+
+\begin{exo}
+ $BOIS$ est un carr\'e de c\^ot\'e 12\,cm.\\
+ $P$ est le milieu de $[BS]$ et $N$ est le point de $[BO]$ tel que $BN=3$\,cm.
+ \begin{enumerate}
+ \item Faire une figure.
+ \item Choisir un rep\`ere et d\'eterminer si le triangle $PIN$ est rectangle.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+ $ABCD$ est un carr\'e de c\^ot\'e 4\,cm.\\
+ $E$ et $F$ sont les milieux respectifs de $[AB]$ et $[OD]$.
+ \begin{enumerate}
+ \item Faire une figure.
+ \item Choisir un rep\`ere et d\'emontrer que le triangle $CFE$ est rectangle et isoc\`ele.
+\end{enumerate}
+\end{exo}
+
+
+\subsection{Algorithmique}
+\begin{exo}
+ Que fait l'algorithme suivant ?
+\begin{algo}
+ \begin{verbatim}
+  VARIABLES
+    a, b, c, d, e, f : nombres
+  DEBUT
+    Saisir a
+    Saisir b
+    Saisir c
+    Saisir d
+    e prend la valeur (a+c)/2
+    f prend la valeur (b+d)/2
+    Afficher e
+    Afficher f
+  FIN
+ \end{verbatim}
+
+\end{algo}
+
+\end{exo}
+
+\begin{exo}
+ \'Ecrire un algorithme prenant comme arguments les coordonn\'ees de deux points et retournant la distance entre ces deux points dans un rep\`ere orthonorm\'e.
+\end{exo}
+
+
+\begin{exo}
+\'Ecrire un algorithme prenant comme arguments les coordonnées de trois points A, B et C et dessinant le triangle ABC dans un repère.
+\end{exo}
+
+\begin{exo}
+\'Ecrire un algorithme prenant comme arguments les coordonnées de trois points A, B et C, calculant  les coordonnées du point D tel que ABCD est un parallélogramme et dessinant ABCD dans un repère.
+\end{exo}
+
+\begin{exo}
+\'Ecrire un algorithme prenant comme argument les coordonnées de trois points A, B et C dans un rep\`ere orthonorm\'e
+\begin{enumerate}
+\item et indiquant si le triangle est iso\`ele.
+\item et indiquant si le triangle est \'equilat\'eral.
+\item et indiquant si le triangle est rectangle.
+\item et indiquant la nature du triangle.
+\end{enumerate}
+\end{exo}
+
+\end{multicols}
+
+
+
+

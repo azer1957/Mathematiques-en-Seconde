@@ -1,0 +1,359 @@
+\chapter{Fonction inverse \\ Fonctions homographiques} \label{homographiques}
+\minitoc
+
+\fancyhead{} % efface les entêtes précédentes
+\fancyhead[LE,RO]{\footnotesize \em \rightmark} % section en entête
+\fancyhead[RE,LO]{\scriptsize \em Seconde} % classe et année en entête
+
+    \fancyfoot{}
+		\fancyfoot[RE]{\scriptsize \em \href{http://perpendiculaires.free.fr/}{http://perpendiculaires.free.fr/}}
+		\fancyfoot[LO]{\scriptsize \em David ROBERT}
+    \fancyfoot[LE,RO]{\textbf{\thepage}}
+
+%\sautpage
+
+
+\section{Activités}
+
+\begin{act}
+Chaque ann\'ee, un c\'el\`ebre magazine automobile organise le concours du v\'ehicule \'ecologique le plus performant. Il s'agit de parcourir un kilom\`etre sur une piste am\'enag\'ee, avec comme seul carburant de l'eau, du vent ou du soleil. On d\'esigne par $v$ la vitesse moyenne d'un v\'ehicule (en kilom\`etres par heure) et par $f(v)$ le temps (en heures) n\'ecessaire pour parcourir la piste.\\
+On rappelle que la vitesse moyenne $v$ est donn\'ee par $\frac{d}{t}$ o\`u $d$ d\'esigne la distance parcourue et $t$ le temps mis pour parcourir cette distance.
+\begin{enumerate}
+ \item \begin{enumerate}
+        \item Donner l'expression de la fonction $f$ en fonction de la vitesse $v$.
+	\item Compl\'eter le tableau suivant :
+	      \begin{center}
+	      \begin{tabularx}{\linewidth}{|*{15}{>{\centering \arraybackslash}X|}}\hline
+	      $v$&0,1	&0,25	&0,5 	&0,75 	&1	&2 	&3 	&4 	&5 	&6	&7	&8	&9	&10	 \\ \hline
+	      $f(v)$&	&	&	&	&	&	&	&	&	& & & & & \\ \hline
+	      \end{tabularx}
+	      \end{center}
+	\item Le tableau pr\'ec\'edent est-il un tableau de proportionnalit\'e ?
+       \end{enumerate}
+ \item \begin{enumerate}
+        \item On se place dans un rep\`ere orthornorm\'e o\`u une unit\'e repr\'esente 1 kilom\`etre par heure en abscisse et 1 heure en ordonn\'ee. Repr\'esenter graphiquement la fonction $f$ dans ce rep\`ere.
+	\item Reconna\^it-on la repr\'esentation graphique d'une fonction affine ? D'une fonction trin\^ome ?
+       \end{enumerate}
+ \item Cette ann\'ee, deux v\'ehicules se sont particuli\`erement distingu\'es : le v\'ehicule \og Solaria 2200 \fg{} et le v\'ehicule \og WindBolide \fg.
+       \begin{enumerate}
+        \item Solaria 2200 a parcouru la piste \`a la vitesse de 9,5 kilom\`etre par heure. Donner un encadrement de son temps de parcours.
+	\item WindBolide, quant \`a lui, a eu besoin de 3 heures pour faire le parcours. Donner un encadrement de sa vitesse moyenne.
+       \end{enumerate}
+
+\end{enumerate}
+
+%\sautpage
+
+\end{act}
+
+\begin{act}
+La petite station baln\'eaire de Port-Soleil est de plus en plus fr\'equent\'ee. Aussi pour satisfaire les vacanciers, le maire a-t-il d\'ecid\'e d'agrandir l'aire de jeu. Actuellement, cette aire a la forme d'un carr\'e de 5 m\`etres de c\^ot\'e. Le responsable du projet propose d'allonger chacun de ses c\^ot\'es pour lui donner la forme rectangulaire ci-dessous :
+\begin{center}
+ \psset{xunit=0.5cm , yunit=0.5cm}
+\begin{pspicture*}(-0.9,-0.9)(12.9,6.9)
+\psline(5,0)(5,5)(0,5)(0,6)(12,6)(12,0)(0,0)(0,5)
+\rput(2.5,3){\small ancienne}
+\rput(2.5,2){\small aire}
+\uput[d](2.5,0){5}
+\uput[l](0,2.5){5}
+\uput[l](0,5.5){$y$}
+\uput[d](8.5,0){$x$}
+\rput(8.5,4){\small extension}
+\end{pspicture*}
+\end{center}
+\begin{enumerate}
+ \item Exprimer l'aire de cette nouvelle aire de jeu en fonction de $x$ et $y$.
+ \item Les contraintes budg\'etaires de la commune font que la surface de la nouvelle aire de jeu devra \^etre de 100 m\`etres carr\'es.\\
+       D\'emontrer que $y=\frac{100}{5+x}-5$.\\
+       Quelle information le maire doit-il donner \`a l'entrepreneur : $x$, $y$ ou les deux ?
+ \item On consid\`ere la fonction $f$ d\'efinie pour $x\geqslant 0$ par $f(x)=\frac{100}{5+x}-5$.
+       \begin{enumerate}
+        \item La valeur de $y$ est limit\'ee \`a 5 m\`etres par le bord de mer. Quelles sont les valeurs possibles pour $x$ ?
+	\item Repr\'esenter la fonction $f$ avec la calculatrice sur l'intervalle $[5\,;\,15]$.
+	\item Quelles semblent \^etre les variations de $f$ sur l'intervalle $[5\,;\,15]$ ?
+	\item Parmi les deux valeurs suivantes de $x$, laquelle donne \`a la nouvelle aire de jeu la plus grand p\'erim\`etre : $x_1=5$\,m ou $x_2=10$\,m ?
+       \end{enumerate}
+
+\end{enumerate}
+
+\end{act}
+
+\sautpage
+
+\section{Fonction inverse}
+
+\begin{definition}
+ On appelle \emph{fonction inverse} la fonction d\'efinie pour tout r\'eel $x\neq0$ par $f(x)=\frac{1}{x}$.
+\end{definition}
+
+Sa courbe repr\'esentative est une \emph{hyperbole}.
+
+\begin{prop}
+ La fonction inverse est strictement d\'ecroissante pour $x\in]-\infty\,;\,0[$ et strictement d\'ecroissante pour $x\in]0\,;\,+\infty[$.
+\[\tabvar{%
+\tx{x}&\tx{-\infty}&&\tx{0}&&\tx{+\infty}\cr
+\tx{f(x)=\frac{1}{x}}&&\fd&\dbt&\fd&\cr
+}\]
+\end{prop}
+
+\begin{proof}
+ Rappelons qu'une fonction $f$ est dite strictement d\'ecroissante sur un intervalle $I$ si, pour tous $a$ et $b$ de cet intervalle, $a<b$ implique que $f(a)>f(b)$ (on dit qu'elle inverse l'ordre).
+Soient $x$ et $y$ deux r\'eels non nuls.\\
+       $\frac{1}{x}-\frac{1}{y}=\frac{y}{xy}-\frac{x}{xy}=\frac{y-x}{xy}$
+\begin{itemize}
+ \item Si $x<y<0$ alors $y-x>0$ et $xy>0$ donc $\frac{y-x}{xy}>0 \ssi \frac{1}{x}-\frac{1}{y}>0 \ssi \frac{1}{x}>\frac{1}{y}$ donc la fonction est bien strictement d\'ecroissante sur $]-\infty\,;\,0[$.
+ \item Si $0<x<y$ alors $y-x>0$ et $xy>0$ donc $\frac{y-x}{xy}>0 \ssi \frac{1}{x}-\frac{1}{y}>0 \ssi \frac{1}{x}>\frac{1}{y}$ donc la fonction est bien strictement d\'ecroissante sur $]0\,;\,+\infty[$.
+\end{itemize}
+\end{proof}
+
+De la propri\'et\'e pr\'ec\'edente, on en d\'eduit imm\'ediatement :
+\begin{prop}
+ Si $a$ et $b$ positifs tels que $a<b$, alors $\frac{1}{a}>\frac{1}{b}$.\\
+ Si $a$ et $b$ n\'egatifs tels que $a<b$, alors $\frac{1}{a}>\frac{1}{b}$.
+\end{prop}
+
+\section{Fonctions homographiques}
+
+\begin{definition}
+ Toute fonction pouvant s'\'ecrire sous la forme $f(x)=\frac{ax+b}{cx+d}$ est appel\'ee \emph{fonction homographique}.\\
+ Elle est d\'efinie pour tout $x$ tel que $cx+d\neq0$, c'est-\`a-dire sur $\left]-\infty\,;\,-\frac{d}{c}\right[\cup\left]-\frac{d}{c}\,;\,+\infty\right[$
+\end{definition}
+
+Sa courbe est une hyperbole.
+
+\begin{prop}
+ Toute fonction homographique peut s'\'ecrire sous la forme $f(x)=\frac{\lambda}{x-\alpha}+\beta$.
+\end{prop}
+
+On l'admettra.
+
+\begin{prop}
+Soit $f(x)=\frac{ax+b}{cx+d}$ une fonction homographique. Alors $f$ a les variations résumées dans l'un des tableaux ci-dessous :
+\begin{center}
+\begin{tabular}{cc}
+$\tabvar{%
+\tx{x}&\tx{-\infty}&&\tx{-\frac{d}{c}}&&\tx{+\infty}\cr
+\tx{f(x)=\frac{ax+b}{cx+d}}&&\fd&\dbt&\fd&\cr
+}$
+&
+$\tabvar{%
+\tx{x}&\tx{-\infty}&&\tx{-\frac{d}{c}}&&\tx{+\infty}\cr
+\tx{f(x)=\frac{ax+b}{cx+d}}&&\fm&\dbt&\fm&\cr
+}$
+\end{tabular}
+\end{center}
+\end{prop}
+On l'admettra.
+
+
+
+\section{Exercices}
+
+\subsection{Technique}
+
+\begin{exo}
+ En s'aidant \'eventuellement de la courbe de la fonction inverse ou de son tableau de variation, compl\'eter :
+  \vspace{-1em}\begin{multicols}{3}\begin{enumerate}
+  \item Si $x>3$ alors \dotfill $\frac{1}{x}$ \dotfill
+  \item Si $x<-\sqrt{2}$ alors \dotfill $\frac{1}{x}$ \dotfill
+  \item Si $x>2$ alors \dotfill $\frac{1}{x}$ \dotfill
+  \item Si $x<-3$ alors \dotfill $\frac{1}{x}$ \dotfill
+  \item Si $x<4$ alors \dotfill $\frac{1}{x}$ \dotfill
+  \item Si $x>-10$ alors \dotfill $\frac{1}{x}$ \dotfill
+  \item Si $x<1$ alors \dotfill $\frac{1}{x}$ \dotfill
+  \item Si $x>-5$ alors \dotfill $\frac{1}{x}$ \dotfill
+ \end{enumerate}\end{multicols}\vspace{-1em}
+\end{exo}
+
+\begin{exo}
+On consid\`ere les fonctions $f$ et $g$ d\'efinies pour tout $x$ non nul par $f(x)=\frac{4}{x}$ et $g(x)=-\frac{2}{x}$.
+\begin{enumerate}
+ \item \begin{enumerate}
+        \item Tracer la courbe repr\'esentative de $f$ sur la calculatrice? Que peut-on conjecturer concernant les variations de $f$ ?
+	\item Soient $0<a<b$.\\
+	      Que peut-on dire alors de $\frac{1}{a}$ et de $\frac{1}{b}$ ?\\
+	      Que peut-on dire alors de $4\times\frac{1}{a}$ et de $4\times\frac{1}{b}$ ?\\
+	      En d\'eduire le sens de variation de $f$ sur $]0\,;\,+\infty[$.
+	\item Faire de m\^eme en partant de $a<b<0$.
+       \end{enumerate}
+ \item M\^emes questions avec la fonction $g$.
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+R\'epondre par vrai ou faux aux affirmations suivantes, en justifiant votre r\'eponse :
+\begin{enumerate}
+ \item Une fonction homographique est toujours d\'efinie sur $\R^*$.
+ \item Une fonction homographique peut \^etre d\'efinie sur $\R$ priv\'e de 1 et 3.
+ \item La fonction $f(x)=\frac{2-x}{10-x}$ est une fonction homographique.
+ \item La fonction $g(x)=\frac{2}{2-5x}+\frac{1}{4-10x}$ est une fonction homographique.
+ \item La fonction $h(x)=\frac{2}{2-5x}+\frac{1}{4-6x}$ est une fonction homographique.
+ \item La fonction $i(x)=\frac{x^2+1}{x+4}$ est une fonction homographique.
+\end{enumerate}
+\end{exo}
+
+%\sautpage
+
+\begin{exo}
+D\'eterminer les ensembles de d\'efinition des fonctions homographiques suivantes et les valeurs de $x$ pour lesquelles elles s'annulent :
+\vspace{-1em}\begin{multicols}{4}\begin{itemize}
+ \item $f:x\longmapsto \frac{3x+1}{2x+4}$
+ \item $g:x\longmapsto \frac{x+5}{x+4}$
+ \item $h:x\longmapsto \frac{2x+3}{3x+4}$
+ \item $i:x\longmapsto \frac{x-1}{3x+1}$
+\end{itemize}\end{multicols}\vspace{-1em}
+\end{exo}
+
+\begin{exo}
+R\'esoudre les \'equations et in\'equations suivantes :
+\vspace{-1em}\begin{multicols}{3}\begin{enumerate}
+ \item $\frac{2x+1}{x-4}=0$
+ \item $\frac{-x+4}{2x-1}=0$
+ \item $\frac{-3x+4}{-2x-1}=2$
+ \item $\frac{3x+4}{x+4}=8$
+ \item $\frac{x-4}{x-1}=-2$
+ \item $\frac{2x-5}{x-6}\geqslant0$
+ \item $\frac{5x-2}{-3x+1}<0$
+ \item $\frac{3x}{4x+9}>0$
+ \item $\frac{2x-10}{11x+2}\leqslant0$
+\end{enumerate}\end{multicols}\vspace{-1em}
+\end{exo}
+
+\sautpage
+
+\subsection{\'Etudes de variation de fonctions homographiques}
+
+
+\vspace{-1em}\begin{multicols}{2}
+\begin{exo}
+On s'int\'eresse \`a la fonction $f$ telle que \[f(x)=\frac{x+4}{x+1}\]
+\begin{enumerate}
+ \item D\'eterminer son ensemble de d\'efinition.
+ \item D\'emontrer que pour tout $x\neq-1$ on a : \[f(x)=1+\frac{3}{x+1}\]
+ \item Soient $a$ et $b$ tels que $-1<a<b$.
+	\begin{enumerate}
+	 \item Compl\'eter successivement les encadrements successifs :
+	\begin{center}
+	  $\begin{array}{ccccc}
+	  \ldots & < & a & <  & b \\
+	  \ldots & \ldots & a+1 & \ldots  & b+1 \\
+	   &  & \delair{\frac{1}{a+1}} & \ldots  & \delair{\frac{1}{b+1}} \\
+	   &  & \delair{\frac{3}{a+1}} & \ldots  & \delair{\frac{3}{b+1}} \\
+	   &  & \delair{1+\frac{3}{a+1}} & \ldots  & \delair{1+\frac{3}{b+1}} \\
+	   &  & f(a) & \ldots  & f(b) \\
+	  \end{array}$	             \end{center}
+	 \item En d\'eduire le sens de variation de $f$ sur $]-1\,;\,+\infty[$.
+	\end{enumerate}
+ \item D\'eterminer de la m\^eme mani\`ere le sens de variation de $f$ sur $]-\infty\,;\,-1[$.
+\end{enumerate}
+\end{exo}
+
+
+\begin{exo}
+On s'int\'eresse \`a la fonction $f$ telle que \[f(x)=\frac{2x-5}{3-x}\]
+\begin{enumerate}
+ \item D\'eterminer son ensemble de d\'efinition.
+ \item D\'emontrer que pour tout $x\neq3$ on a : \[f(x)=\frac{1}{3-x}-2\]
+
+ \item Soient $a$ et $b$ tels que $3<a<b$.
+	\begin{enumerate}
+	 \item Compl\'eter successivement les encadrements successifs :
+	\begin{center}
+	  $\begin{array}{ccccc}
+	  \ldots & < & a & <  & b \\
+	  \ldots & \ldots & -a & \ldots  & -b \\
+	  \ldots & \ldots & 3-a & \ldots  & 3-b \\
+	   &  & \delair{\frac{1}{3-a}} & \ldots  & \delair{\frac{1}{3-b}} \\
+	   &  & \delair{\frac{1}{3-a}-2} & \ldots  & \delair{\frac{1}{3-b}-2} \\
+	   &  & f(a) & \ldots  & f(b) \\
+	  \end{array}$	             \end{center}
+	 \item En d\'eduire le sens de variation de $f$ sur $]3\,;\,+\infty[$.
+	\end{enumerate}
+ \item D\'eterminer de la m\^eme mani\`ere le sens de variation de $f$ sur $]-\infty\,;\,3[$.
+\end{enumerate}
+\end{exo}
+
+%\sautcol
+
+\begin{exo}
+On s'int\'eresse \`a la fonction $f$ telle que \[f(x)=\frac{x+1}{x+2}\]
+\begin{enumerate}
+ \item D\'eterminer son ensemble de d\'efinition.
+ \item D\'emontrer que pour tout $x\neq-2$ on a : \[f(x)=1-\frac{1}{x+2}\]
+ \item En utilisant une des deux expressions de $f$, r\'esoudre les \'equations ou in\'equations suivantes :
+	\vspace{-1em}\begin{multicols}{2}
+	\begin{enumerate}
+	 \item $f(x)=0$
+	 \item $f(x)=1$
+	 \item $f(x)<0$
+	\end{enumerate}\end{multicols}\vspace{-1em}
+
+ \item Soient $a$ et $b$ tels que $-2<a<b$.
+	\begin{enumerate}
+	 \item Compl\'eter successivement les encadrements successifs :
+	\begin{center}
+	  $\begin{array}{ccccc}
+	  \ldots & < & a & <  & b \\
+	  \ldots & \ldots & a+2 & \ldots  & b+2 \\
+	   &  & \delair{\frac{1}{a+2}} & \ldots  & \delair{\frac{1}{b+2}} \\
+	   &  & \delair{-\frac{1}{a+2}} & \ldots  & \delair{-\frac{1}{b+2}} \\
+	   &  & \delair{1-\frac{1}{a+2}} & \ldots  & \delair{1-\frac{1}{b+2}} \\
+	   &  & f(a) & \ldots  & f(b) \\
+	  \end{array}$	             \end{center}
+	 \item En d\'eduire le sens de variation de $f$ sur $]-2\,;\,+\infty[$.
+	\end{enumerate}
+ \item D\'eterminer de la m\^eme mani\`ere le sens de variation de $f$ sur $]-\infty\,;\,-2[$.
+\end{enumerate}
+\end{exo}
+
+
+
+%\sautpage
+
+\begin{exo}
+On s'int\'eresse \`a la fonction $f$ telle que \[f(x)=\frac{2x-1}{x+3}\]
+\begin{enumerate}
+ \item D\'eterminer son ensemble de d\'efinition.
+ \item D\'emontrer que pour tout $x\neq-3$ on a : \[f(x)=2-\frac{7}{x+3}\]
+
+ \item D\'eterminer le sens de variation de $f$ sur $]-3\,;\,+\infty[$.
+\end{enumerate}
+\end{exo}
+
+\end{multicols}
+
+\subsection{Probl\`emes}
+
+\begin{prob}
+$ABC$ est un triangle, $M$ est un point du segment $[AB]$ et $N$ est le point de $[AC]$ tel que $(MN)\parallel(BC)$.\\
+On donne $AB=x$, $MB=2$ et $MN=4$ et on suppose que $x>2$.
+\begin{enumerate}
+ \item Exprimer la longueur $BC$ en fonction de $x$.
+ \item On appelle $\ell(x)$ la longueur $BC$.
+       \begin{enumerate}
+        \item Montrer que $\ell(x)=4+\frac{8}{x-2}$.
+	\item D\'emontrer que la fonction $\ell$ est d\'ecroissante sur $]2\,;\,+\infty[$.
+       \end{enumerate}
+ \item Calculer $x$ pour que $BC=5$.
+ \item Peut-on avoir $BC=1\,000$ ?
+\end{enumerate}
+\end{prob}
+
+\begin{prob}
+ Lors d'un branchement en parall\`ele (on dit aussi en d\'erivation) de deux r\'esistances $R_1$ et $R_2$, les physiciens savent qu'une loi permet de remplacer ces deux r\'esistances par une seule r\'esistance $R$ \`a condition qu'elle v\'erifie la relation :
+ \[\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}\]
+ Dans cet exercice, les r\'esistances sont exprim\'ees en ohms, avec $R_1=2$ et $R_2=x$.
+\begin{enumerate}
+ \item D\'emontrer que $R=\frac{2x}{x+2}$.
+ \item On consid\`ere la fonction $r$ d\'efinie sur $[0\,;\,+\infty[$ par $r(x)=\frac{2x}{x+2}$.
+	\begin{enumerate}
+	 \item Montrer que $r(x)=2-\frac{4}{x+2}$.
+	 \item D\'emontrer que $r$ est croissante sur $[0\,;\,+\infty[$.
+	 \item D\'emontrer que pour tout $x$ positif on a $0\leqslant r(x) <2$.
+	 \item Dresser la tableau des variations de $r$.
+	\end{enumerate}
+ \item Comment choisir $R_2$ pour avoir $R=1,5\,\Omega$ ?
+\end{enumerate}
+
+\end{prob}
+

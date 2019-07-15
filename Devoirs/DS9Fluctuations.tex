@@ -1,0 +1,121 @@
+\cleardoublepage
+
+\fancyhead{} % Delete current head settings
+
+		\fancyhead[LE,LO]{\footnotesize \em Nom : }
+		\fancyhead[RE,RO]{\scriptsize \em Lundi 22 mai -- 1h00}
+
+\setcounter{ds}{9} %c'est le numéro du DS
+\setcounter{chaptertemp}{\thechapter} %stocke le numéro du chapitre courant dans un compteur temporaire
+\stepcounter{chapter} % remet tous les compteurs dépendant du chapitre à 0, dont les numéros d'exercice
+
+%(et avance le compteur de 1 mais on s'en fout à cause de la ligne qui suit)
+\setcounter{chapter}{\theds} % met le compteur de chapitre au numéro du ds
+
+			 %(il sera remis à son numéro normal en fin de fichier)
+
+
+\section*{Devoir surveillé n°\theds}\label{DS9}
+{\centering \large Fluctuations}
+\addstarredchapter{Devoir surveillé n°\theds : Fluctuations}
+
+%\begin{small}
+
+\medskip
+
+\hrule
+
+\begin{exo}[8 points]\label{ds10exo1}
+Une urne contient 10 boules : \textbf{sept} rouges, \textbf{trois} noires. On tire une boule et on note sa couleur et on la remet dans l'urne.
+\begin{enumerate}
+\item \begin{enumerate}
+       \item \`A chaque tirage, quelles sont les probabilit\'es $p(R)$ et $p(N)$ d'obtenir les \'ev\`enements suivants :
+       \vspace{-1em}\begin{multicols}{2}\begin{description}
+        \item[R :] \og{} La boule tir\'ee est rouge \fg{}
+        \item[N :] \og{} La boule tir\'ee est noire \fg{}
+       \end{description}\end{multicols}\vspace{-1em}
+       \item\label{ds9q1} D\'eterminer pour chacune des couleurs l'intervalle de fluctuation au seuil de 95\,\% pour un \'echantillon de taille 50.
+       \item Interpr\'eter ces intervalles de fluctuation.
+      \end{enumerate}
+\item On donne la table de nombres aléatoires entiers de 0 à 9 suivante : 
+	\reinitrand[first=0, last=9]
+\begin{center}
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+
+\rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand} \quad \rand\arabic{rand}
+\end{center}
+\begin{enumerate}
+ \item D\'ecrire pr\'ecis\'ement comment simuler 50 tirages dans cette urne contenant les sept rouges et trois noires.
+ \item Donner la liste des r\'esultats de vos 50 simulations.
+ \item Calculer les fréquences obtenues pour chaque couleur.
+ \item Ces fr\'equences sont-elles dans les intervalles de fluctuation d\'etermin\'es dans la question \ref{ds9q1} ?\\
+	Conclure.
+\end{enumerate}
+
+\end{enumerate}
+\end{exo}
+
+\medskip
+
+\hrule
+
+\sautpage
+
+\begin{exo}[12 points]
+\emph{On arrondira tous les r\'esultats au centi\`eme.}\\
+
+Dans un tr\`es gros lyc\'ee, la distribution des \'el\`eves de Seconde entre externes, demi-pensionnaires et internes est la suivante :
+\begin{center}
+ \begin{tabular}{c|c|c}
+    Externes & Demi-pensionnaires & Internes \\ \hline
+    404 & 1366 & 230
+ \end{tabular}
+\end{center}
+\begin{enumerate}
+  \item Quelles sont les proportions $p_E$, $p_D$ et $p_I$, respectivement d'externes, de demi-pensionnaires et d'internes ? 
+  \item On constitue une classe en piochant $n=36$ \'el\`eves au hasard parmi les \'el\`eves de Seconde.\\
+  On souhaite estimer l'intervalle de fluctuation au seuil de 95\,\% pour ces diff\'erentes proportions.
+	\begin{enumerate}
+	 \item Expliquer pourquoi on peut d\'eterminer les intervalles de fluctuations pour les externes, pour les demi-pensionnaires mais pas pour les internes.
+	 \item \label{q1} D\'eterminer l'intervalle de fluctuation pour la proportion d'externes, qu'on appellera $I$, pour un \'echantillon de taille 36.\\
+	 Pour la suite on pourra aussi utiliser, si besoin, l'intervalle de fluctuation au seuil de 95\,\% pour la proportion de \underline{demi-pensionnaires} pour un \'echantillon de taille $n=36$ suivant : $J=[0,516\,;\,0,850]$.
+	\end{enumerate}
+ 
+ \item Dans ce Lyc\'ee, il y a 36 \'el\`eves en Seconde 06 et leur distribution est la suivante :
+\begin{center}
+ \begin{tabular}{c|c|c}
+    Externes & Demi-pensionnaires & Internes \\ \hline
+    12 & 18 & 6
+ \end{tabular}
+\end{center}
+\emph{On justifiera avec soin et arguments math\'ematiques ses r\'eponses aux questions suivantes.}
+\begin{enumerate}
+ \item La fr\'equence d'externes dans cette classe peut-elle \^etre due au hasard ?
+ \item La fr\'equence de demi-pensionnaires dans cette classe est-elle repr\'esentative de la population globale des \'el\`eves de Seconde dans ce lyc\'ee ?
+\end{enumerate}
+ \item On fait l'hypoth\`ese que dans les \'el\`eves de Seconde de ce lyc\'ee, il y a la moiti\'e de filles et la moiti\'e de gar\c{c}ons.\\
+ Dans cette m\^eme Seconde 06, il y a 11 filles et 25 gar\c{c}ons. \\
+ Qu'en conclure ?
+\end{enumerate}
+%\end{enumerate}
+
+\end{exo}
+
+\medskip
+
+\hrule
+
+%\end{small}
+
+
+
+\setcounter{chapter}{\thechaptertemp} % remet le numéro de chapitre à ce qu'il était
+
+
+

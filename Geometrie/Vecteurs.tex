@@ -1,0 +1,1086 @@
+\chapter{Translation -- Vecteurs} \label{vecteurs}
+\minitoc
+
+\fancyhead{} % efface les entêtes précédentes
+\fancyhead[LE,RO]{\footnotesize \em \rightmark} % section en entête
+\fancyhead[RE,LO]{\scriptsize \em Seconde} % classe et année en entête
+
+    \fancyfoot{}
+		\fancyfoot[RE]{\scriptsize \em \href{http://perpendiculaires.free.fr/}{http://perpendiculaires.free.fr/}}
+		\fancyfoot[LO]{\scriptsize \em David ROBERT}
+    \fancyfoot[LE,RO]{\textbf{\thepage}}
+
+%\sautpage
+
+\section{Translation}
+
+\subsection{D\'efinition}
+
+\begin{definition*}
+ Soient $A$ et $B$ deux points du plan.\\
+  On appelle \emph{translation qui transforme $A$ en $B$} la transformation qui \`a tout point $M$ du plan associe l'unique point $M'$ tel que $[AM']$ et $[BM]$ ont m\^eme milieu.
+\end{definition*}
+
+
+\subsection{Activit\'es}
+
+\begin{act}[Image d'un point par une translation]\label{imagedunpoint}
+Sur chacune des figures ci-dessous, construire $M'$, image de $M$ par la translation qui transforme $A$ en $B$.
+\begin{center}
+	    \begin{tabular}{cc}
+		    \psset{xunit=0.5cm , yunit=0.5cm}
+		    \def\xmin{-0.1} \def\xmax{11.1} \def\ymin{-0.1} \def\ymax{6.1}
+		    \begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+		    \psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+		    \psline{->}(4,4)(7,3)
+		    \psdots(4,4)(7,3)(6,5)
+		    \uput[u](4,4){$A$}
+		    \uput[u](7,3){$B$}
+		    \uput[u](6,5){$M$}
+		    \end{pspicture*}
+		    &
+		    \psset{xunit=0.5cm , yunit=0.5cm}
+		    \def\xmin{-0.1} \def\xmax{11.1} \def\ymin{-0.1} \def\ymax{6.1}
+		    \begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+		    \psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+		    \psline{->}(8,5)(4,4)
+		    \psdots(4,4)(8,5)(6,2)
+		    \uput[u](4,4){$B$}
+		    \uput[u](8,5){$A$}
+		    \uput[u](6,2){$M$}
+		    \end{pspicture*}
+		\end{tabular}		             \end{center}
+		
+Dans chaque construction, on voit appara\^itre une figure famili\`ere. Laquelle ?\\
+		D\'emontrer que c'est toujours le cas.	                                    
+
+
+
+	
+\end{act}
+
+\sautpage
+
+\begin{act}[Quelques propri\'et\'es de la translation]\label{proptranslation}
+	Toutes les questions de cette activit\'e se rapportent \`a la figure \ref{proptranslationfig1} \vpageref{proptranslationfig1}.
+	\begin{enumerate}
+	 \item Construire $M'$, $N'$ et $O'$, images respectives de $M$, $N$ et $O$ par la translation qui transforme $A$ en $B$.
+		\begin{figure}[h]
+		\centering
+		      \caption{\small Figure des activit\'es \ref{proptranslation} et \ref{translationcomposition}}\label{proptranslationfig1}
+ 
+		
+
+		 %\begin{tabular}{cc}
+		  \psset{xunit=0.5cm , yunit=0.5cm}
+		  \def\xmin{-0.1} \def\xmax{24.1} \def\ymin{-0.1} \def\ymax{11.1}
+		  \begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+		  \psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+		  \psline{->}(8,10)(11,9)
+		  \psline{->}(11,9)(17,11)
+		  \psdots(8,10)(11,9)(1,2)(2,4)(4,8)(17,11)
+		  \uput[u](8,10){$A$}
+		  \uput[u](11,9){$B$}
+		  \uput[u](1,2){$M$}
+		  \uput[u](2,4){$N$}
+		  \uput[u](4,8){$O$}
+		  \uput[d](17,11){$C$}
+		  
+		  \end{pspicture*}
+		 %\end{tabular}
+		\end{figure}
+	 \item Construire $P$, image de $O$ la translation qui transforme $M$ en $M'$. Que constate-t-on ?
+	 \item\label{proptranslationq3} Les points $M$, $N$ et $O$ sont align\'es. Cela semble-t-il \^etre aussi le cas des points $M'$, $N'$ et $O'$ ? \\ D\'emontrons-le.
+		\begin{enumerate}
+		 \item D'apr\`es la propri\'et\'e obtenue dans le cas g\'en\'eral, quels sont les parall\'elogrammes issus de la translation ?
+		\item Quelles sont alors les droites parall\`eles \`a $(AB)$ ? Quelles sont les longueurs \'egales \`a $AB$ ?
+		\item Que peut-on en d\'eduire pour les quadrilat\`eres $MNN'M'$, $NOO'N'$ ?
+		\item Que peut-on en d\'eduire pour les droites $(MN)$ et $(M'N')$ ? Et pour les droites $(ON)$ et $(O'N')$ ?
+		\item Conclure.
+		\end{enumerate}
+	  \item Construire l'image d'un autre point situ\'e sur le segment $[OM]$. Sur quel segment est situ\'ee cette image ? \\ Conjecturer quelle est l'image du segment $[OM]$ et celle de la droite $(OM)$.
+	  \item Que peut-on dire des longueurs $MN$ et $M'N'$ ? Et des longueurs $ON$ et $O'N'$ ? \emph{Justifier, en utilisant \'eventuellement un r\'esultat de la d\'emonstration de la question \ref{proptranslationq3}}.
+
+	\end{enumerate}
+\end{act}
+
+\begin{act}[Encha\^inement de deux translations]\label{translationcomposition}
+ Toutes les questions de cette activit\'e se rapportent \`a la figure \ref{proptranslationfig1} \vpageref{proptranslationfig1}.
+  \begin{enumerate}
+   \item Construire $M''$, $N''$ et $O''$, images respectives de $M'$, $N'$ et $O'$ par la translation qui transforme $B$ en $C$. 
+   \item Quelle est la nature du quadrilat\`ere $ONN''O''$ ? \emph{Justifier}.
+   \item Quelle est la transformation qui permet de passer des points $M$, $N$ et $O$ aux points $M''$, $N''$ et $O''$ ?
+  \end{enumerate}
+
+\end{act}
+
+
+
+\subsection{Bilan et compl\'ements}
+
+\begin{definition}[Rappel]
+ Soient $A$ et $B$ deux points du plan.\\
+  On appelle \emph{translation qui transforme $A$ en $B$} la transformation qui \`a tout point $M$ du plan associe l'unique point $M'$ tel que $[AM']$ et $[BM]$ ont m\^eme milieu.
+\end{definition}
+
+\begin{prop}
+ Soient $A$ et $B$ deux points du plan et $M$ ayant pour image $M'$ par la translation qui transforme $A$ en $B$.\\
+ Alors $ABM'M$ est un \dotfill
+\end{prop}
+
+Cela a \'et\'e d\'emontr\'e dans l'activit\'e.
+
+\begin{prop}
+ Soient $A$ et $B$ deux points du plan et $M$, $N$ et $O$ ayant pour images respectives $M'$, $N'$ et $O'$ par la translation qui transforme $A$ en $B$. Alors :
+  \begin{itemize}
+       \item Si $M$, $N$ et $O$ sont align\'es alors \dotfill
+       \item L'image du segment $[MN]$ est \dotfill de m\^eme \dotfill
+       \item Si $O$ est le milieu du segment $[MN]$ alors \dotfill
+  \end{itemize}
+ On dit que la translation \emph{conserve} \dotfill, \dotfill et \dotfill.
+\end{prop}
+
+Le premier et le deuxi\`eme points ont \'et\'e d\'emontr\'es dans l'activit\'e. Le troisi\`eme point est une cons\'equence triviale des deux premiers.
+
+\begin{prop}[admise]
+ L'image d'une droite par une translation est \dotfill\\
+ L'image d'un cercle par une translation est \dotfill
+\end{prop}
+
+
+Enfin, comme on l'a vu en activit\'e :
+
+\begin{prop}
+ L'encha\^inement (on parle de la \emph{composition}) de deux translations est une translation.
+\end{prop}
+
+
+\section{Vecteurs}
+
+\subsection{D\'efinition -- \'Egalit\'e}
+
+\begin{definition}
+ On appelle \emph{vecteur $\V{AB}$} le bipoint associ\'e \`a la translation qui transforme $A$ en $B$.\\
+ $A$ est appel\'e \emph{origine du vecteur}, $B$ est appel\'e \emph{extr\'emit\'e du vecteur}.
+\end{definition}
+
+
+
+\begin{definition}
+ Deux vecteurs sont dits \emph{\'egaux} s'ils sont associ\'es \`a une m\^eme translation.
+\end{definition}
+
+On a vu pr\'ec\'edemment que
+\begin{itemize}
+ \item d'une part, $M'$ est l'image de $M$ par la translation de vecteur $\V{AB}$ si et seulement si $ABM'M$ parall\'elogramme (\'eventuellement aplati),
+ \item d'autre part que les translations de vecteur $\V{AB}$ et de vecteur $\V{MM'}$ \'etaient les m\^emes donc que $\V{AB}=\V{MM'}$
+\end{itemize}
+
+
+\begin{multicols}{2}
+Ce cas est g\'en\'eral. Ainsi :
+
+
+\vspace{-1em}\begin{prop}~
+  \begin{itemize}
+   \item $\V{AB}=\V{MM'} \ssi$ \dotfill
+   \item $\V{AB}=\ldots\ldots\ssi ABCD$ est un parall\'elogramme
+  \end{itemize}
+\end{prop}
+
+\begin{rmq} Attention à l'ordre des lettres !\end{rmq}
+
+
+\sautcol
+
+\begin{center}
+\psset{xunit=1cm , yunit=0.6666cm}
+\begin{pspicture*}(-0.8,-0.6)(7.7,2.6)
+\def\xmin{-0.6} \def\xmax{7.5} \def\ymin{-0.5} \def\ymax{2.5}
+
+
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(0,0)(7,2.5)
+
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\uput[r](0,0){$A$}
+\uput[l](1,2){$B$}
+\psline{->}(0,0)(1,2)
+\uput[r](2,0){$M$}
+\uput[l](3,2){$M'$}
+\psline{->}(2,0)(3,2)
+\uput[l](4,2){$A$}
+\uput[r](6,2){$B$}
+\uput[r](7,0){$C$}
+\uput[l](5,0){$D$}
+\psline(4,2)(6,2)(7,0)(5,0)(4,2)
+\end{pspicture*}
+\end{center}
+\end{multicols}
+
+Ainsi, on peut aussi d\'efinir un vecteur de la mani\`ere suivante :
+
+\begin{definition}
+Un vecteur non nul est déterminé par :
+\begin{itemize}
+	\item sa \emph{direction} ;
+	\item son \emph{sens} ;
+	\item et sa longueur, appel\'ee \emph{norme du vecteur}.
+\end{itemize}
+\end{definition}
+
+Et on a alors la propri\'et\'e :
+
+\begin{prop}
+ Deux vecteurs sont \'egaux si et seulement si ils ont la m\^eme direction, le m\^eme sens et la m\^eme norme.
+\end{prop}
+
+En effet, en appellant $\V{AB}$ et $\V{CD}$ ces deux vecteurs, $\V{AB}=\V{CD} \ssi ABDC \text{ parall\'elogramme } \ssi \V{AB}$ et $\V{CD}$ ont la m\^eme direction, le m\^eme sens et la m\^eme norme.
+
+%\sautpage
+
+\subsubsection{Notation $\vec{u}$}
+
+\begin{multicols}{2}
+\begin{center}
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.8,-0.8)(6.7,2.7)
+\def\xmin{-0.6} \def\xmax{6.5} \def\ymin{-0.6} \def\ymax{2.5}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psline{->}(0,1)(2,1)
+\uput[l](0,1){$A$}
+\uput[r](2,1){$B$}
+\psline{->}(2,2)(4,2)
+\uput[l](2,2){$C$}
+\uput[r](4,2){$D$}
+\psline{->}(3,0)(5,0)
+\uput[l](3,0){$E$}
+\uput[r](5,0){$F$}
+\psline{->}(4,1)(6,1)
+\uput[u](5,1){$\vec{u}$}
+\psdots[dotstyle=x,dotscale=2](0,1)(2,1)(2,2)(4,2)(3,0)(5,0)
+\end{pspicture*}
+
+\end{center}
+Sur le schéma ci-contre, on a $\V{AB}=\V{CD}=\V{EF}$. \\
+On pose alors $\vec{u}=\V{AB}=\V{CD}=\V{EF}$. \\
+$\V{AB}$, $\V{CD}$ et $\V{EF}$ sont appelés des \emph{représentants} du vecteur $\vec{u}$.
+\end{multicols}
+
+\begin{exo}\label{vecteursegaux1}
+Sur chaque sch\'ema de la figure ci-dessous, l'égalité $\V{AB}=\V{CD}$ est-elle vraie ?
+
+\begin{center}
+\begin{multicols}{3}
+\psset{xunit=0.5cm , yunit=0.5cm}
+\begin{pspicture*}(-0.8,-0.8)(7.7,4.7)
+\def\xmin{-0.6} \def\xmax{7.5} \def\ymin{-0.6} \def\ymax{4.5}
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-0.6,-0.6)(7.5,4.5)
+\psset{xunit=0.5cm , yunit=0.5cm}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots[dotstyle=x, dotscale=2.0000](1.0000,4.0000)
+\psdots[dotstyle=x, dotscale=2.0000](3.0000,0.0000)
+\psdots[dotstyle=x, dotscale=2.0000](6.0000,4.0000)
+\psdots[dotstyle=x, dotscale=2.0000](4.0000,0.0000)
+\uput[l](1,4){$A$}
+\uput[l](3,0){$B$}
+\uput[r](6,4){$C$}
+\uput[r](4,0){$D$}
+\end{pspicture*}
+\psset{xunit=0.5cm , yunit=0.5cm}
+\begin{pspicture*}(-0.8,-0.8)(7.7,4.7)
+\def\xmin{-0.6} \def\xmax{7.5} \def\ymin{-0.6} \def\ymax{4.5}
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-0.6,-0.6)(7.5,4.5)
+\psset{xunit=0.5cm , yunit=0.5cm}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots[dotstyle=x, dotscale=2.0000](1.0000,4.0000)
+\psdots[dotstyle=x, dotscale=2.0000](6.0000,0.0000)
+\psdots[dotstyle=x, dotscale=2.0000](6.0000,4.0000)
+\psdots[dotstyle=x, dotscale=2.0000](1.0000,0.0000)
+\uput[l](1,4){$A$}
+\uput[r](6,0){$C$}
+\uput[r](6,4){$B$}
+\uput[l](1,0){$D$}
+\end{pspicture*}
+\psset{xunit=0.5cm , yunit=0.5cm}
+\begin{pspicture*}(-0.8,-0.8)(7.7,4.7)
+\def\xmin{-0.6} \def\xmax{7.5} \def\ymin{-0.6} \def\ymax{4.5}
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-0.6,-0.6)(7.5,4.5)
+\psset{xunit=0.5cm , yunit=0.5cm}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots[dotstyle=x, dotscale=2.0000](1.0000,4.0000)
+\psdots[dotstyle=x, dotscale=2.0000](5.0000,3.0000)
+\psdots[dotstyle=x, dotscale=2.0000](3.0000,1.0000)
+\psdots[dotstyle=x, dotscale=2.0000](7.0000,0.0000)
+\uput[r](1,4){$A$}
+\uput[l](5,3){$C$}
+\uput[r](3,1){$B$}
+\uput[l](7,0){$D$}
+\end{pspicture*}
+
+\end{multicols} \end{center}
+\end{exo}
+
+
+
+
+\begin{exo}\label{vecteursegaux2} Sur la figure ci-dessous, expliquer, en utilisant les termes direction, sens ou norme, pourquoi le vecteur $\V{AB}$ n'est \'egal \`a aucun des autres vecteurs repr\'esent\'es.
+
+\begin{center}
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.8,-0.8)(7.7,4.7)
+\def\xmin{-0.6} \def\xmax{7.5} \def\ymin{-0.6} \def\ymax{4.5}
+\psset{xunit=1cm,yunit=1cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-0.6,-0.6)(7.5,4.5)
+\psset{xunit=1cm , yunit=1cm}
+
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\uput[d](0,2){$A$}
+\uput[u](1,3){$B$}
+\psline{->}(0,2)(1,3)
+\uput[d](1,0){$C$}
+\uput[d](3,0){$D$}
+\psline{->}(1,0)(3,0)
+\uput[d](3,2){$G$}
+\uput[u](5,4){$H$}
+\psline{->}(3,2)(5,4)
+\uput[d](6,1){$E$}
+\uput[u](7,2){$F$}
+\psline{->}(7,2)(6,1)
+
+\end{pspicture*}\end{center}
+
+\end{exo}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{multicols}{2}\begin{exo}
+Sur la figure ci-contre :
+\begin{enumerate}
+	\item Construire, à partir des points $A$, $B$ et $C$, les points $D$, $E$ et $F$ tels que :\\ $\V{AB}=\V{CD}, \quad\V{EA}=\V{AB}, \quad\V{CF}=\V{BA}$
+	\item Quels parallélogrammes peut-on tracer avec ces six points ?
+	\item En utilisant ces six points, compléter : \\
+	$\V{BD}=\ldots\ldots=\ldots\ldots \quad\V{BC}=\ldots\ldots \quad\V{BF}=\ldots\ldots$
+	\item Quelles autres \'egalit\'es de vecteurs peut-on d\'eduire ?
+\end{enumerate}
+\begin{center}
+\psset{xunit=0.5cm , yunit=0.5cm}
+\begin{pspicture*}(-0.8,-1.8)(10.7,6.7)
+\def\xmin{-0.6} \def\xmax{10.5} \def\ymin{-1.6} \def\ymax{6.5}
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-0.6,-1.6)(10.5,6.5)
+\psset{xunit=0.5cm , yunit=0.5cm}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots[dotstyle=x, dotscale=2.0000](2.0000,3.0000)
+\psdots[dotstyle=x, dotscale=2.0000](8.0000,2.0000)
+\psdots[dotstyle=x, dotscale=2.0000](4.0000,6.0000)
+\uput[l](2,3){$A$}
+\uput[r](8,3){$C$}
+\uput[r](4,6){$B$}
+\end{pspicture*}
+\end{center}
+\end{exo}\end{multicols}
+
+
+
+\subsection{Somme de deux vecteurs -- Relation de \textsc{Chasles}}
+
+\begin{definition}
+ La somme de deux vecteurs $\vec{u}$ et $\vec{v}$ est le vecteur associ\'e \`a la translation r\'esultat de l'encha\^inement des translations de vecteur $\vec{u}$ et de vecteur $\vec{v}$.
+\end{definition}
+
+\begin{exo}
+\begin{tabular}{*{3}{m{0.3\textwidth}}}
+
+Construire ci-dessous un vecteur égal à $\V{AB}+\V{BC}$. &
+Le vecteur tracé ci-dessous est-il égal à $\V{AB}+\V{BC}$ ? &
+Construire ci-dessous un vecteur égal à $\V{AB}+\V{AC}$. \\
+\psset{xunit=0.5cm , yunit=0.5cm}
+\def\xmin{-1} \def\xmax{8} \def\ymin{-1} \def\ymax{5}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots[dotstyle=x, dotscale=2.0000](1.0000,2.0000)
+\psdots[dotstyle=x, dotscale=2.0000](3.0000,1.0000)
+\psdots[dotstyle=x, dotscale=2.0000](6.0000,3.0000)
+\uput[l](1,2){$A$}
+\uput[d](3,1){$B$}
+\uput[r](6,3){$C$}
+\end{pspicture*}
+&
+\psset{xunit=0.5cm , yunit=0.5cm}
+\def\xmin{-1} \def\xmax{8} \def\ymin{-1} \def\ymax{5}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots[dotstyle=x, dotscale=2.0000](2.0000,3.0000)
+\psdots[dotstyle=x, dotscale=2.0000](1.0000,1.0000)
+\psdots[dotstyle=x, dotscale=2.0000](5.0000,2.0000)
+\uput[l](2,3){$A$}
+\uput[l](1,1){$B$}
+\uput[l](5,2){$C$}
+\psline{->}(5,4)(7,1)
+\end{pspicture*}
+&
+\psset{xunit=0.5cm , yunit=0.5cm}
+\def\xmin{-1} \def\xmax{8} \def\ymin{-1} \def\ymax{5}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots[dotstyle=x, dotscale=2.0000](1.0000,4.0000)
+\psdots[dotstyle=x, dotscale=2.0000](4.0000,3.0000)
+\psdots[dotstyle=x, dotscale=2.0000](2.0000,1.0000)
+\uput[l](1,4){$A$}
+\uput[l](4,3){$B$}
+\uput[r](2,1){$C$}
+\end{pspicture*}
+\end{tabular}
+
+\end{exo}
+
+
+
+\begin{multicols}{3}
+\begin{prop}[Relation de \textsc{Chasles}]
+Pour tous points $A$, $B$ et $C$, on a : $\V{AB}+\V{BC}=\V{AC}$
+\end{prop}
+
+\sautcol
+
+\begin{center}
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.8,-0.8)(4.7,2.7)
+\def\xmin{-0.6} \def\xmax{4.5} \def\ymin{-0.6} \def\ymax{2.5}
+\psset{xunit=1cm,yunit=1cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-0.6,-0.6)(4.5,2.5)
+\psset{xunit=1cm , yunit=1cm}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psline{->}(0,0)(2,2)
+\psline{->}(2,2)(4,2)
+\psline{->}(0,0)(4,2)
+\uput[l](0,0){$A$}
+\uput[ul](2,2){$B$}
+\uput[ur](4,2){$C$}
+\end{pspicture*}
+
+\sautcol
+
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.8,-0.8)(4.7,2.7)
+\def\xmin{-0.6} \def\xmax{4.5} \def\ymin{-0.6} \def\ymax{2.5}
+\psset{xunit=1cm,yunit=1cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-0.6,-0.6)(4.5,2.5)
+\psset{xunit=1cm , yunit=1cm}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psline{->}(0,0)(2,2)
+\psline{->}(2,2)(4,2)
+\psline{->}(0,0)(4,2)
+\uput[ul](1,1){$\vec{u}$}
+\uput[u](3,2){$\vec{v}$}
+\uput[dr](2,1){$\vec{u}+\vec{v}$}
+\end{pspicture*}
+\end{center}
+\end{multicols}
+
+
+
+\begin{multicols}{3}
+\begin{prop}[R\`egle du parall\'elogramme]
+Pour tous points $A$, $B$, $C$ et $D$ on a : $\V{AB}+\V{AC}=\V{AD}\Leftrightarrow ABDC$ parallélogramme.
+\end{prop}
+
+\sautcol
+
+\begin{center}
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.8,-0.8)(4.7,2.7)
+\def\xmin{-0.6} \def\xmax{4.5} \def\ymin{-0.6} \def\ymax{2.5}
+\psset{xunit=1cm,yunit=1cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-0.6,-0.6)(4.5,2.5)
+\psset{xunit=1cm , yunit=1cm}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psline{->}(0,0)(2,2)
+\psline{->}(0,0)(2,0)
+\psline{->}(0,0)(4,2)
+\psline[linestyle=dashed](2,2)(4,2)(2,0)
+\uput[dl](0,0){$A$}
+\uput[ul](2,2){$B$}
+\uput[ur](4,2){$D$}
+\uput[dr](2,0){$C$}
+\end{pspicture*}
+
+\sautcol
+
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.8,-0.8)(4.7,2.7)
+\def\xmin{-0.6} \def\xmax{4.5} \def\ymin{-0.6} \def\ymax{2.5}
+\psset{xunit=1cm,yunit=1cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-0.6,-0.6)(4.5,2.5)
+\psset{xunit=1cm , yunit=1cm}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psline{->}(0,0)(2,2)
+\psline{->}(0,0)(2,0)
+\psline{->}(0,0)(4,2)
+\psline[linestyle=dashed](2,2)(4,2)(2,0)
+\uput[ul](1,1){$\vec{u}$}
+\uput[u](1,0){$\vec{v}$}
+\uput[ur](2,0.5){$\vec{u}+\vec{v}$}
+\end{pspicture*}
+\end{center}
+\end{multicols}
+
+%\sautpage
+
+\begin{exo}[Relation de \textsc{Chasles}]
+Compléter à l'aide de la relation de \textsc{Chasles} :
+\vspace{-1em}\begin{multicols}{3}
+\begin{itemize}
+	\item $\V{IJ}=\V{IB}+\V{B\ldots}$
+	\item $\V{XK}=\V{XL}+\V{\ldots K}$
+	\item $\V{CD}=\V{\ldots A}+\V{A\ldots}$
+	\item $\V{MN}=\V{\ldots P}+\ldots\ldots$
+	\item $\V{\ldots E}=\V{F\ldots}+\V{G\ldots}$
+	\item $\V{H\ldots}=\ldots\ldots+\V{IJ}$
+	\item $\V{RS}=\V{R\ldots}+\V{\ldots S}$
+	\item $\ldots\ldots=\V{JK}+\V{\ldots M}$
+	\item $\V{AB}+\V{BC}+\V{CD}+\V{DE}=\ldots\ldots$
+	\item $\V{AB}=\V{\ldots C}+\V{\ldots D}+\ldots\ldots$
+	\item $\V{\ldots Y}=\V{XJ}+\ldots\ldots+\V{R\ldots}$
+\end{itemize}
+\end{multicols}
+\end{exo}
+
+\sautpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exo}[Vecteurs égaux, somme]
+
+On considère le motif représenté ci-dessous.
+\begin{multicols}{2}
+\begin{enumerate}
+	\item Citer tous les vecteurs égaux :
+		\begin{enumerate}
+			\item au vecteur $\V{AB}$ et représentés sur ce motif ;
+			\item au vecteur $\V{FE}$ et représentés sur ce motif.
+		\end{enumerate}
+
+	\item En n'utilisant que les lettres représentées sur ce motif, déterminer un vecteur égal au vecteur $\V{AB}+\V{FE}$.
+	
+	\item En n'utilisant que les lettres représentées sur ce motif, déterminer un vecteur égal aux vecteurs suivants :
+		\vspace{-1em}\begin{multicols}{2}\begin{enumerate}
+			\item $\V{AB}+\V{AH}$
+			\item $\V{BA}+\V{BC}$
+			\item $\V{BC}+\V{DE}$
+			\item $\V{BF}+\V{GF}$
+			\item $\V{AE}+\V{FB}$
+		\end{enumerate}\end{multicols}
+%\sautcol
+\begin{center}
+\psset{xunit=0.75cm,yunit=0.75cm}
+\begin{pspicture*}(0.2,0.2)(9.7,7.7)
+\def\xmin{0.4} \def\xmax{9.5} \def\ymin{0.4} \def\ymax{7.5}
+\psset{xunit=0.75cm,yunit=0.75cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(0.4,0.4)(9.5,7.5)
+
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots[dotstyle=+, dotscale=2.0000](3.0000,7.0000)
+\psline(7,1)(7,5)(9,5)(5,7)(1,7)(1,3)(3,3)(7,1)
+\uput[dr](7,1){$A$}
+\uput[ul](7,5){$H$}
+\uput[r](9,5){$G$}
+\uput[u](5,7){$F$}
+\uput[u](3,7){$E$}
+\uput[ul](1,7){$D$}
+\uput[dl](1,3){$C$}
+\uput[ur](3,3){$B$}
+
+\end{pspicture*}
+\end{center}
+
+\end{enumerate}\end{multicols}\end{exo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exo}[Sommes]\label{vectsomme}
+Dans chacun des cas de la figure \ref{vectsommefig} \vpageref{vectsommefig},
+construire en couleur le vecteur $\vec{w}$ tel que $\vec{w}=\vec{u}+\vec{v}$.
+Que remarque-t-on dans le dernier cas ?
+\begin{figure}[!h]
+ \centering
+ \caption{Figure de l'exercice \ref{vectsomme}}\label{vectsommefig}
+
+
+\psset{xunit=0.5cm , yunit=0.5cm}
+\begin{pspicture*}(-0.8,-0.8)(32.7,20.7)
+\def\xmin{-0.6} \def\xmax{32.5} \def\ymin{-0.6} \def\ymax{20.5}
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-0.6,-0.6)(32.5,20.5)
+\psset{xunit=0.5cm , yunit=0.5cm}
+
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psline{->}(0,2)(5,2)
+\uput[u](2.5,2){$\vec{u}$}
+\psline{->}(7,5)(5,2)
+\uput[dr](6,3.5){$\vec{v}$}
+
+\psline{->}(0,9)(6,12)
+\uput[ul](3,10.5){$\vec{u}$}
+\psline{->}(6,10)(10,9)
+\uput[dl](8,9.5){$\vec{v}$}
+
+\psline{->}(0,16)(6,19)
+\uput[ul](3,17.5){$\vec{u}$}
+\psline{->}(6,19)(9,17)
+\uput[ul](7.5,18){$\vec{v}$}
+
+\psline{->}(19,1)(15,1)
+\uput[u](17,1){$\vec{u}$}
+\psline{->}(13,3)(19,3)
+\uput[u](16,3){$\vec{v}$}
+
+\psline{->}(17,11)(13,11)
+\uput[u](15,11){$\vec{u}$}
+\psline{->}(21,6)(19,11)
+\uput[ur](20,8.5){$\vec{v}$}
+
+\psline{->}(17,19)(14,17)
+\uput[ul](15.5,18){$\vec{u}$}
+\psline{->}(17,19)(22,18)
+\uput[ul](19.5,18.5){$\vec{v}$}
+
+\psline{->}(30,2)(27,2)
+\uput[u](28.5,2){$\vec{u}$}
+\psline{->}(24,2)(27,2)
+\uput[u](25.5,2){$\vec{v}$}
+
+\psline{->}(32,7)(28,7)
+\uput[u](30,7){$\vec{u}$}
+\psline{->}(32,10)(26,10)
+\uput[u](29,10){$\vec{v}$}
+
+\psline{->}(26,19)(26,15)
+\uput[l](26,17){$\vec{u}$}
+\psline{->}(32,19)(26,19)
+\uput[u](30,19){$\vec{v}$}
+\end{pspicture*}                
+
+\end{figure}
+\end{exo}
+
+\sautpage
+
+\subsection{Vecteur nul -- Vecteurs oppos\'es}
+
+\begin{definition}
+ On appelle \emph{vecteur nul}, not\'e $\vec{0}$, tout vecteur dont son origine et son extr\'emit\'e sont confondues. La translation associ\'ee laisse tous les points invariants.\\
+ On appelle \emph{vecteurs oppos\'es} tous vecteurs $\vec{u}$ et $\vec{v}$ tels que $\vec{u}+\vec{v}=\vec{0}$. On peut noter $\vec{u}=-\vec{v}$ ou $\vec{v}=-\vec{u}$.
+\end{definition}
+
+D'apr\`es la relation de Chasles, $\V{AB}+\V{BA}=\V{AA}=\vec{0}$. On a donc :
+
+\begin{prop}
+ Les vecteurs $\V{AB}$ et $\V{BA}$ sont des vecteurs oppos\'es. On a donc $\V{AB}=$ \dotfill et $\V{BA}=$ \dotfill.
+\end{prop}
+
+\begin{exo}[Différence]
+\'Etant donné le parallélogramme $ABCD$, on pose $\vec{u}=\V{AB}$ et $\vec{v}=\V{AD}$.
+\begin{multicols}{2}\begin{center}
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.8,-0.8)(6.7,3.7)
+\def\xmin{-0.6} \def\xmax{6.5} \def\ymin{-0.6} \def\ymax{3.5}
+\psset{xunit=1cm,yunit=1cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-0.6,-0.6)(6.5,3.5)
+\psset{xunit=1cm , yunit=1cm}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psline(0,0)(4,0)(6,3)(2,3)(0,0)
+\psline{->}(2,3)(6,3)
+\uput[u](4,3){$\vec{v}$}
+\psline{->}(2,3)(0,0)
+\uput[ul](1,1.5){$\vec{u}$}
+\uput[ul](2,3){$A$}
+\uput[ur](6,3){$B$}
+\uput[dl](0,0){$D$}
+\uput[dr](4,0){$C$}
+\end{pspicture*}
+\end{center}
+\'Ecrire les vecteurs suivants à l'aide des vecteurs $\vec{u}$ et $\vec{v}$ \emph{seulement} :
+\begin{multicols}{2}\begin{itemize}
+	\item $\V{BA}=\ldots\ldots\ldots\ldots$ ;
+	\item $\V{DA}=\ldots\ldots\ldots\ldots$ ;
+	\item $\V{CB}=\ldots\ldots\ldots\ldots$ ;
+	\item $\V{DC}=\ldots\ldots\ldots\ldots$ ;
+	\item $\V{AC}=\ldots\ldots\ldots\ldots$ ;
+	\item $\V{CD}=\ldots\ldots\ldots\ldots$ ;
+	\item $\V{CA}=\ldots\ldots\ldots\ldots$ ;
+	\item $\V{DB}=\ldots\ldots\ldots\ldots$ ;
+	\item $\V{BD}=\ldots\ldots\ldots\ldots$ ;
+	\item $\V{BC}=\ldots\ldots\ldots\ldots$ ;
+\end{itemize}\end{multicols}
+\end{multicols}\end{exo}
+
+Enfin on a la propri\'et\'e suivante :
+
+\begin{prop}
+ Soient $A$ et $B$ deux points distincts et $I$ un point du plan. Alors \dotfill $\ssi \V{IA}+\V{IB}=\V{0}$
+\end{prop}
+
+%\sautpage
+
+
+\subsection{Produit d'un vecteur par un r\'eel}
+
+\begin{act}
+ Sur la figure ci-contre :
+  \begin{multicols}{2}\begin{enumerate}
+   \item Construire un repr\'esentant du vecteur $\vec{v}=\vec{u}+\vec{u}$ et $\vec{w}=\vec{u}+\vec{u}+\vec{u}$.\\
+    
+   Quelles  propri\'et\'es g\'eom\'etriques partagent $\vec{u}$, $\vec{v}$ et $\vec{w}$ ? Quelles sont leurs diff\'erences ? 
+   \item On notera $\vec{v}=2\vec{u}$ et $\vec{w}=3\vec{u}$.\\
+   En vous inspirant du point pr\'ec\'edent, conjecturer une repr\'esentation du vecteur $\vec{\imath}=-2\vec{u}$ et du vecteur $\vec{\jmath}=1,5\vec{u}$.
+  \end{enumerate}
+  \begin{center}
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.8,-0.8)(6.7,3.7)
+\def\xmin{-0.6} \def\xmax{6.5} \def\ymin{-0.6} \def\ymax{3.5}
+
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-1,-1)(13,7)
+
+\psset{xunit=1cm , yunit=1cm}
+
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psline{->}(3,3)(2,2)
+\uput[ul](2.5,2.5){$\vec{u}$}
+
+\end{pspicture*}
+\end{center}
+\end{multicols}
+\end{act}
+
+On a ainsi :
+\begin{definition}
+ Soit $k$ un r\'eel non nul et $\vec{u}$ un vecteur non nul. Alors le vecteur $k\vec{u}$ est un vecteur dont :
+ \begin{itemize}
+  \item la direction est \dotfill
+  \item le sens est \dotfill
+  \item la norme est \dotfill
+ \end{itemize}
+
+\end{definition}
+
+ \begin{act}
+On a reproduit ci-dessous deux fois la même figure.\\
+Sur la figure 1, construire le vecteur $3\left(\vec{u}+2\vec{v}\right)$ et, sur la figure 2, construire le vecteur $3\vec{u}+6\vec{v}$. Que remarque-t-on ?
+\begin{multicols}{2}
+\begin{center}
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.8,-0.8)(6.7,3.7)
+\def\xmin{-0.6} \def\xmax{6.5} \def\ymin{-0.6} \def\ymax{3.5}
+
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-1,-1)(13,7)
+
+\psset{xunit=1cm , yunit=1cm}
+
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psline{->}(3,3)(2,2)
+\uput[ul](2.5,2.5){$\vec{u}$}
+\psline{->}(2,2)(3,2)
+\uput[d](2.5,2){$\vec{v}$}
+
+\end{pspicture*}
+\end{center}
+\sautcol
+\begin{center}
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.8,-0.8)(6.7,3.7)
+\def\xmin{-0.6} \def\xmax{6.5} \def\ymin{-0.6} \def\ymax{3.5}
+
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-1,-1)(13,7)
+
+\psset{xunit=1cm , yunit=1cm}
+
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psline{->}(3,3)(2,2)
+\uput[ul](2.5,2.5){$\vec{u}$}
+\psline{->}(2,2)(3,2)
+\uput[d](2.5,2){$\vec{v}$}
+
+\end{pspicture*}
+\end{center}
+\end{multicols}
+\end{act}
+
+On a ainsi :
+
+\begin{prop}
+Pour tous vecteurs $\vec{u}$ et $\vec{v}$ et pour tous nombres réels $k$ et $k'$ : $k\left(\vec{u}+\vec{v}\right)=$ \dotfill et $k\vec{u}+k'\vec{u}=$ \dotfill
+\end{prop}
+
+On a de plus :
+
+\begin{prop}
+Pour tout vecteur $\vec{u}$ et pour tout nombre $k$, $0\vec{u}=$ \dotfill et $k\vec{0}=$ \dotfill.
+\end{prop}
+
+\begin{prop}
+Soient $A$ et $B$ deux points distincts et $I$ un point du plan, alors $I$ milieu de $[AB] \ssi \V{AI} = \dotfill \V{AB}$.
+\end{prop}
+
+%\sautpage
+
+\subsection{Colin\'earit\'e de deux vecteurs}
+
+\begin{definition}
+ Deux vecteurs $\vec{u}$ et $\vec{v}$ sont dits \emph{colin\'eaires} s'il existe un nombre $k$ tel que $\vec{u}=k\vec{v}$ ou $\vec{v}=k\vec{u}$.
+\end{definition}
+
+\begin{rmq}
+ Le vecteur nul est colin\'eaire \`a tout vecteur $\vec{u}$ car $0\vec{u}=\vec{0}$.
+\end{rmq}
+
+\begin{act}\label{actcolinearite}
+ Sur la figure \ref{actcolinearitefig} \vpageref{actcolinearitefig} le quadrilat\`ere $ABCD$ est un parall\'elogramme.\\
+ On appelle $E$ le sym\'etrique de $D$ par rapport \`a $C$ et $F$ le sym\'etrique de $D$ par rapport \`a $A$.
+ 
+\begin{figure}[h]
+ \centering
+ \caption{Figure de l'activit\'e \ref{actcolinearite}}\label{actcolinearitefig}
+\psset{xunit=1cm , yunit=1cm}
+\def\ymin{-0.1} \def\ymax{8.1} \def\xmin{-0.1} \def\xmax{14.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+
+%\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots(3,4)(7,4)(8,6)(4,6)
+\uput[r](3,4){$A$}
+\uput[dl](7,4){$B$}
+\uput[u](8,6){$C$}
+\uput[ur](4,6){$D$}
+\end{pspicture*}
+
+\end{figure}
+ 
+\begin{enumerate}
+ \item Construire $E$ et $F$.
+ \item D\'emontrer que les points $F$, $B$ et $E$ sont align\'es.
+ \item D\'emontrer que les droites $(AC)$ et $(FE)$ sont parall\`eles.
+ \item Exprimer $\V{FB}$ d'une part et $\V{FE}$ d'autre part en fonction des vecteurs $\V{AB}$ et $\V{AD}$. Ces vecteurs sont-ils colin\'eaires ?
+  \item Exprimer $\V{AC}$ en fonction des vecteurs $\V{AB}$ et $\V{AD}$. Les vecteurs $\V{AC}$ et $\V{FB}$ sont-ils colin\'eaires ?
+\end{enumerate}
+
+\end{act}
+
+\FloatBarrier
+
+Ce r\'esultat est g\'en\'eral. Plus pr\'ecis\'ement :
+
+\begin{prop}
+ Soient $A$, $B$, $C$ et $D$ quatre points du plan.
+\[A, B, C \text{ align\'es } \ssi \V{AB} \text{ et } \V{AC} \text{ colin\'eaires}\]
+\[ (AB) \parallel (CD) \ssi \V{AB} \text{ et } \V{CD} \text{ colin\'eaires}\]
+\end{prop}
+
+\sautpage
+
+\section{Exercices}
+
+\begin{exo}
+ $ABCD$ est un quadrilat\`ere quelconque. $I$, $J$, $K$ et $L$ sont les milieux respectifs de $[AB]$, $[BC]$, $[CD]$ et $[DA]$.
+\begin{enumerate}
+        \item Montrer, \underline{\`a l'aide de la relation de \textsc{Chasles}}, que $\V{IJ}=\frac{1}{2}\V{AC}$.
+	 \item Montrer, \underline{\`a l'aide de la relation de \textsc{Chasles}}, que $\V{LK}=\frac{1}{2}\V{AC}$.
+	\item En d\'eduire la nature du quadrilat\`ere $IJKL$.
+       \end{enumerate}
+\end{exo}
+
+\begin{exo}
+ Soit $ABCD$ un parall\'elogramme non aplati et les points $E$ et $F$ tels que $\V{AE}=\frac{2}{5}\V{AB}$ et $\V{DF}=\frac{3}{5}\V{DC}$.\\ Montrer que les segments $[EF]$ et $[BD]$ ont m\^eme milieu.
+\end{exo}
+
+
+\begin{exo}\label{exovec10}
+On considère deux vecteurs $\vec{u}$ et $\vec{v}$ de directions différentes. $A$ est un point donné (voir la figure \ref{exovec10fig} \vpageref{exovec10fig}).\begin{enumerate}
+	\item Construire les points $B$ et $C$ tels que $\V{AB}=\vec{u}+\vec{v}$ et $\V{AC}=\vec{u}-\vec{v}$.
+	\item Construire les points $P$, $Q$ et $R$ tels que $\V{BP}=\frac{2}{3}\vec{u}$, $\V{PQ}=-2\vec{v}$ et $\V{QR}=-\frac{2}{3}\vec{u}$.
+	\item Que constate-t-on ? \emph{Le justifier par un calcul sur les vecteurs}.
+\end{enumerate}
+\begin{figure}[!p]
+ \centering
+ \caption{Figure de l'exercice \ref{exovec10}}\label{exovec10fig}
+
+
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-0.8,-0.8)(9.7,9.7)
+\def\xmin{-0.6} \def\xmax{9.5} \def\ymin{-0.6} \def\ymax{9.5}
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-1,-1)(19,19)
+\psset{xunit=1cm , yunit=1cm}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots[dotstyle=x, dotscale=2.0000](8.0000,8.0000)
+\psline{->}(3,9)(0,6)
+\uput[ul](1.5,7.5){$\vec{u}$}
+\psline{->}(3,8)(5,8)
+\uput[u](4,8){$\vec{v}$}
+\uput[ur](8,8){$A$}
+\end{pspicture*}
+
+\end{figure}
+\end{exo}
+
+%\sautpage
+
+\begin{exo}\label{exovec11}
+Soit un triangle rectangle $ABC$ en $C$ tel que $AC=3$\,cm et $BC=3$\,cm (voir la figure \ref{exovec11fig} \vpageref{exovec11fig}).
+\begin{enumerate}
+	\item Placer les points $I$, $J$, $K$ et $L$ définis par les égalités suivantes :
+		\vspace{-1em}\begin{multicols}{4}\begin{itemize}
+			\item $\V{AI}=\frac{1}{2}\V{AB}$ ;
+			\item $\V{BJ}=2\V{BA}$ ;
+			\item $\V{CK}=-\frac{2}{3}\V{CA}$ ;
+			\item $\V{CL}=\frac{2}{3}\V{BC}-\frac{13}{6}\V{BA}$.
+		\end{itemize}\end{multicols}\vspace{-1em}
+	\item Tracer le quadrilatère $IJKL$. Que peut-on conjecturer sur sa nature ?
+	\item Nous allons d\'emontrer la conjecture faite au point pr\'ec\'edent.
+	      \begin{enumerate}
+	       \item \`A l'aide de la relation de \textsc{Chasles}, exprimer $\V{IJ}$ en fonction de $\V{AI}$, $\V{AB}$ et $\V{BJ}$.\\
+		En d\'eduire $\V{IJ}$ en fonction de $\V{AB}$.
+	       \item \`A l'aide de la relation de \textsc{Chasles}, exprimer $\V{LK}$ en fonction de $\V{CK}$ et $\V{CL}$.\\
+		Toujours \`a l'aide de la relation de Chasles, travailler l'expression pr\'ec\'edente jusqu'\`a obtenir $\V{LK}$ en fonction de $\V{AB}$.
+	       \item Conclure.
+	      \end{enumerate}
+
+\end{enumerate}
+
+\begin{figure}[!p]
+ \centering
+ \caption{Figure de l'exercice \ref{exovec11}}\label{exovec11fig}
+\psset{xunit=1cm , yunit=1cm}
+\begin{pspicture*}(-7,-3.5)(6.5,5)
+\def\ymin{-3.6} \def\ymax{5.1} \def\xmin{-7.1} \def\xmax{6.6}
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(-14,-7)(13,10)
+\psset{xunit=1cm , yunit=1cm}
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots(0,0)(3,0)(0,3)
+\uput[dl](0,0){$C$}
+\uput[ul](0,3){$B$}
+\uput[r](3,0){$A$}
+\end{pspicture*}
+
+\end{figure}
+\end{exo}
+
+%\FloatBarrier
+
+
+\begin{exo}
+\'Ecrire les vecteurs $\vec{u}$, $\vec{v}$, $\vec{w}$, $\vec{x}$ et $\vec{t}$ en fonction des seuls vecteurs $\V{AB}$ et $\V{AC}$.
+\vspace{-1em}\begin{multicols}{3}\begin{itemize}
+	\item $\vec{u}=2\V{AB}-\frac{1}{3}\V{AC}+\V{BC}$.
+	\item $\vec{v}=\V{AB}+3\V{CA}-2\V{BC}$.
+	\item $\vec{w}=\frac{2}{5}\left(\V{AB}-5\V{BC}\right)+\V{CA}$.
+	\item $\vec{x}=-\frac{2}{5}\V{AB}+\V{CB}$.
+	\item $\vec{t}=2\V{AB}-\frac{1}{2}\V{BC}-\frac{1}{2}\V{CA}$.
+\end{itemize}\end{multicols}
+\end{exo}
+
+\sautpage
+
+\begin{exo}
+Soit $ABC$ un triangle non aplati ($A$, $B$ et $C$ non alignés) et les points $D$ et $E$ tels que :\\
+\begin{tabularx}{\linewidth}{XrXlX}
+&$\V{AD}=\frac{5}{2}\V{AC}+\frac{3}{2}\V{CB}$ & &$\V{CE}=-2\V{AC}+\frac{1}{2}\V{AB}$&
+\end{tabularx}
+\begin{enumerate}
+	\item Faire un dessin. Conjecturer le lien entre les points $B$, $D$ et $E$.
+        \item Nous allons d\'emontrer la conjecture du point pr\'ec\'edent.
+	\begin{enumerate}
+	 \item Exprimer $\V{ED}$ en fonction des vecteurs $\V{DA}$, $\V{AC}$ et $\V{CE}$ puis en fonction des seuls vecteurs $\V{AB}$ et $\V{AC}$.
+	 \item Exprimer $\V{BD}$ en fonction des seuls vecteurs $\V{AB}$ et $\V{AC}$.
+	 \item Conclure.
+	\end{enumerate}
+\end{enumerate}
+\end{exo}
+
+\begin{exo}\label{exo1colinearite}
+ Sur la figure \ref{exo1colinearitefig} \vpageref{exo1colinearitefig}, $ABCD$ est un parall\'elogramme. $A'$ est le sym\'etrique de $A$ par rapport \`a $B$ et $E$ est le milieu de $[BC]$.
+
+
+ \begin{enumerate}
+  \item Construire $A'$ et $E$.
+  \item Exprimer $\V{DE}$ d'une part et $\V{DA'}$ d'autre part en fonction des vecteurs $\V{AB}$ et $\V{AD}$.
+  \item Que peut-on en d\'eduire pour les vecteurs $\V{DE}$ et $\V{DA'}$ ?
+  \item Que peut-on en d\'eduire pour les points $A'$, $E$ et $D$ ?
+ \end{enumerate}
+\end{exo}
+
+\begin{exo}\label{exo2colinearite}
+ Sur la figure \ref{exo2colinearitefig} \vpageref{exo2colinearitefig}, $ABC$ est un triangle quelconque. On d\'efinit trois points $D$, $E$ et $F$ par : $\V{AD}=\V{BC}$, $\V{AE}=\frac{1}{3}\V{AC}$ et $\V{AF}=\frac{2}{3}\V{AC}$. On appelle, par ailleurs, $I$ et $J$ les milieux respectifs de $[AB]$ et $[CD]$.
+
+\begin{figure}[!b]
+\begin{multicols}{2}
+
+\centering
+ \caption{Figure de l'exercice \ref{exo1colinearite}}\label{exo1colinearitefig}
+\psset{xunit=1cm , yunit=1cm}
+\def\ymin{-0.1} \def\ymax{9.1} \def\xmin{0.9} \def\xmax{9.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+
+%\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots(3,2)(5,3)(7,7)(5,6)
+\uput[r](3,2){$A$}
+\uput[dl](5,3){$B$}
+\uput[u](7,7){$C$}
+\uput[ur](5,6){$D$}
+\end{pspicture*}
+
+\sautcol
+
+ \centering
+ \caption{Figure de l'exercice \ref{exo2colinearite}}\label{exo2colinearitefig}
+\psset{xunit=1cm , yunit=1cm}
+\def\ymin{-0.1} \def\ymax{9.1} \def\xmin{0.9} \def\xmax{10.1}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+\psgrid[gridlabels=0pt,gridwidth=.3pt, gridcolor=gray, subgridwidth=.3pt, subgridcolor=gray, subgriddiv=1](0,0)(\xmin,\ymin)(\xmax,\ymax)
+
+%\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots(4,7)(2,3)(7,1)
+\uput[r](4,7){$A$}
+\uput[dl](2,3){$B$}
+\uput[u](7,1){$C$}
+
+\end{pspicture*}
+ 
+\end{multicols}
+\end{figure}
+
+\begin{enumerate}
+ \item Construire $D$, $E$, $F$, $I$ et $J$.
+ \item Montrer, si possible \`a l'aide des vecteurs, que les droites $(DE)$ et $(BF)$ sont parall\`eles.
+ \item Montrer, si possible \`a l'aide des vecteurs, que les points $I$, $E$ et $D$ sont align\'es.
+ \item Montrer, si possible \`a l'aide des vecteurs, que les points $B$, $F$ et $J$ sont align\'es.
+\end{enumerate}
+
+\end{exo}
+
+
+
+
+

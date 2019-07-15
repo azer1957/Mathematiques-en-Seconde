@@ -1,0 +1,664 @@
+\chapter{Probabilit\'es} \label{proba}
+\minitoc
+
+\fancyhead{} % efface les entêtes pr\'ec\'edentes
+\fancyhead[LE,RO]{\footnotesize \em \rightmark} % section en entête
+\fancyhead[RE,LO]{\scriptsize \em Seconde} % classe et ann\'ee en entête
+
+    \fancyfoot{}
+		\fancyfoot[RE]{\scriptsize \em \href{http://perpendiculaires.free.fr/}{http://perpendiculaires.free.fr/}}
+		\fancyfoot[LO]{\scriptsize \em David ROBERT}
+    \fancyfoot[LE,RO]{\textbf{\thepage}}
+
+   %\sautpage
+
+\section{Vocabulaire des ensembles}
+
+\begin{tabular}{cc}
+
+\begin{minipage}[l]{0.65\linewidth}
+\begin{definition}[Intersection]
+L'\emph{intersection} de deux ensembles $A$ et $B$ est l'ensemble des \'el\'ements qui sont communs \`a $A$ et $B$.\\
+On la note $A\cap B$.
+\end{definition}
+\end{minipage}
+&
+\begin{minipage}[r]{0.35\linewidth}
+\begin{center}
+\def\xmin{-1.6} \def\xmax{4.6} \def\ymin{-1.6} \def\ymax{1.6}
+\psset{xunit=1cm,yunit=0.75cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+\psclip{%
+\pscustom[linestyle=none]{%
+\psellipse(.5,0)(1.5,1)}
+\pscustom[linestyle=none]{%
+\psellipse(2.5,0)(1.5,1)}}
+\psframe*[linecolor=grisDR](\xmin,\ymin)(\xmax,\ymax)
+\endpsclip
+
+\psellipse(.5,0)(1.5,1)
+\psellipse(2.5,0)(1.5,1)
+\rput(-1,1){$A$}
+\rput(4,1){$B$}
+\psdot[dotstyle=x](1.2,0.2)
+\uput[dr](1.2,0.2){$e$}
+
+\end{pspicture*}
+\end{center}
+\end{minipage}
+\end{tabular}
+Ainsi $e \in A \cap B$ signifie $e \in A$ \textbf{et} $e \in B$.
+
+\begin{rmq} Lorsque $A \cap B = \vide$, on dit que les ensembles $A$ et $B$ sont disjoints.\end{rmq}
+
+\begin{tabular}{cc}
+
+\begin{minipage}[l]{0.65\linewidth}
+\begin{definition}[R\'eunion]
+La \emph{r\'eunion} de deux ensembles $A$ et $B$ est l'ensemble des \'el\'ements qui sont dans $A$ ou dans $B$. \\
+On la note $A \cup B$.
+\end{definition}
+\end{minipage}
+&
+\begin{minipage}[r]{0.35\linewidth}
+\begin{center}
+\def\xmin{-1.6} \def\xmax{4.6} \def\ymin{-1.6} \def\ymax{1.6}
+\psset{xunit=1cm,yunit=0.75cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+\psclip{%
+\pscustom[linestyle=none]{%
+\psellipse(.5,0)(1.5,1)}}
+\psframe*[linecolor=grisDR](\xmin,\ymin)(\xmax,\ymax)
+\endpsclip
+
+\psclip{%
+\pscustom[linestyle=none]{%
+\psellipse(2.5,0)(1.5,1)}}
+\psframe*[linecolor=grisDR](\xmin,\ymin)(\xmax,\ymax)
+\endpsclip
+
+\psellipse(.5,0)(1.5,1)
+\psellipse(2.5,0)(1.5,1)
+\rput(-1,1){$A$}
+\rput(4,1){$B$}
+\psdot[dotstyle=x](0,0.2)
+\uput[dr](0,0.2){$e$}
+
+\end{pspicture*}
+\end{center}
+\end{minipage}
+\end{tabular}
+
+Ainsi $e \in A \cup B$ signifie $e \in A$ \textbf{ou} $e \in B$.
+
+\begin{tabular}{cc}
+
+\begin{minipage}[l]{0.70\linewidth}
+\begin{definition}[Inclusion]
+On dit qu'un ensemble $A$ est \emph{inclus} dans un ensemble $B$ si tous les \'el\'ements de $A$ sont des \'el\'ements
+de $B$. \\
+On note alors $A \subset B$ (\og $A$ inclus dans $B$ \fg) ou $B \supset A$ (\og $B$ contient $A$ \fg).
+\end{definition}
+\end{minipage}
+&
+\begin{minipage}[r]{0.30\linewidth}
+\begin{center}
+\def\xmin{-1.6} \def\xmax{4.6} \def\ymin{-1.6} \def\ymax{1.6}
+\psset{xunit=1cm,yunit=0.75cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+\psellipse(1,0)(0.75,0.5)
+\psellipse(1.5,0)(1.5,1)
+\rput(2,0){$A$}
+\rput(3,1){$B$}
+
+\end{pspicture*}
+\end{center}
+\end{minipage}
+\end{tabular}
+
+On dit alors que $A$ est une \emph{partie} de $B$ ou que $A$ est un \emph{sous-ensemble} de $B$.
+
+\begin{rmq} $\vide$ et $E$ sont toujours des parties de $E$ (partie vide et partie pleine).\end{rmq}
+
+On notera $\mathcal{P}(E)$ l'ensemble de toutes les parties de $E$.
+
+\begin{tabular}{cc}
+
+\begin{minipage}[l]{0.65\linewidth}
+\begin{definition}[Compl\'ementaire]
+Soit $E$ un ensemble et $A$ une partie de $E$. Le \emph{compl\'ementaire} de $A$ dans $E$ est l'ensemble des \'el\'ements
+de $E$ qui n'appartiennent pas \`a $A$. On le note $\overline{A}$.
+\end{definition}
+\end{minipage}
+&
+\begin{minipage}[r]{0.35\linewidth}
+\begin{center}
+\def\xmin{-1.6} \def\xmax{4.6} \def\ymin{-1.6} \def\ymax{1.6}
+\psset{xunit=1cm,yunit=0.75cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+\psclip{%
+\pscustom[linestyle=none]{%
+\psellipse(1.5,0)(1.5,1)}}
+\psframe*[linecolor=grisDR](\xmin,\ymin)(\xmax,\ymax)
+\endpsclip
+
+\psellipse(1.5,0)(1.5,1)
+\psellipse*[linecolor=white](1,0)(0.75,0.5)
+\psellipse(1,0)(0.75,0.5)
+\rput(1,0){$A$}
+\rput(3,1){$E$}
+\psline{->}(3.5,0)(2.75,0)
+\uput[r](3.5,0){ $\overline{A}$}
+\end{pspicture*}
+\end{center}
+\end{minipage}
+\end{tabular}
+
+\begin{rmq} $A \cup \overline{A} = E$ et $A \cap \overline{A} = \vide$. \end{rmq}
+
+\begin{tabular}{cc}
+\begin{minipage}[l]{0.65\linewidth}
+\begin{definition}\label{partition}
+Des parties $A_1$, $A_2$, $\ldots$, $A_p$ d'un ensemble $E$ constituent une \emph{partition} de $E$ si elles sont deux \`a deux
+disjointes et si leur r\'eunion est $E$.\\
+Ainsi :
+\begin{itemize}
+	\item Pour tous $i$ et $j$ de $\{1\, ;\,\ldots \,;\, p\} : i \neq j \Rightarrow A_i \cap A_j = \vide$ ;
+	\item $\displaystyle\coprod_{i=1}^p A_i= A_1 \cup A_2 \cup \ldots \cup A_p = E$.
+\end{itemize}
+\end{definition}
+\end{minipage}
+&
+\begin{minipage}[r]{0.35\linewidth}
+\begin{center}
+\def\xmin{-3.6} \def\xmax{3.6} \def\ymin{-2.1} \def\ymax{2.1}
+\psset{unit=1cm}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+\psplot[plotpoints=200,algebraic=true]{-3}{3}{(1-(x/3)^2)^0.5*1.5}
+\psplot[plotpoints=200,algebraic=true]{-3}{3}{(1-(x/3)^2)^0.5*(-1.5)}
+\psline(-2,1.11803)(-2,-1.11803)
+\psline(-1,1.41421)(-1,-1.41421)
+\psline(0,1.5)(0,-1.5)
+\psline(1,1.41421)(1,-1.41421)
+\psline(2,1.11803)(2,-1.11803)
+\rput(-2.5,0){$A_1$}
+\rput(-1.5,0){$A_2$}
+\rput(-0.5,0){$A_3$}
+\rput(0.5,0){$A_4$}
+\rput(1.5,0){$\ldots$}
+\rput(2.5,0){$A_p$}
+\rput(2.5,1.5){$E$}
+
+\end{pspicture*}
+\end{center}
+\end{minipage}
+\end{tabular}
+
+\begin{exemple*}
+ Au Lyc\'ee Dupuy de L\^ome, les \'el\`eves de Premi\`ere ou Terminale g\'en\'erale sont en S, ES, L. On prend au hasard un \'el\`eve de Premi\`ere ou de Terminale g\'en\'erale.\\ On appelle $S$ (respectivement $ES$ et $L$) l'\'ev\`enement \og l'\'el\`eve est en S (respectivement ES et L) \fg. On appelle aussi $F$ et $G$ les \'ev\`enements \og l'\'el\`eve est une fille \fg{} et \og l'\'el\`eve est un gar\c{c}on \fg.\\
+ L'univers $\Omega$ est l'ensemble des \'el\`eves possibles de Premi\`ere et Terminale. \\
+ Les \'ev\`enements $F$ et $G$ forment une partition de l'univers $\Omega$. Ils sont aussi compl\'ementaires.\\
+ Les \'ev\`enements $S$, $ES$ et $L$ forment une partition de l'univers $\Omega$.
+\end{exemple*}
+
+
+\begin{definition}[Cardinal]
+Le nombre d'\'el\'ements d'un ensemble fini $E$ est appel\'e \emph{cardinal de $E$}. Ce nombre est not\'e Card($E$).
+On convient que Card($\vide$)$ = 0$.
+\end{definition}
+
+\begin{rmq} La notion de cardinal ne s'applique pas aux ensembles infinis (comme $\R$).\end{rmq}
+
+\section{Exp\'eriences al\'eatoires}
+
+\subsection{Issues, univers}
+
+\begin{definition}
+Une exp\'erience est dite \emph{al\'eatoire} lorsqu'elle a plusieurs issues (ou r\'esultats) possibles et que l'on ne peut ni pr\'evoir avec certitude, ni calculer laquelle de ces issues sera r\'ealis\'ee.\\L'ensemble de toutes les \emph{issues} d'une \emph{exp\'erience al\'eatoire} est appel\'e \emph{univers} (ou univers des possibles). On note
+g\'en\'eralement cet ensemble $\Omega$.
+\end{definition}
+
+À notre niveau, $\Omega$ sera toujours un ensemble fini.
+
+\begin{exemples*}~
+\begin{itemize}
+	\item On lance un d\'e et on regarde la face obtenue : $\Omega = \{1\,;\,2\,;\,3\,;\,4\,;\,5\,;\,6\}$
+	\item On lance un d\'e et on regarde si le num\'ero de la face obtenue est pair ou impair : $\Omega = \{P\,;\,I\}$
+	\item On lance une pi\`ece de monnaie : $\Omega = \{P\,;\,F\}$
+	\item On lance deux pi\`eces de monnaie, l'une apr\`es l'autre : $\Omega = \{P_1\cap P_2\,;\,P_1\cap F_2\,;\,F_1\cap P_2\,;\,F_1\cap F_2\}$
+	\item On lance un javelot et on mesure la distance entre la ligne de lancer et le point de contact du javelot avec le sol
+\end{itemize}
+\end{exemples*}
+Remarquons qu'une même exp\'erience peut d\'eboucher sur des univers diff\'erents suivant ce que l'on observe, comme le montrent les deux premiers exemples ci-dessus.
+
+\subsection{\'Ev\`enements}
+
+Exemple : on lance deux d\'es et on consid\`ere la somme $S$ obtenue.\\ L'univers des possible est $\Omega = \{2\,;\,3\,;\,\cdots\,;\,11\,;\,12\}$.
+
+Le tableau \ref{probavoctab} \vpageref{probavoctab} 
+d\'efinit le vocabulaire relatif aux \emph{\'ev\`enements} (en probabilit\'e) :
+
+\begin{table}[!h]
+\centering
+\caption{Vocabulaire relatif aux \'ev\`enements en probabilit\'e}\label{probavoctab}
+\begin{tabular}{|>{\centering}m{0.25\textwidth}|>{\centering}m{0.25\textwidth}|m{0.4\textwidth}|}
+\hline
+Vocabulaire & Signification & Illustration \tabularnewline \hline
+\begin{tabular}{c}
+\'Ev\`enement\\
+ (notation quelconque)\\
+\end{tabular}
+& Ensemble de plusieurs issues  &
+\begin{tabular}{l}
+Obtenir un nombre pair : \\
+$A = \{2\,;\,4\,;\,6\,;\,8\,;\,10\,;\,12\}$ \\
+ Obtenir un multiple de trois : \\
+ $B = \{3\,;\,6\,;\,9\,;\,12\}$ \\
+Obtenir une somme sup\'erieure \`a 10 : \\
+$C = \{10\,;\,11\,;\,12\}$ \\
+Obtenir une somme inf\'erieure \`a 6 : \\
+$D = \{2\,;\,3\,;\,4\,;\,5\,;\,6\}$ \\
+\end{tabular}
+\tabularnewline \hline
+\begin{tabular}{c}
+\'Ev\`enement \'el\'ementaire \\
+(not\'e $\omega$)\\
+\end{tabular} & L'une des issues de la situation
+\'etudi\'ee (un \'el\'ement de $\Omega$) & Obtenir 7 : $\omega = \{7\}$ \tabularnewline \hline
+
+
+\begin{tabular}{c}
+\'Ev\`enement impossible \\
+ (not\'e $\vide$)\\
+\end{tabular}
+ & C'est un \'ev\`enement qui ne peut pas se produire & \og Obtenir 13 \fg{} est un \'ev\`enement impossible.
+ \tabularnewline \hline
+
+ \begin{tabular}{c}
+\'Ev\`enement certain \\
+ (not\'e $\Omega$)\\
+\end{tabular}
+ & C'est un \'ev\`enement qui se produira obligatoirement & \og Obtenir entre 2 et 12 \fg{} est un \'ev\`enement certain.
+ \tabularnewline \hline
+
+\begin{tabular}{c}
+\'Ev\`enement \og A et B \fg \\
+ (not\'e $A \cap B$)\\
+\end{tabular}
+ & \'Ev\`enement constitu\'e des issues
+communes aux 2 \'ev\`enements & $A \cap B = \{6\,;\,12\}$ \tabularnewline \hline
+
+\begin{tabular}{c}
+\'Ev\`enement \og A ou B \fg \\
+ (not\'e $A \cup B$)\\
+\end{tabular}
+ & \'Ev\`enement constitu\'e de toutes
+les issues des deux \'ev\`enements & $A \cup B = \{2\,;\,3\,;\,4\,;\,6\,;\,8\,;\,9\,;\,10\,;\,12\}$ \tabularnewline \hline
+
+\begin{tabular}{c}
+\'Ev\`enements \\
+incompatibles \\
+ (on note alors \\
+ $A \cap B=\vide$)\\
+\end{tabular}
+ & Ce sont des \'ev\`enements qui
+n'ont pas d'\'el\'ements en
+commun & $C \cap D = \vide$ donc $C$ et $D$ sont incompatibles. Par contre, $A$ et $B$ ne le sont pas. \tabularnewline \hline
+
+\begin{tabular}{c}
+\'Ev\`enements\\
+ contraires \\
+ (l'\'ev\`enement contraire \\
+ de $A$ se note $\overline{A}$)\\
+\end{tabular}
+ & Ce sont deux \'ev\`enements
+incompatibles dont la r\'eunion
+forme la totalit\'e des issues ($\Omega$) & Ici, $\overline{A}$ repr\'esente l'\'ev\`enement \og obtenir une
+somme impaire \fg. On a alors :
+\begin{itemize}
+	\item $A \cap \overline{A} = \vide$ (ensembles disjoints)
+	\item $A \cup \overline{A} = \Omega$
+\end{itemize}
+ \tabularnewline \hline
+
+\end{tabular}
+\end{table}
+
+%\FloatBarrier
+
+
+\section{Loi de probabilit\'e sur un univers $\Omega$}
+
+\subsection{Cas g\'en\'eral}
+
+\begin{definition}
+Soit $\Omega=\{\omega_1\,;\, \omega_2\,;\,\cdots\,;\,\omega_n\}$ l'univers d'une exp\'erience al\'eatoire.\\
+D\'efinir une loi de probabilit\'e $P$ sur $\Omega$, c'est associer, \`a chaque
+\'ev\`enement \'el\'ementaire $w_i$, des nombres $p_i \in [0\,;\,1]$, appel\'es \emph{probabilit\'es}, tels que :
+\begin{itemize}
+	\item $\displaystyle\sum_{i} p_i=p_1+p_2+\cdots+p_n=1$ ;
+	\item la probabilit\'e d'un \'ev\`enement $A$, not\'ee $p(A)$, est la somme des probabilit\'es $p_i$ des \'ev\`enements \'el\'ementaires $\omega_i$ qui constituent $A$.
+\end{itemize}
+\end{definition}
+
+\begin{rmq} On note aussi : $p_i = p(\{\omega_i\})=p(\omega_i)$.\end{rmq}
+
+D\'ecrire la loi de probabilit\'e revient \`a indiquer, pour chaque \'ev\`enement \'el\'ementaire, sa probabilit\'e. On la pr\'esente g\'en\'eralement sous forme de tableau.
+
+\FloatBarrier
+
+\begin{exemple*}\label{detruque}
+Soit un d\'e truqu\'e dont les probabilit\'es d'apparitions des faces sont donn\'ees par le tableau suivant :
+\begin{center}
+\begin{tabular}{|*{7}{c|}}\hline
+Issue $\omega$ & 1& 2 &3 &4 &5 &6 \\ \hline
+Probabilit\'e $p(\omega)$& 0,05& 0,05& 0,1& 0,1& 0,2& inconnue\\ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+	\item Calculer la probabilit\'e de l'\'ev\`enement $A =$ \og obtenir un r\'esultat inf\'erieur ou \'egal \`a 4 \fg.\\
+D'apr\`es la d\'efinition, $p(A) = p(1) + p(2) + p(3) + p(4) = 0,3$\footnote{La notation rigoureuse est $p(\{1\})$ mais on peut noter $p(1)$ quand il n'y a pas de risque de confusion.}.
+
+\item Calculer la probabilit\'e d'obtenir 6 :\\
+D'apr\`es la d\'efinition, $p(1) + p(2) + p(3) + p(4) + p(5) + p(6) = 1$, donc $p(6) = 0,5$.
+\end{enumerate}
+\end{exemple*}
+
+\begin{prop}
+Soit $A$ et $B$ deux \'ev\`enements de $\Omega$, alors :
+\vspace{-1em}\begin{multicols}{2}\begin{itemize}
+	\item $p ( A \cup B ) = p ( A ) + p ( B ) - p ( A \cap B )$ ;
+	\item $p (\overline{A}) = 1 - p ( A )$.
+\end{itemize}\end{multicols}\vspace{-1em}
+\end{prop}
+
+\begin{rmq} Comme, par d\'efinition, la probabilit\'e de l'\'ev\`enement certain est 1 alors la probabilit\'e de l'\'ev\`enement impossible, qui est son contraire, est 0. \end{rmq}
+
+
+
+\subsection{Cas particulier : l'\'equiprobabilit\'e}
+
+\begin{definition}
+Lorsque toutes les issues d'une exp\'erience al\'eatoire ont même probabilit\'e, on dit qu'il y a \emph{\'equiprobabilit\'e} ou que
+la loi de probabilit\'e est \emph{\'equir\'epartie}.
+\end{definition}
+
+Dans ce cas, la r\`egle de calcul de la probabilit\'e d'un \'ev\`enement $A$ est la suivante :
+
+\begin{prop}
+Dans une situation d'\'equiprobabilit\'e sur un univers $\Omega$, pour tout \'ev\`enement \'el\'ementaire $\omega$ et tout \'ev\`enement $A$ on a :\\
+\begin{tabularx}{\linewidth}{lXr}
+ $p(\omega) = \delair{\dfrac{1}{\text{Card}(\Omega)}}$ & &
+ $p(A) = \delair{\dfrac{\text{nombre d'issues favorables}}{\text{nombre d'issues possibles}}=\dfrac{\text{Card}(A)}{\text{Card}(\Omega)}}$
+\end{tabularx}
+
+\end{prop}
+
+Certaines exp\'eriences ne sont pas des situations d'\'equiprobabilit\'e, mais on peut parfois s'y ramener tout de même.
+
+\begin{exemple*}
+On lance deux d\'es \'equilibr\'es et on s'int\'eresse \`a la somme des deux d\'es.\\
+L'univers est $\Omega=\{2\,;\,3\,;\,4\,;\,5\,;\,6\,;\,7\,;\,8\,;\,9\,;\,10\,;\,11\,;\,12\}$ mais il n'y a pas \'equiprobabilit\'e car chaque \'ev\`enement n'a pas la même probabilit\'e. Ainsi il est plus difficile d'obtenir 2 que 7.
+
+On se ram\`ene \`a une situtation d'\'equiprobabilit\'e : chaque d\'e \'etant \'equilibr\'e, on a \'equiprobabilit\'e sur chaque d\'e (chaque face \`a une probabilit\'e de $\frac{1}{6})$.
+
+Il reste \`a d\'eterminer la façon d'obtenir chaque somme. Le tableau ci-dessous r\'esume les possibilit\'es pour chaque d\'e et la somme obtenue :
+\begin{center}
+\begin{tabular}{|*{7}{c|}}\hline
+\diaghead{\theadfont D\'e 1 et d\'e 2}%
+{d\'e 1}{d\'e 2}& \thead{1} & \thead{2} & \thead{3} & \thead{4} & \thead{5} & \thead{6} \\ \hline
+1 & 2 & 3 & 4 & 5 & 6 & 7 \\ \hline
+2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline
+3 & 4 & 5 & 6 & 7 & 8 & 9 \\ \hline
+4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+5 & 6 & 7 & 8 & 9 & 10 & 11 \\ \hline
+6 & 7 & 8 & 9 & 10 & 11 & 12 \\ \hline
+\end{tabular}
+\end{center}
+Chaque \og case \fg{} \'etant \'equiprobable ($\frac{1}{36}$) on obtient :
+\begin{center}
+\begin{tabular}{|*{13}{c|}}\hline
+$\omega_i$ & 2 & 3 & 4 & 5& 6 & 7 & 8& 9& 10 & 11 & 12 & Total \\ \hline
+$p_i$ & $\delair{\frac{1}{36}}$ & $\delair{\frac{2}{36}}$ & $\delair{\frac{3}{36}}$ & $\delair{\frac{4}{36}}$ & $\delair{\frac{5}{36}}$ & $\delair{\frac{6}{36}}$ &
+$\delair{\frac{5}{36}}$ &
+$\delair{\frac{4}{36}}$ &
+$\delair{\frac{3}{36}}$ &
+$\delair{\frac{2}{36}}$ &
+$\delair{\frac{1}{36}}$ &
+1 \\ \hline
+\end{tabular}
+\end{center}
+
+\end{exemple*}
+
+
+
+\section{Exercices}
+
+
+
+\begin{exo}
+On jette un d\'e dont les faces sont num\'erot\'ees de 1 \`a 6 et on s'int\'eresse au num\'ero apparaissant sur la face sup\'erieure.
+\begin{enumerate}
+	\item D\'ecrire l'ensemble $\Omega$, univers associ\'e \`a cette exp\'erience al\'eatoire.
+	\item \'Ecrire sous forme de partie (d'ensemble) de $\Omega$ les \'ev\`enements :
+\begin{itemize}
+	\item $A$ : \og obtenir un num\'ero inf\'erieur ou \'egal \`a 2 \fg ;
+	\item $B$ : \og obtenir un num\'ero impair \fg ;
+	\item $C$ : \og obtenir un num\'ero strictement sup\'erieur \`a 4 \fg.
+\end{itemize}
+\item Pour chacun des \'ev\`enements suivants, les \'ecrire sous forme de partie de $\Omega$ et les d\'ecrire par une phrase la plus simple possible.
+\vspace{-1em}\begin{multicols}{5}
+\begin{itemize}
+	\item $A\cup B$ ;
+	\item $A\cap B$ ;
+	\item $A\cup C$ ;
+	\item $A\cap C$ ;
+	\item $C\cup B$ ;
+	\item $C\cap B$ ;
+	\item $\overline{A}$ ;
+	\item $\overline{A}\cup C$ ;
+	\item $\overline{A}\cap C$ ;
+\end{itemize}
+\end{multicols}\vspace{-1em}
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+%\begin{multicols}{2}
+On choisit au hasard une carte dans un jeu de 52 cartes.
+\begin{enumerate}
+	\item Combien y a-t-il d'issues possibles ?
+	\item On consid\`ere les \'ev\`enements :
+%\vspace{-1em}\begin{multicols}{2}
+\begin{itemize}
+	\item $A$ : \og obtenir un as \fg ;
+	\item $P$ : \og obtenir un pique \fg.
+\end{itemize}
+%\end{multicols}\vspace{-1em}
+\begin{enumerate}
+	\item Combien y a-t-il d'\'eventualit\'es dans $A$ ?
+	\item Combien y a-t-il d'\'eventualit\'es dans $P$ ?
+	\item Traduire par une phrase les \'ev\`enements $A\cap P$ et $A\cup P$.
+	\item D\'eterminer Card$(A\cap P)$ et Card$(A\cup P)$.
+\end{enumerate}
+\end{enumerate}
+%\end{multicols}
+\end{exo}
+
+
+
+\sautpage
+
+\begin{exo}
+$E$ est l'ensemble des nombres de 1 \`a 20 inclus. On choisit au hasard l'un de ces nombres.
+
+\begin{enumerate}
+	\item Quelle est la probabilit\'e des \'ev\`enements suivants :
+\begin{itemize}
+	\item $A$ : \og il est un multiple de 2 \fg
+	\item $B$ : \og il est un multiple de 4 \fg
+	\item $C$ : \og il est un multiple de 5 \fg
+	\item $D$ : \og il est un multiple de 2 mais pas de 4 \fg
+\end{itemize}
+%\sautcol
+\item Calculer la probabilit\'e de :
+\vspace{-1em}\begin{multicols}{4}
+\begin{itemize}
+	\item $A \cap B$ ;
+	\item $A \cup B$ ;
+	\item $A \cap C$ ;
+	\item $A \cup C$.
+\end{itemize}\end{multicols}\vspace{-1em}
+\end{enumerate}
+
+\end{exo}
+
+\begin{exo}
+Pour se rendre \`a son travail, un automobiliste rencontre trois feux tricolores. On suppose que les feux
+fonctionnent de mani\`ere ind\'ependante, que l'automobiliste s'arrête s'il voit le feu orange ou rouge et qu'il passe
+si le feu est vert. On suppose de plus que chaque feu est vert durant un temps \'egal \`a rouge et orange (autrement
+dit, l'automobiliste \`a autant de chance de passer que de s'arrêter).
+\begin{enumerate}
+	\item Faire un arbre repr\'esentant toutes les situations possibles.
+	\item Quelle est la probabilit\'e que l'automobiliste ait :
+\vspace{-1em}\begin{multicols}{2}
+\begin{enumerate}
+	\item les trois feux verts ?
+	\item deux des trois feux verts ?
+\end{enumerate}
+\end{multicols}\vspace{-1em}
+\end{enumerate}
+\end{exo}
+
+\begin{exo}
+Deux lignes t\'el\'ephoniques $A$ et $B$ arrivent \`a un standard.\\ On note :
+\vspace{-1em}\begin{multicols}{2}
+\begin{itemize}
+	\item $E_1$ : \og la ligne $A$ est occup\'e \fg ;
+	\item $E_2$ : \og la ligne $B$ est occup\'ee \fg.
+\end{itemize}
+\end{multicols}\vspace{-1em}
+Apr\`es \'etude statistique, on admet les probabilit\'es :
+\vspace{-1em}\begin{multicols}{3}
+\begin{itemize}
+	\item $p(E_1) = 0,5$ ;
+	\item $p(E_2) = 0,6$ ;
+	\item $p(E_1 \cap E_2) = 0,3$.
+\end{itemize}
+\end{multicols}\vspace{-1em}
+Calculer la probabilit\'e des \'ev\`enements suivants :
+\vspace{-1em}\begin{multicols}{2}
+\begin{itemize}
+	\item $F$ : \og la ligne $A$ est libre \fg ;
+	\item $G$ : \og une ligne au moins est occup\'ee \fg ;
+	\item $H$ : \og une ligne au moins est libre \fg.
+\end{itemize}
+\end{multicols}\vspace{-1em}
+\end{exo}
+
+
+
+
+
+\begin{exo}
+Un couple de futurs parents d\'ecide d'avoir trois enfants.
+On fait l'hypoth\`ese qu'ils auront, \`a chaque fois, autant de chances d'avoir un garçon qu'une fille et qu'il n'y aura pas de jumeaux.
+Calculer la probabilit\'e des \'ev\`enements :
+%\vspace{-1em}\begin{multicols}{2}
+\begin{itemize}
+	\item $A$ : \og ils auront trois filles \fg ;
+	\item $B$ : \og ils auront trois enfants de même sexe \fg ;
+	\item $C$ : \og ils auront au plus une fille \fg ;
+	\item $D$ : \og les trois enfants seront de sexes diff\'erents \fg.
+\end{itemize}
+%\end{multicols}\vspace{-1em}
+\end{exo}
+
+%\sautpage
+
+\begin{exo}
+Un d\'e (\`a 6 faces) est truqu\'e de la façon suivante : chaque chiffre pair a deux fois plus de chance de sortir qu'un
+num\'ero impair.
+\begin{enumerate}
+	\item Calculer la probabilit\'e d'obtenir un 6.
+	\item On lance deux fois le d\'e.
+\begin{enumerate}
+	\item Calculer la probabilit\'e d'obtenir deux fois un chiffre pair.
+	\item Calculer la probabilit\'e d'obtenir deux fois un 6.
+\end{enumerate}
+\end{enumerate}
+\end{exo}
+
+%\begin{exo}\label{lievreettortueenonce}
+%On lance $n$ d\'es ($n \geq 1$). On note $A$ l'\'ev\`enement \og obtenir au moins un 6 \fg.
+%\begin{enumerate}
+%	\item D\'ecrire $\overline{A}$.
+%	\item Exprimer en fonction de $n$ la probabilit\'e $p (\overline A)$.
+%	\item En d\'eduire que $p(A) = 1 - \left(\frac{5}{6}\right)^n$.
+%	\item Compl\'eter le tableau suivant :
+%\begin{center}
+%\begin{tabular}{|c|*{8}{m{1cm}|}}\hline
+%$n$ & 1 & 2 & 3 & 4&5&6&7&8\\ \hline
+%$p(A)$&&&&&&&& \\ \hline
+%\end{tabular}
+%\end{center}
+%\item Combien de d\'es faut-il lancer pour que la probabilit\'e d'obtenir au moins un six soit sup\'erieure \`a $\frac{3}{4}$ ?
+%\item Le li\`evre et la tortue font la course.
+
+%Le li\`evre se divertit longuement mais quand il part, il file \`a l'arriv\'ee. La tortue, quant \`a elle, avance inexorablement mais lentement vers l'arriv\'ee.
+
+%On consid\`ere qu'on peut assimiler cette course au lancement d'un d\'e :
+%\begin{itemize}
+%	\item si le 6 sort, le li\`evre avance ;
+%	\item sinon la tortue avance d'une case et au bout de 4 cases la tortue a gagn\'e.\\
+%	Voir figure \ref{lievreettortuefigure}.
+%\end{itemize}
+
+%\begin{figure}[htpb]
+%\centering
+%\caption{Figure de l'exercice \ref{lievreettortueenonce}}\label{lievreettortuefigure}
+%\def\xmin{-0.5} \def\xmax{8.5} \def\ymin{-0.5} \def\ymax{3.5}
+%\psset{xunit=1cm,yunit=1cm}
+%\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+
+%\pspolygon(0,0)(3,0)(3,1)(0,1)
+%\rput(1.5,0.5){D\'epart du li\`evre}
+%\psline{->}(3,0.5)(5,0.5)
+%\pspolygon(5,0)(8,0)(8,1)(5,1)
+%\rput(6.5,0.5){Arriv\'ee}
+
+%\pspolygon(0,2)(3,2)(3,3)(0,3)
+%\rput(1.5,2.5){D\'epart de la tortue}
+
+%\psline{->}(3,2.5)(3.5,2.5)
+%\pspolygon(3.5,2)(4.5,2)(4.5,3)(3.5,3)
+%\rput(4,2.5){1}
+
+%\psline{->}(4.5,2.5)(5,2.5)
+%\pspolygon(5,2)(6,2)(6,3)(5,3)
+%\rput(5.5,2.5){2}
+
+%\psline{->}(6,2.5)(6.5,2.5)
+%\pspolygon(6.5,2)(7.5,2)(7.5,3)(6.5,3)
+%\rput(7,2.5){3}
+
+%\psline{->}(7,2)(7,1)
+
+%\end{pspicture*}
+%\end{figure}
+%D\'eterminer la probabilit\'e que le li\`evre l'emporte et celle que la tortue l'emporte.
+%\end{enumerate}
+%\end{exo}
+%\sautpage
+
+
+
+
+

@@ -1,0 +1,270 @@
+\chapter{Statistiques continues} \label{statistiquescontinues}
+\minitoc
+
+\fancyhead{} % efface les entêtes précédentes
+\fancyhead[LE,RO]{\footnotesize \em \rightmark} % section en entête
+\fancyhead[RE,LO]{\scriptsize \em Seconde} % classe et année en entête
+
+    \fancyfoot{}
+		\fancyfoot[RE]{\scriptsize \em \href{http://perpendiculaires.free.fr/}{http://perpendiculaires.free.fr/}}
+		\fancyfoot[LO]{\scriptsize \em David ROBERT}
+    \fancyfoot[LE,RO]{\textbf{\thepage}}
+
+%\sautpage
+
+
+
+\section{Un exemple}
+
+
+%\sautpage
+
+
+%\begin{act}
+Lors d'une enquête portant sur 1\,300 personnes, on a demandé le temps passé par jour devant le téléviseur. Les
+données relevées ont été regroupées par classe car les 1\,300 données sont en trop grand nombre pour être
+manipulées toutes ensembles.
+On a obtenu le tableau suivant :
+\begin{center}
+\begin{tabular}{|*{8}{c|}}
+\hline
+Temps (h) & $[0\, ;\, 1[$ &$[1 \, ;\, 2[$ &$[2 \, ;\, 3[$ &$[3 \, ;\, 4[$ &$[4 \, ;\, 5[$& $[5 \, ;\, 6[$ &$[6 \, ;\, 7]$\\ \hline
+Effectif& 170& 309& 432& 221& 103& 41& 24\\ \hline
+\end{tabular}
+\end{center}
+Les 1\,300 données ne sont alors plus accessibles dans le détail. Peut-on malgré tout obtenir de ce tableau les
+paramètres statistiques de la série (valeurs extrêmes, moyenne, médiane, etc.) ou, au moins, des valeurs
+approchées ?
+
+%\medskip
+\subsection{Valeurs extrêmes}
+	\begin{enumerate}
+	\item Peut-on obtenir les valeurs minimale et maximale de la série ?
+Si oui les donner.
+Sinon donner une valeur (la plus grande possible) dont on est sûr qu'elle est plus petite que toutes les
+données de la série et une valeur (la plus petite possible) dont on est sûr qu'elle est plus grande que toutes
+les données de la série.
+\item Peut-on obtenir l'étendue de la série ?
+Si oui la donner.
+Sinon donner l'étendue maximale que peut avoir la série.
+\end{enumerate}
+
+\sautpage
+
+\subsection{Moyenne}
+\begin{enumerate}
+	\item Expliquer pourquoi on ne peut pas calculer la moyenne exacte du temps passé par jour devant la télévision.
+	\item Pour obtenir une valeur approchée de la moyenne, on considère que toutes les données d'une classe sont
+égales au centre de la classe.\\
+Ainsi, par exemple, nous considèrerons que les 170 données de la classe $[0\, ;\, 1[$ sont égales à $\frac{0+1}{2}=0,5$.\\
+Compléter alors le tableau suivant et en déduire une valeur approchée de la moyenne :
+\begin{center}
+\begin{tabular}{|*{8}{c|}}
+\hline
+Temps (h) & $[0\, ;\, 1[$ &$[1 \, ;\, 2[$ &$[2 \, ;\, 3[$ &$[3 \, ;\, 4[$ &$[4 \, ;\, 5[$& $[5 \, ;\, 6[$ &$[6 \, ;\, 7]$\\ \hline
+Centre de la
+classe & & & & & & & \\ \hline
+Effectif& 170& 309& 432& 221& 103& 41& 24\\ \hline
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\subsection{Médiane}
+\begin{enumerate}
+	\item Quel est le rang de la médiane de cette série ?
+	\item Expliquer pourquoi on ne peut pas savoir le temps médian exact (la médiane exacte de cette série) passé
+par jour devant la télévision.
+\item Compléter le tableau suivant :
+\begin{center}
+\begin{tabular}{|m{4cm}|*{7}{c|}}
+\hline
+Temps passé devant la télévision inférieur à & 1h &2h &3h &4h &5h& 6h &7h\\ \hline
+Effectif& 170& 309& 432& 221& 103& 41& 24\\ \hline
+Effectifs cumulés croissants& & & & & & & \\ \hline
+\end{tabular}
+\end{center}
+\item À l'aide de ces effectifs cumulés croissants et du 1., déterminer à quelle classe appartient la médiane exacte
+de cette série.
+\item Cette donnée est souvent trop approximative pour être utile en statistique et l'on a souvent besoin d'une
+estimation plus précise.
+On l'obtient avec un graphique.
+\begin{enumerate}
+	\item Représenter le tableau sur un graphique en indiquant en abscisse les temps passés devant la
+télévision (1 h = 2 cm) et en ordonnée les effectifs cumulés croissants (100 = 1 cm).
+\item À l'aide de ce graphique et du 1., déterminer une valeur approchée de la médiane de cette série.
+\end{enumerate}
+\end{enumerate}
+
+\subsection{Mode}
+Lorsque les données sont regroupées par classes de même taille le mode n'est pas accessible mais la classe dont
+l'effectif et le plus grand est appelée classe modale.
+Lorsque les classes ne sont pas de la même taille, il existe des moyens d'estimer celle qui est modale, mais cette
+compétence n'est pas au programme de la Seconde.
+
+\sautpage
+
+\section{Exercices}
+
+
+\begin{exo}
+%\vspace{-1em}\begin{multicols}{2}
+Le tableau ci-contre donne une répartition des salaires mensuels en euros des employés dans une entreprise.
+
+\begin{enumerate}
+	\item Quel est le nombre d'employés de l'entreprise ?
+	\item Quel est le nombre d'employés touchant un salaire mensuel supérieur ou égal à 1\,200 \euro{} ?
+	\item Estimer le salaire moyen et le salaire m\'edian des employés de l'entreprise.
+\end{enumerate}
+%\sautcol
+
+\begin{center}
+\begin{tabular}{|*{2}{c|}}\hline
+Salaire & Effectif \\ \hline
+$[1\,000\,;\,1\,200[$ & 326 \\ \hline
+$[1\,200\,;\,1\,500[$ & 112 \\ \hline
+$[1\,500\,;\,2\,000[$ & 35 \\ \hline
+$[2\,000\,;\,3\,000[$ & 8 \\ \hline
+$[3\,000\,;\,10\,000[$& 3 \\ \hline
+\end{tabular}
+\end{center}
+
+%\end{multicols}\vspace{-1em}
+\end{exo}
+
+
+
+\begin{exo}
+%\vspace{-1em}\begin{multicols}{2}
+Dans une petite ville fictive où la taxe d'habitation est proportionnelle à la superficie de
+l'habitation, la répartition des habitations selon leur superficie est la suivante :
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Superficie en m$^2$ & Effectif \\ \hline
+$[10\,;\,40[$ & 14 \\ \hline
+$[40\,;\,70[$ & 24 \\ \hline
+$[70\,;\,100[$ & 54 \\ \hline
+$[100\,;\,120[$ & 64 \\ \hline
+$[120\,;\,140[$ & 32 \\ \hline
+$[140\,;\,170[$ & 12 \\ \hline
+\end{tabular}
+\end{center}
+%\sautcol
+\begin{enumerate}
+	\item Déterminer une valeur approchée de la superficie moyenne des
+habitations de cette ville.
+\item Un membre du conseil municipal propose d'exonérer la moitié des personnes : celles dont les
+habitations ont les superficies les plus faibles. Une personne dont
+l'appartement mesure 80 m$^2$ serait-elle exonérée ? Une personne dont
+l'appartement mesure 110 m$^2$ serait-elle exonérée ?
+\item Un autre membre du conseil municipal propose d'exonérer le quart des personnes : celles dont les habitations ont les superficies les
+plus faibles. Une personne dont l'appartement mesure 80 m$^2$ serait-elle exonérée ?
+\end{enumerate}%\end{multicols}\vspace{-1em}
+\end{exo}
+
+\sautpage
+
+\begin{exo}
+%\vspace{-1em}\begin{multicols}{2}
+Dans deux entreprises $A$ et $B$, les employés sont
+classés en deux catégories : ouvriers et cadres.\\
+Les deux tableaux qui suivent donnent la
+répartition des employés en fonction de leur
+catégorie professionnelle et de leur salaire
+mensuel net, en euros.
+On suppose qu'à l'intérieur de chaque classe, la
+répartition est régulière.
+
+\begin{small}\begin{center}
+
+\textbf{Entreprise $A$}
+
+\begin{tabular}{|*{4}{c|}}
+\hline
+Salaires & $[1\,000 \,;\, 2\,000[$ & $[2\,000 \,;\, 3\,000[$ & $[3\,000 \,;\, 4\,000[$ \\ \hline
+Ouvriers & 114 & 66 & 0 \\ \hline
+Cadres & 0 & 8 & 12 \\ \hline
+\end{tabular}
+
+\vskip 0.5em
+
+\textbf{Entreprise $B$}
+
+\begin{tabular}{|*{4}{c|}}
+\hline
+Salaires & $[1\,000 \,;\, 2\,000[$ & $[2\,000 \,;\, 3\,000[$ & $[3\,000 \,;\, 4\,000[$ \\ \hline
+Ouvriers & 84 & 42 & 0 \\ \hline
+Cadres & 0 & 12 & 12 \\ \hline
+\end{tabular}
+\end{center}            \end{small}\vspace{-1em}
+\begin{enumerate}
+	\item
+\begin{enumerate}
+	\item Calculer la moyenne des salaires de tous
+les employés de l'entreprise $A$
+\item Calculer la moyenne des salaires des
+ouvriers de l'entreprise $A$
+\item Calculer la moyenne des salaires des
+cadres de l'entreprise $A$
+\end{enumerate}
+\item Faire les mêmes calculs pour l'entreprise $B$
+\item Le P.D.G. de l'entreprise $A$ dit à celui de l'entreprise $B$ : \og Mes employés sont mieux payés que les vôtres. \fg
+
+\og Faux \fg répond ce dernier, \og mes ouvriers sont mieux payés et mes cadres également. \fg\\
+Expliquer ce paradoxe.
+\end{enumerate}
+
+%\end{multicols}\vspace{-1em}
+\end{exo}
+
+
+\begin{exo}
+%\vspace{-1em}\begin{multicols}{2}
+Lors d'une étude d'une population de rats, K. Miescher a observé l'évolution d'une population de 144 rats. 
+
+Le tableau ci-contre indique la durée de vie (en mois) des rats.
+
+Ainsi, un seul rat a vécu entre 10 et 15 mois, trois ont vécu entre 15 et 20 mois, neuf entre 20 et 25 mois etc.
+On suppose que, dans chaque classe, la répartition est régulière.
+\begin{enumerate}
+	\item \'Evaluez l'étendue de cette série
+	\item \'Evaluez la moyenne de la durée de vie d'un rat dans cette population
+	\item Quelle est le rang de la durée de vie m\'ediane d'un rat dans cette population ?\\
+	      \`A l'aide du polygone des effectifs cumul\'es croissants,\'evaluez le valeur de la
+médiane ?
+\item En observant la moyenne et la médiane, quel commentaire peut-on faire ?
+\end{enumerate}
+
+%\sautcol
+%\vspace{1cm}
+\begin{center}
+%\begin{small}
+\begin{tabular}{|c|c|}
+\hline
+Durée de vie (en mois) & Effectif \\ \hline
+$[10\,;\,15[$ & 1 \\ \hline
+$[15\,;\,20[$ & 3 \\ \hline
+$[20\,;\,25[$ & 9 \\ \hline
+$[25\,;\,28[$ & 12 \\ \hline
+$[28\,;\,30[$ & 13 \\ \hline
+$[30\,;\,32[$ & 20 \\ \hline
+$[32\,;\,34[$ & 23 \\ \hline
+$[34\,;\,36[$ & 26 \\ \hline
+$[36\,;\,38[$ & 22 \\ \hline
+$[38\,;\,40[$ & 11 \\ \hline
+$[40\,;\,42[$ & 3 \\ \hline
+$[42\,;\,43[$ & 1 \\ \hline
+\end{tabular}
+%\end{small}
+\end{center}%\vspace{-1em}
+%\end{multicols}\vspace{-1em}
+\end{exo}
+
+
+
+
+
+
+
+
+

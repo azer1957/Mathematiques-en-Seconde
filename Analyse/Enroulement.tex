@@ -1,0 +1,396 @@
+\chapter{Enroulement de la droite des r\'eels sur le cercle trigonom\'etrique} \label{enroulement}
+\minitoc
+
+\fancyhead{} % efface les entêtes précédentes
+\fancyhead[LE,RO]{\footnotesize \em \rightmark} % section en entête
+\fancyhead[RE,LO]{\scriptsize \em Seconde} % classe et année en entête
+
+    \fancyfoot{}
+		\fancyfoot[RE]{\scriptsize \em \href{http://perpendiculaires.free.fr/}{http://perpendiculaires.free.fr/}}
+		\fancyfoot[LO]{\scriptsize \em David ROBERT}
+    \fancyfoot[LE,RO]{\textbf{\thepage}}
+
+
+\section{Enroulement de la droite des réels}
+
+\begin{definition}[Orientation d'un cercle, du plan, cercle trigonométrique]
+On se place dans le plan.
+\begin{itemize}
+	\item Orienter un cercle, c'est choisir un sens de parcours sur ce cercle appelé \emph{sens direct} (ou positif). L'autre sens est appelé \emph{sens indirect} (négatif ou rétrograde).
+	\item Orienter le plan, c'est orienter tous les cercles du plan dans le même sens. L'usage est de choisir pour sens direct le sens contraire des aiguilles d'une montre (appelé aussi \emph{sens trigonométrique}).
+	\item Un cercle trigonométrique est un cercle orienté dans le sens direct et de rayon 1. Lorsque le plan est muni d'un repère $\left(O;\vec{\imath},\vec{\jmath}\right)$, le cercle trigonométrique est le cercle orienté dans le sens direct, de centre $O$ et de rayon 1.
+\end{itemize}
+\end{definition}
+
+
+\begin{act}\label{trigoact1}
+
+
+
+Soit un repère orthonormal $\Oij$, le cercle $\mathcal{C}$ de centre $O$ et de rayon 1 et la droite $D$ d'équation $x = 1$ qui coupe l'axe $(Ox)$ en $I$, repr\'esent\'es sur la figure \ref{trigoact1fig} \vpageref{trigoact1fig}.
+
+À tout nombre $a$, on associe le point $M$ de la droite $D$, d'abscisse 1 et d'ordonnée $a$.
+
+\og L'enroulement \fg{} de la droite $D$ autour du cercle $\mathcal{C}$ met en coïncidence le point $M$ avec un point $N$ de $\mathcal{C}$.
+
+Plus précisément, si $a$ est positif, le point $N$ est tel que $\overset{\curvearrowright}{IN}=IM=a$, l'arc étant mesuré dans le sens inverse des aiguilles d'une montre et, si $a$ est négatif, le point $N$ est tel que $\overset{\curvearrowright}{IN}=IM=|a|$, l'arc étant mesuré dans le sens des aiguilles d'une montre.
+
+Le point $N$ est le point du cercle $\mathcal{C}$ associé au nombre $a$.
+
+
+\begin{enumerate}
+	\item Placer les points $M_a$ de la droite $D$ dont les ordonnées $a$ respectives sont : $0 ; \frac{\pi}{2} ; -\frac{\pi}{3} ; \pi ; -\pi$.
+	\item Placer les points $N_a$ du cercle associés à ces nombres $a$.
+	\item Indiquer un nombre associé à chacun des points $I$, $J$, $B(-1;0)$ et $B'(0;-1)$.
+	\item Existe-t-il plusieurs nombres associés à un même point ? Donner quatre nombres associés au point $J$.
+\end{enumerate}
+\begin{figure}[!h]
+ \centering
+\caption{Figure de l'activit\'e \ref{trigoact1}}\label{trigoact1fig}
+
+\psset{xunit=2cm , yunit=2cm}
+\begin{pspicture*}(-2.2,-3.2)(2.2,3.2)
+\def\xmin{-2} \def\xmax{2} \def\ymin{-3.2} \def\ymax{3.2}
+\psset{xunit=2cm,yunit=2cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-2,-3)(2,3)
+\psset{xunit=2cm , yunit=2cm}
+\psaxes[labels=none,labelsep=1pt,Dx=1,Dy=1]{-}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\psset{linecolor=black, linewidth=.5pt, arrowsize=2pt 4}
+\psdots[dotstyle=x, dotscale=2.0000](1.0000,0.0000)
+\psdots[dotstyle=x, dotscale=2.0000](0.0000,1.0000)
+\psdots[dotstyle=x, dotscale=2.0000](0.0000,0.0000)
+\psdots[dotstyle=x, dotscale=2.0000](1.0000,2.0000)
+\psdots[dotstyle=x, dotscale=2.0000](-0.4160,0.9090)
+\uput[r](1,0){$I$}
+\uput[ur](0,1){$J$}
+\psline(1,\ymin)(1,\ymax)
+\uput[r](1,2.5){$D$}
+\rput(1,2){\psbezier{->}(0,0)(-1,0)(-1.416,-1.091)}
+\uput[r](1,2){$M$}
+\uput[ul](-0.416,0.909){$N$}
+\uput[dl](0,0){$O$}
+%\psarc(0,0){2}{0}{360}
+\psset{xunit=1cm , yunit=1cm}
+\pscircle(0.0000,0.0000){2}
+
+\end{pspicture*}
+\end{figure}
+
+
+\end{act}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Une nouvelle unité de mesure des angles : le radian}
+
+Dans la suite du chapitre, on suppose que le plan est orienté dans le sens trigonométrique.
+
+\begin{definition}
+La mesure d'un angle en radian est égale à la longueur de l'arc de cercle que cet angle intercepte sur le cercle trigonométrique.
+\end{definition}
+
+Avec les notations de l'activité précédente, la mesure de l'angle $\widehat{ION}$ en radian est égale à la longueur $\overset{\curvearrowright}{IN}$, c'est-à-dire à $a$.
+
+\begin{exo}
+Compléter le tableau suivant :
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|*{7}{>{\centering \arraybackslash}X|}}\hline
+Mesure de l'arc $\overset{\curvearrowright}{IN}$ =  mesure en radian de l'angle $\widehat{ION}$ 		&	$0$		&	$\delair{\dfrac{\pi}{6}}$ 		&	$\delair{\dfrac{\pi}{4}}$		&	$\delair{\dfrac{\pi}{3}}$		&	$\delair{\dfrac{\pi}{2}}$ & $\pi$ & $2\pi$	\\ \hline
+	&&&&&&& \\ 
+Mesure en degré de l'angle $\widehat{ION}$	&&&&&&& \\ 
+	&&&&&&& \\ \hline
+\end{tabularx}
+\end{center}
+\end{exo}
+
+\begin{exo}\label{trigoexo2}
+La figure \ref{cerclestrigo} \vpageref{cerclestrigo} propose plusieurs cercles trigonom\'etriques.
+ 
+  \begin{itemize}
+   \item Sur un de ces cercles, placer les points correspondant aux nombres suivant : \\$0, \frac{\pi}{4}, \frac{\pi}{2}, \frac{3\pi}{4}, \pi, \frac{5\pi}{4}, 2\pi, -\frac{\pi}{4}, -\frac{\pi}{2}, -\frac{3\pi}{4}, -\frac{\pi}{4}, -\pi, -\frac{7\pi}{4}, -2\pi$
+   \item Sur un autre de ces cercles, placer les points correspondant aux nombres suivant :\\ $\frac{\pi}{6}, \frac{\pi}{3}, \frac{3\pi}{6}, \frac{2\pi}{3}, \frac{5\pi}{6}, \frac{7\pi}{6}, \frac{4\pi}{3}, -\frac{\pi}{6}, -\frac{\pi}{3}, -\frac{2\pi}{3}, -\frac{5\pi}{6}$
+  \end{itemize}
+
+\end{exo}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cosinus et sinus d'un réel $x$}
+
+\begin{act}\label{trigoact2}
+En s'aidant des sch\'emas de la figure \ref{trigoact2fig} \vpageref{trigoact2fig}, compléter le tableau suivant :
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|*{7}{>{\centering \arraybackslash}X|}}\hline
+Mesure de l'arc $\overset{\curvearrowright}{IN}$		&	$0$		&	$\delair{\dfrac{\pi}{6}}$ 		&	$\delair{\dfrac{\pi}{4}}$		&	$\delair{\dfrac{\pi}{3}}$		&	$\delair{\dfrac{\pi}{2}}$ & $\pi$ & $2\pi$	\\ \hline
+	&&&&&&& \\
+Abscisse de $N$	&&&&&&& \\ 
+	&&&&&&& \\ \hline
+	&&&&&&& \\
+Ordonnée de $N$	&&&&&&& \\
+	&&&&&&& \\ \hline
+\end{tabularx}
+\end{center}
+
+
+On pourra observer que les triangles $OIN$, $ONP$ et $ONJ$ ne sont pas quelconques lorsque $N$ correspond, respectivement, aux nombres $\frac{\pi}{3}$, $\frac{\pi}{4}$ et $\frac{\pi}{6}$.
+
+\begin{figure}[!h]
+\centering
+\caption{Figures de l'activit\'e \ref{trigoact2}}\label{trigoact2fig}
+\begin{tabular}{ccc}
+ \psset{unit=3cm}
+\def\xmin{-0.2} \def\xmax{1.1} \def\ymin{-0.2} \def\ymax{1.2}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+ \psset{unit=0.75cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-5,-5)(5,5)
+ \psset{unit=3cm}
+\psaxes[labels=none,labelsep=1pt,Dx=1,Dy=1]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\uput[dr](1,0){$I$}
+\uput[ur](0,1){$J$}
+\uput[dl](0,0){$O$}
+\uput[ur](0.5,0.866025404){$N$}
+\psarc(0,0){1}{0}{90}
+\psdots(0.5,0.866025404)(0.5,0)(0,0.866025404)
+\psline(1,0)(0.5,0.866025404)(0,0)
+\psline[linestyle=dashed](0.5,0)(0.5,0.866025404)(0,0.866025404)
+%\psset{xunit=1cm , yunit=1cm}
+%\pscircle(0.0000,0.0000){3cm}
+\end{pspicture*}
+& 
+ \psset{unit=3cm}
+\def\xmin{-0.2} \def\xmax{1.1} \def\ymin{-0.2} \def\ymax{1.2}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+ \psset{unit=0.75cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-5,-5)(5,5)
+ \psset{unit=3cm}
+\psaxes[labels=none,labelsep=1pt,Dx=1,Dy=1]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\uput[dr](1,0){$I$}
+\uput[ur](0,1){$J$}
+\uput[dl](0,0){$O$}
+\uput[ur](0.707106781,0.707106781){$N$}
+\uput[ur](0.707106781,0){$P$}
+\psarc(0,0){1}{0}{90}
+\psdots(0.707106781,0.707106781)(0.707106781,0)(0,0.707106781)
+\psline(0.707106781,0)(0.707106781,0.707106781)(0,0)
+\psline[linestyle=dashed](0.707106781,0.707106781)(0,0.707106781)
+%\psset{xunit=1cm , yunit=1cm}
+%\pscircle(0.0000,0.0000){3cm}
+\end{pspicture*}
+& 
+ \psset{unit=3cm}
+\def\xmin{-0.2} \def\xmax{1.1} \def\ymin{-0.2} \def\ymax{1.2}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+ \psset{unit=0.75cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-5,-5)(5,5)
+ \psset{unit=3cm}
+\psaxes[labels=none,labelsep=1pt,Dx=1,Dy=1]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\uput[dr](1,0){$I$}
+\uput[ur](0,1){$J$}
+\uput[dl](0,0){$O$}
+\uput[ur](0.866025404,0.5){$N$}
+\psarc(0,0){1}{0}{90}
+\psdots(0.866025404,0.5)(0,0.5)(0.866025404,0)
+\psline(0,1)(0.866025404,0.5)(0,0)
+\psline[linestyle=dashed](0,0.5)(0.866025404,0.5)(0.866025404,0)
+%\psset{xunit=1cm , yunit=1cm}
+%\pscircle(0.0000,0.0000){3cm}
+\end{pspicture*}
+\end{tabular}
+\end{figure}
+
+\end{act}
+
+\begin{definition}
+Soit $x$ un réel et $N\,(x_n\,;\,y_n)$ le point qui lui est associé par enroulement sur le cercle trigonométrique. Alors on a :
+\[\cos x=x_n \quad \sin x=y_n \quad \text{ et, quand } \cos x\neq 0, \tan x =\dfrac{\sin x }{\cos x}\]
+\end{definition}
+
+\sautpage
+
+\begin{exo}
+ Compléter le tableau suivant :
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|*{6}{>{\centering \arraybackslash}X|}}\hline
+$x$		&	$0$		&	$\delair{\dfrac{\pi}{6}}$ 		&	$\delair{\dfrac{\pi}{4}}$		&	$\delair{\dfrac{\pi}{3}}$		&	$\delair{\dfrac{\pi}{2}}$ & $\pi$ 	\\ \hline
+	&&&&&& \\
+$\sin x$	&&&&&& \\ 
+	&&&&&& \\ \hline
+	&&&&&& \\
+$\cos x$	&&&&&& \\ 
+	&&&&&& \\ \hline
+	&&&&&& \\
+$\tan x$	&&&&&& \\ 
+	&&&&&& \\ \hline
+\end{tabularx}
+\end{center}\end{exo}
+
+
+
+
+\begin{prop}
+Pour tout réel $x$ on a :
+\vspace{-1em}\begin{multicols}{3}\begin{itemize}
+	\item $-1\leqslant\cos x \leqslant1$
+	\item $-1\leqslant\sin x \leqslant1$
+	\item $\cos(x+2\pi)=\cos x$
+	\item $\cos (-x)=\cos x$
+	\item $\sin(x+2\pi)=\sin x$
+	\item $\sin (-x) = - \sin x$
+	\item $\cos ^2 x + \sin ^2 x =1$
+\end{itemize}\end{multicols}\vspace{-1em}
+\end{prop}
+
+\begin{exo}
+ Par lecture graphique et sans justifier, en s'aidant des sch\'emas obtenus dans l'exercice \ref{trigoexo2}, compléter le tableau sui\-vant :
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|*{12}{>{\centering \arraybackslash}X|}}\hline
+$x$		&	$\delair{\dfrac{2\pi}{3}}$		&	$\delair{\dfrac{3\pi}{4}}$ 		&	$\delair{\dfrac{5\pi}{6}}$		&	$\delair{-\dfrac{\pi}{6}}$		&	$\delair{-\dfrac{\pi}{4}}$ & $\delair{-\dfrac{\pi}{3}}$ & $\delair{-\dfrac{\pi}{2}}$ & $\delair{-\dfrac{2\pi}{3}}$ & $\delair{-\dfrac{3\pi}{4}}$	& $\delair{-\dfrac{5\pi}{6}}$ & $\pi$ & $2\pi$ \\   \hline
+	&&&&&&&&&&&& \\
+$\sin x$	&&&&&&&&&&&& \\ 
+	&&&&&&&&&&&& \\ \hline
+	&&&&&&&&&&&& \\
+$\cos x$	&&&&&&&&&&&& \\
+	&&&&&&&&&&&& \\ \hline
+	&&&&&&&&&&&& \\
+$\tan x$	&&&&&&&&&&&& \\
+	&&&&&&&&&&&& \\ \hline
+\end{tabularx}
+\end{center}
+\end{exo}
+
+%\sautpage
+
+\begin{exo}
+\begin{enumerate}
+	\item Compléter le tableau suivant :
+\begin{center}
+\begin{tabularx}{\linewidth}{|*{14}{>{\centering \arraybackslash}X|}}\hline
+$x$		&	 $-2\pi$	& $-\pi$	&	$\delair{-\dfrac{\pi}{2}}$&	$\delair{-\dfrac{\pi}{3}}$&	$\delair{-\dfrac{\pi}{4}}$&$\delair{-\dfrac{\pi}{6}}$ 						   &$0$		&	$\delair{\dfrac{\pi}{6}}$ 		&	$\delair{\dfrac{\pi}{4}}$		&	$\delair{\dfrac{\pi}{3}}$		&	$\delair{\dfrac{\pi}{2}}$ & $\pi$ & $2\pi$	\\ \hline
+&&&&&&&&&&&&& \\
+$\cos x$	&&&&&&&&&&&&& \\
+&&&&&&&&&&&&& \\ \hline
+&&&&&&&&&&&&& \\
+$\sin x$	&&&&&&&&&&&&& \\
+&&&&&&&&&&&&& \\ \hline
+&&&&&&&&&&&&& \\
+$\tan x$	&&&&&&&&&&&&& \\
+&&&&&&&&&&&&& \\ \hline
+\end{tabularx}
+\end{center}
+
+\item Tracer dans trois repères orthogonaux (ordonnées : 5 cm = une unité ; abscisses : 6 cm = $\pi$ unités) les courbes représentatives des fonctions sinus, cosinus et tangente.
+\item Dresser le tableau des variations de ces fonctions pour $x\in[-2\pi\,;\,2\pi]$
+\end{enumerate}
+\end{exo}
+
+
+
+\begin{figure}[p]
+\centering
+\caption{Cercles trigonom\'etriques}\label{cerclestrigo}
+\begin{tabular}{cc}
+ \psset{unit=3cm}
+\def\xmin{-1.2} \def\xmax{1.2} \def\ymin{-1.2} \def\ymax{1.2}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+ \psset{unit=0.75cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-5,-5)(5,5)
+ \psset{unit=3cm}
+\psaxes[labels=none,labelsep=1pt,Dx=1,Dy=1]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\uput[dr](1,0){$I$}
+\uput[ur](0,1){$J$}
+\uput[dl](0,0){$O$}
+%\psarc(0,0){2}{0}{360}
+%\psset{xunit=1cm , yunit=1cm}
+\pscircle(0.0000,0.0000){3cm}
+
+\end{pspicture*}
+& 
+ \psset{unit=3cm}
+\def\xmin{-1.2} \def\xmax{1.2} \def\ymin{-1.2} \def\ymax{1.2}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+ \psset{unit=0.75cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-5,-5)(5,5)
+ \psset{unit=3cm}
+\psaxes[labels=none,labelsep=1pt,Dx=1,Dy=1]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\uput[dr](1,0){$I$}
+\uput[ur](0,1){$J$}
+\uput[dl](0,0){$O$}
+%\psarc(0,0){2}{0}{360}
+%\psset{xunit=1cm , yunit=1cm}
+\pscircle(0.0000,0.0000){3cm}
+
+\end{pspicture*}
+\\
+ \psset{unit=3cm}
+\def\xmin{-1.2} \def\xmax{1.2} \def\ymin{-1.2} \def\ymax{1.2}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+ \psset{unit=0.75cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-5,-5)(5,5)
+ \psset{unit=3cm}
+\psaxes[labels=none,labelsep=1pt,Dx=1,Dy=1]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\uput[dr](1,0){$I$}
+\uput[ur](0,1){$J$}
+\uput[dl](0,0){$O$}
+%\psarc(0,0){2}{0}{360}
+%\psset{xunit=1cm , yunit=1cm}
+\pscircle(0.0000,0.0000){3cm}
+
+\end{pspicture*}
+ &
+ \psset{unit=3cm}
+\def\xmin{-1.2} \def\xmax{1.2} \def\ymin{-1.2} \def\ymax{1.2}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+ \psset{unit=0.75cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-5,-5)(5,5)
+ \psset{unit=3cm}
+\psaxes[labels=none,labelsep=1pt,Dx=1,Dy=1]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\uput[dr](1,0){$I$}
+\uput[ur](0,1){$J$}
+\uput[dl](0,0){$O$}
+%\psarc(0,0){2}{0}{360}
+%\psset{xunit=1cm , yunit=1cm}
+\pscircle(0.0000,0.0000){3cm}
+
+\end{pspicture*}
+ \\
+ \psset{unit=3cm}
+\def\xmin{-1.2} \def\xmax{1.2} \def\ymin{-1.2} \def\ymax{1.2}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+ \psset{unit=0.75cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-5,-5)(5,5)
+ \psset{unit=3cm}
+\psaxes[labels=none,labelsep=1pt,Dx=1,Dy=1]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\uput[dr](1,0){$I$}
+\uput[ur](0,1){$J$}
+\uput[dl](0,0){$O$}
+%\psarc(0,0){2}{0}{360}
+%\psset{xunit=1cm , yunit=1cm}
+\pscircle(0.0000,0.0000){3cm}
+
+\end{pspicture*}
+& 
+ \psset{unit=3cm}
+\def\xmin{-1.2} \def\xmax{1.2} \def\ymin{-1.2} \def\ymax{1.2}
+\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+ \psset{unit=1cm}
+\psgrid[griddots=10,gridlabels=0pt,gridwidth=.3pt, gridcolor=black, subgridwidth=.3pt, subgridcolor=black, subgriddiv=1](0,0)(-5,-5)(5,5)
+ \psset{unit=3cm}
+\psaxes[labels=none,labelsep=1pt,Dx=1,Dy=1]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+\uput[dr](1,0){$I$}
+\uput[ur](0,1){$J$}
+\uput[dl](0,0){$O$}
+%\psarc(0,0){2}{0}{360}
+%\psset{xunit=1cm , yunit=1cm}
+\pscircle(0.0000,0.0000){3cm}
+
+\end{pspicture*}
+\\
+\end{tabular}
+
+
+\end{figure}
+
+
